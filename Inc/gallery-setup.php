@@ -57,82 +57,20 @@ class VARIMO_Gallery_Setup {
             wp_enqueue_script('varimo-custom-slick-slider-js', plugin_dir_url(dirname(__FILE__)) . 'Assets/JS/custom-slick-slider.min.js',array(), VMONSTER_VERION, true );
 
 
-            if ($galleryStyleTemplate === 'template_1') {
-                wp_enqueue_script(
-                    'varimo-variation-gallery',
-                    plugin_dir_url(dirname(__FILE__)) . 'Assets/JS/varimo-variation-gallery/template1.js',
-                    ['jquery', 'varimo-custom-slick-slider-js'],
-                    VMONSTER_VERION,
-                    true
-                );
+            wp_enqueue_script(
+                'varimo-variation-gallery',
+                plugin_dir_url(dirname(__FILE__)) . 'Assets/JS/varimo-variation-gallery/template3.js',
+                ['jquery', 'varimo-custom-slick-slider-js'],
+                VMONSTER_VERION,
+                true
+            );
 
-                wp_enqueue_style(
-                    'varimo-variation-gallery',
-                    plugin_dir_url(dirname(__FILE__)) . 'Assets/CSS/varimo-variation-gallery/template1.css',
-                    [],
-                    VMONSTER_VERION
-                );
-            }elseif ($galleryStyleTemplate === 'template_2') {
-                wp_enqueue_script(
-                    'varimo-variation-gallery',
-                    plugin_dir_url(dirname(__FILE__)) . 'Assets/JS/varimo-variation-gallery/template2.js',
-                    ['jquery', 'varimo-custom-slick-slider-js'],
-                    VMONSTER_VERION,
-                    true
-                );
-
-                wp_enqueue_style(
-                    'varimo-variation-gallery',
-                    plugin_dir_url(dirname(__FILE__)) . 'Assets/CSS/varimo-variation-gallery/template2.css',
-                    [],
-                    VMONSTER_VERION
-                );
-            }elseif ($galleryStyleTemplate === 'template_3') {
-                wp_enqueue_script(
-                    'varimo-variation-gallery',
-                    plugin_dir_url(dirname(__FILE__)) . 'Assets/JS/varimo-variation-gallery/template3.js',
-                    ['jquery', 'varimo-custom-slick-slider-js'],
-                    VMONSTER_VERION,
-                    true
-                );
-
-                wp_enqueue_style(
-                    'varimo-variation-gallery',
-                    plugin_dir_url(dirname(__FILE__)) . 'Assets/CSS/varimo-variation-gallery/template3.css',
-                    [],
-                    VMONSTER_VERION
-                );
-            }elseif ($galleryStyleTemplate === 'template_4') {
-                wp_enqueue_script(
-                    'varimo-variation-gallery',
-                    plugin_dir_url(dirname(__FILE__)) . 'Assets/JS/varimo-variation-gallery/template4.js',
-                    ['jquery', 'varimo-custom-slick-slider-js'],
-                    VMONSTER_VERION,
-                    true
-                );
-
-                wp_enqueue_style(
-                    'varimo-variation-gallery',
-                    plugin_dir_url(dirname(__FILE__)) . 'Assets/CSS/varimo-variation-gallery/template4.css',
-                    [],
-                    VMONSTER_VERION
-                );
-            }elseif ($galleryStyleTemplate === 'template_5') {
-                wp_enqueue_script(
-                    'varimo-variation-gallery',
-                    plugin_dir_url(dirname(__FILE__)) . 'Assets/JS/varimo-variation-gallery/template5.js',
-                    ['jquery', 'varimo-custom-slick-slider-js'],
-                    VMONSTER_VERION,
-                    true
-                );
-
-                wp_enqueue_style(
-                    'varimo-variation-gallery',
-                    plugin_dir_url(dirname(__FILE__)) . 'Assets/CSS/varimo-variation-gallery/template5.css',
-                    [],
-                    VMONSTER_VERION
-                );
-            }
+            wp_enqueue_style(
+                'varimo-variation-gallery',
+                plugin_dir_url(dirname(__FILE__)) . 'Assets/CSS/varimo-variation-gallery/template3.css',
+                [],
+                VMONSTER_VERION
+            );
 
             global $product;
 

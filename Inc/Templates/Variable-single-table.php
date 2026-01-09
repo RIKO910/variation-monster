@@ -1,5 +1,5 @@
 <?php
-if (!defined('ABSPATH')) exit;
+if ( ! defined( 'ABSPATH' ) ) exit;
 
 global $product;
 global $post;
@@ -20,33 +20,16 @@ if (isset($product) && $product->is_type("variable")) {
     if($varimo_isMob){
 
         if ($varimoQuickTableOnOff == 'true') {
-
-            if ($varimoDesignSingleProductPageMobile === 'template_1') {
-                include plugin_dir_path(__FILE__) . '../design-templates/template_1.php';
-
-            }elseif ($varimoDesignSingleProductPageMobile === 'template_2') {
-                include plugin_dir_path(__FILE__) . '../design-templates/template_2.php';
-
-            }elseif ($varimoDesignSingleProductPageMobile === 'template_3') {
-                if ($varimoVariationTableMeta === 'true' || $varimoVariationTableMeta === '') {
-                    if ($varimoMetaVariableTableTemplate === '' || $varimoMetaVariableTableTemplate === 'none'){
-                        if ($varimoVariationTableTemplate === 'template_2'){
-                            include plugin_dir_path(__FILE__) . '../table-template/table-template2.php';
-                        }elseif ($varimoVariationTableTemplate === 'template_1'){
-                            include plugin_dir_path(__FILE__) . '../table-template/table-template1.php';
-                        }
-                    }else{
-                        if ($varimoMetaVariableTableTemplate === 'template_1'){
-                            include plugin_dir_path(__FILE__) . '../table-template/table-template1.php';
-                        }elseif ($varimoMetaVariableTableTemplate === 'template_2'){
-                            include plugin_dir_path(__FILE__) . '../table-template/table-template2.php';
-                        }
+            if ($varimoVariationTableMeta === 'true' || $varimoVariationTableMeta === '') {
+                if ($varimoMetaVariableTableTemplate !== '' && $varimoMetaVariableTableTemplate !== 'none'){
+                    if ($varimoMetaVariableTableTemplate === 'template_1'){
+                        include plugin_dir_path(__FILE__) . '../table-template/table-template1.php';
+                    }
+                }else{
+                    if ($varimoVariationTableTemplate === 'template_2'){
+                        include plugin_dir_path(__FILE__) . '../table-template/table-template2.php';
                     }
                 }
-
-            }elseif ($varimoDesignSingleProductPageMobile === 'template_4') {
-                include plugin_dir_path(__FILE__) . '../design-templates/template_4.php';
-
             }
         }
 
@@ -57,14 +40,10 @@ if (isset($product) && $product->is_type("variable")) {
                 if ($varimoMetaVariableTableTemplate !== '' && $varimoMetaVariableTableTemplate !== 'none'){
                     if ($varimoMetaVariableTableTemplate === 'template_1'){
                         include plugin_dir_path(__FILE__) . '../table-template/table-template1.php';
-                    }elseif ($varimoMetaVariableTableTemplate === 'template_2'){
-                        include plugin_dir_path(__FILE__) . '../table-template/table-template2.php';
                     }
                 }else{
                     if ($varimoVariationTableTemplate === 'template_2'){
                         include plugin_dir_path(__FILE__) . '../table-template/table-template2.php';
-                    }elseif ($varimoVariationTableTemplate === 'template_1'){
-                        include plugin_dir_path(__FILE__) . '../table-template/table-template1.php';
                     }
                 }
             }

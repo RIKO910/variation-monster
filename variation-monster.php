@@ -97,11 +97,7 @@ if (varimo_variation_monster_check_conflicts() === true){
     require_once VMONSTER_DIR_PATH . "/Inc/Frontend-ajax.php";
     require_once VMONSTER_DIR_PATH . "/Inc/Dynamic-style/Dynamic-css.php";
     require_once VMONSTER_DIR_PATH . "/Inc/gallery-setup.php";
-    require_once VMONSTER_DIR_PATH . "/Inc/table-template/before-add-to-cart.php";
-    require_once VMONSTER_DIR_PATH . "/Inc/table-template/before-add-to-cart-template-two.php";
     require_once VMONSTER_DIR_PATH . "/Inc/dokan-integration/dokan-integration.php";
-    require_once VMONSTER_DIR_PATH . "/Inc/filter-widget/includes/class-varimo-attributes-filter-helper.php";
-    require_once VMONSTER_DIR_PATH . "/Inc/filter-widget/includes/class-varimo-attributes-filter-widget.php";
     /**
      * The main class for the Quick Cart & Product Variations Table (Pro).
      *
@@ -118,15 +114,6 @@ if (varimo_variation_monster_check_conflicts() === true){
             add_action('admin_init', array($this,'quick_variable_plugin_review'));
             add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), array($this, 'variation_table_quick_cart_settings_link') );
             add_action("wp_head",[$this,"custom_css_for_oceanwp"]);
-
-            // Register widget on widgets_init hook
-
-            $variableSetting    = get_option('variable_all_checked', array());
-            $showOnFilterWidget = isset($variableSetting['showOnFilterWidget']) ? $variableSetting['showOnFilterWidget'] : '';
-
-            if ($showOnFilterWidget === 'true'){
-                add_action('widgets_init', [$this, 'register_widgets']);
-            }
         }
 
         /**
@@ -145,27 +132,7 @@ if (varimo_variation_monster_check_conflicts() === true){
                 new VARIMO_Variables();
                 new VARIMO_Dynamic_Style();
                 new VARIMO_Gallery_Setup();
-                new VARIMO_Table_Before_AddTo_Cart();
-                new VARIMO_Table_Before_AddTo_Cart_Template_Two();
                 new VARIMO_Dokan_Integration();
-            }
-        }
-
-        /**
-         * Filter Widget register function.
-         *
-         * @since 1.0.2
-         * @return void
-         */
-        public function register_widgets() {
-            $variableSetting    = get_option('variable_all_checked', array());
-            $showOnFilterWidget = isset($variableSetting['showOnFilterWidget']) ? $variableSetting['showOnFilterWidget'] : '';
-
-            if ($showOnFilterWidget === 'true'){
-                register_widget('VARIMO_WC_Attributes_Filter_Widget');
-            }else{
-                unregister_widget('VARIMO_WC_Attributes_Filter_Widget');
-                wp_cache_delete('widget_recent_posts', 'widget');
             }
         }
 
