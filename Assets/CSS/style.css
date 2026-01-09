@@ -12,6 +12,10 @@
     margin: 0;
 }
 
+.quick-variable-dashboard .dashicons-lock{
+    color: #6033E7 !important;
+}
+
 /* Common CSS */
 .quick-hidden {
     display: none;

@@ -197,6 +197,14 @@ $varimoLicense_active                     = get_option('quick_license_key');
         <a style="padding:8px" class="tablinks" onclick="event.preventDefault(); varimoDashboardClick(event, 'attribute-gallery')">
             <i class="fas fa-shapes"></i> <?php echo wp_kses(' Attribute Gallery','variation-monster'); ?>
         </a>
+        <div class="vertical-divider"></div>
+        <a style="padding:8px" class="tablinks" onclick="varimoDashboardClick(event, 'support')">
+            <i class="fas fa-life-ring"></i> <?php echo wp_kses(' Support','variation-monster'); ?>
+        </a>
+        <div class="vertical-divider"></div>
+        <a style="padding:8px" class="our-products" onclick="varimoDashboardClick(event, 'our-products')">
+            <i class="fas fa-life-ring"></i> <?php echo wp_kses(' Our Products','variation-monster'); ?>
+        </a>
     </div>
 
     <div id="general" class="tabcontent" >
@@ -2271,6 +2279,65 @@ $varimoLicense_active                     = get_option('quick_license_key');
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div id="support" class="tabcontent" style="">
+        <div id="quickAuthenticateWrapper">
+            <h2><?php esc_html_e('Get Support','variation-monster'); ?></h2>
+            <div class="container-for-support">
+                <div class="grid-support">
+                    <div class="support-item">
+                        <strong><i class="fas fa-globe"></i> <?php esc_html_e('Website:','variation-monster'); ?></strong>
+                        <a href="http://webcartisan.com/" target="_blank"><?php esc_html_e('webcartisan.com','variation-monster'); ?></a>
+                        <p><?php esc_html_e('Visit our official website for live chat and more information, tutorials, and resources.','variation-monster'); ?></p>
+                    </div>
+
+                    <div class="support-item">
+                        <strong><i class="fab fa-facebook-f"></i> <?php esc_html_e('Facebook:','variation-monster'); ?></strong>
+                        <a href="https://www.facebook.com/webcartisan" target="_blank"><?php esc_html_e('Follow us','variation-monster'); ?></a>
+                        <p><?php esc_html_e('Join our community on Facebook for support, updates, and discussions.','variation-monster'); ?></p>
+                    </div>
+                    <div class="support-item">
+                        <strong><i class="fab fa-whatsapp"></i> <?php esc_html_e('WhatsApp:','variation-monster'); ?></strong>
+                        <a href="https://wa.me/01926167151" target="_blank"><?php esc_html_e('Chat Now ','variation-monster'); ?></a>
+                        <p><?php esc_html_e('Get instant support by chatting with us on WhatsApp. We’re here to help!','variation-monster'); ?></p>
+                    </div>
+                    <div class="support-item">
+                        <strong><i class="fas fa-envelope"></i> <?php esc_html_e('Email:','variation-monster'); ?></strong>
+                        <a href="mailto:hello@webcartisan.com"><?php esc_html_e('hello@webcartisan.com','variation-monster'); ?></a>
+                        <p><?php esc_html_e('Feel free to reach out to us via email for any inquiries or support requests.','variation-monster'); ?></p>
+                    </div>
+                    <div class="support-item">
+                        <strong><i class="fab fa-linkedin-in"></i> <?php esc_html_e('LinkedIn:','variation-monster'); ?></strong>
+                        <a href="https://www.linkedin.com/company/webcartisan" target="_blank"><?php esc_html_e('Connect on LinkedIn','variation-monster'); ?></a>
+                        <p><?php esc_html_e('Let’s connect on LinkedIn for networking, updates, and professional support.','variation-monster'); ?></p>
+                    </div>
+                    <div class="support-item">
+                        <strong><i class="fab fa-twitter"></i> <?php esc_html_e('Twitter:','variation-monster'); ?></strong>
+                        <a href="https://x.com/WebCartisan" target="_blank"><?php esc_html_e('Follow us','variation-monster'); ?></a>
+                        <p><?php esc_html_e('Stay updated with the latest news and announcements by following us on Twitter.','variation-monster'); ?></p>
+                    </div>
+                    <div class="support-item">
+                        <strong><i class="fab fa-youtube"></i> <?php esc_html_e('YouTube:','variation-monster'); ?></strong>
+                        <a href="https://www.youtube.com/@WebCartisan" target="_blank"><?php esc_html_e('Subscribe','variation-monster'); ?></a>
+                        <p><?php esc_html_e('Check out our YouTube channel for video tutorials and product showcases.','variation-monster'); ?></p>
+                    </div>
+                    <div class="support-item">
+                        <strong><i class="fab fa-instagram"></i> <?php esc_html_e('Instagram:','variation-monster'); ?></strong>
+                        <a href="https://www.instagram.com/webcartisan" target="_blank"><?php esc_html_e('Follow us','variation-monster'); ?></a>
+                        <p><?php esc_html_e('See behind-the-scenes content and our latest updates on Instagram.','variation-monster'); ?></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="our-products" class="tabcontent" style="">
+        <div id="quickAuthenticateWrapper">
+            <?php
+            require_once VMONSTER_DIR_PATH . "/Admin/our-products.php";
+            ?>
         </div>
     </div>
 
