@@ -13,6 +13,20 @@ class VARIMO_Admin{
         add_action('plugins_loaded', [$this, 'attribute_section_setup_gallery_field']);
         add_filter( 'woocommerce_settings_tabs_array', array($this, 'variation_monster_tab_under_woocommerce_setting_page'), 21 );
         add_action( 'woocommerce_settings_tabs_variation-monster-setting', array($this, 'variation_monster_tab_content') );
+        add_action('wp_ajax_varimo_plugin_review_dismissed_ajax', array($this, 'varimo_plugin_review_dismissed_ajax'));
+    }
+
+    /**
+     * Handle AJAX request dismiss review notice.
+     *
+     * @return void
+     * @since 1.0.2
+     */
+    function varimo_plugin_review_dismissed_ajax() {
+
+        check_ajax_referer('qvt_nonce', '_nonce');
+        update_option('varimo_review_dismissed', true);
+        wp_send_json_success(['message' => 'Notice dismissed successfully.']);
     }
 
     public function variation_monster_tab_under_woocommerce_setting_page( $tabs ) {

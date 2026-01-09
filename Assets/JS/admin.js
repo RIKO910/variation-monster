@@ -161,6 +161,43 @@ jQuery(document).ready(function ($) {
 
     // Attribute Section End
 
+    // Ajax notice start
+
+    jQuery(document).ready(function($) {
+        $('.qvt-dismiss-btn').on('click', function() {
+            const data = {
+                action: 'varimo_plugin_review_dismissed_ajax',
+                _nonce: qvt_notice_obj.nonce
+            };
+            const ajaxURL = qvt_notice_obj.ajax_url;
+            $.post(ajaxURL, data, function(response) {
+                console.log("response",response)
+                if (response.success) {
+                    console.log("work");
+                    $('#qvt-review-notice').hide(); // Hide the review notice
+                } else {
+                    console.log(response.data);
+                }
+            });
+        });
+
+        var imgURL = qvt_notice_obj.logo_url;
+        // Check if the target .logo span exists before appending
+        if ($("#qvt-review-notice .logo").length > 0) {
+            // Create an <img> element
+            var imgElement = $("<img>", {
+                src: imgURL,
+                alt: "Plugin Logo",
+                class: "custom-logo", // Add your custom class if needed
+            });
+
+            // Append the image to the .logo span inside the admin notice
+            $("#qvt-review-notice .logo").append(imgElement);
+        }
+    });
+
+    //  Ajax notice end
+
     // Meta Section Start
 
     jQuery(document).ready(function($) {

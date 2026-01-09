@@ -111,8 +111,9 @@ if (varimo_variation_monster_check_conflicts() === true){
          */
         public function __construct(){
             $this->init();
-            add_action('admin_init', array($this,'quick_variable_plugin_review'));
+            add_action('admin_init', array($this,'varimo_plugin_redirect'));
             add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), array($this, 'variation_table_quick_cart_settings_link') );
+            add_filter('plugin_row_meta', array($this, 'varimo_plugin_support_link'), 10, 2);
             add_action("wp_head",[$this,"custom_css_for_oceanwp"]);
         }
 
@@ -137,24 +138,24 @@ if (varimo_variation_monster_check_conflicts() === true){
         }
 
         /**
-         * Add option for notice review dismissed.
+         * Redirect to settings page on activation.
          *
          * @return void
          * @since 1.0.0
          */
-        public function quick_variable_plugin_review(){
-
-            $qvt_review_dismissed  = "";
-
-            if ( isset( $_GET['dismiss-review'] ) ) {
-                $qvt_review_dismissed = sanitize_text_field( wp_unslash($_GET['dismiss-review']) );
+        public function varimo_plugin_redirect(){
+            if (get_transient('varimo_plugin_activation_redirect')) {
+                delete_transient('varimo_plugin_activation_redirect');
+                wp_safe_redirect(admin_url('admin.php?page=wc-settings&tab=variation-monster-setting'));
+                exit;
             }
+            $install_date            = get_option( 'varimo_activation_date' );
+            $install_date_plus_7days = strtotime("+7 days", $install_date);
+            $review_dismissed        = get_option( 'varimo_review_dismissed' );
+            $now                     = strtotime( "now" );
 
-            if ( isset($_GET['_nonce'])) {
-                $_nonce = sanitize_text_field( wp_unslash( $_GET['_nonce'] ) );
-                if (wp_verify_nonce( $_nonce, 'qvt_nonce' ) && intval( $qvt_review_dismissed ) === 1 ) {
-                    add_option( 'quick_variable_review_dismissed', true );
-                }
+            if ( $install_date_plus_7days <= $now && !$review_dismissed ) {
+                add_action( 'admin_notices', array($this, 'varimo_display_admin_notice') );
             }
         }
 
@@ -170,6 +171,47 @@ if (varimo_variation_monster_check_conflicts() === true){
             );
 
             return array_merge( $action_links, $links );
+        }
+
+        /**
+         * Add a support link to the plugin details.
+         *
+         * @param $links, $file
+         * @since 1.0.0
+         */
+        function varimo_plugin_support_link($links, $file) {
+            if ($file === plugin_basename(__FILE__)) {
+                $support_link = '<a href="https://wa.me/01926167151" target="_blank" style="color: #0073aa;">' . __('Support', 'variation-monster') . '</a>';
+                $dock_link    = '<a href="http://webcartisan.com/docs/variation-monster-for-woocommerce/" target="_blank" style="color: #0073aa;">' . __('Docs', 'variation-monster') . '</a>';
+                $links[] = $support_link;
+                $links[] = $dock_link;
+            }
+            return $links;
+        }
+
+        /**
+         * Notice show.
+         *
+         * @return void
+         * @since 1.0.0
+         */
+        public function varimo_display_admin_notice() {
+            ?>
+            <div id="qvt-review-notice" class="updated qvt_review_notices">
+                <span class="logo"></span>
+                <ul class="right_contes">
+                    <li><?php echo esc_html__('Hello! Seems like you have used Variation Monster Plugin for this website — Thanks a lot!', 'variation-monster'); ?></li>
+                    <li class="button_wrap">
+                        <a href="<?php echo esc_url('https://wordpress.org/plugins/variation-monster/'); ?>" type="button" class="qvt-dismiss-btn" target="_blank">
+                            <i class="fas fa-check-circle"></i> <?php esc_html_e('Ok, you deserved it', 'variation-monster'); ?>
+                        </a>
+                        <button type="button" class="qvt-dismiss-btn">
+                            <i class="fas fa-thumbs-down"></i> <?php esc_html_e('No thanks', 'variation-monster'); ?>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <?php
         }
 
         /*Compatible With themes*/
@@ -195,6 +237,7 @@ if (varimo_variation_monster_check_conflicts() === true){
      * @since 1.0.0
      */
     function varimo_quick_variable_plugin_activate(){
+        set_transient('varimo_plugin_activation_redirect', true, 30);
         $varimo_now = strtotime( "now" );
         add_option( 'quick_variable_activation_date', $varimo_now );
     }
