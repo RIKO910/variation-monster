@@ -38,10 +38,6 @@ class VARIMO_Dokan_Integration {
         $quickCarouselMeta                            = get_post_meta($post->ID, '_quick_cart_carousel_meta', true);
         $defaultValueQuickCarouselMeta                = !empty($quickCarouselMeta) ? $quickCarouselMeta : $quickCarouselOnOff;
 
-        $quickCartCarouselTemplate                    = isset($variableSetting['quickCartCarouselTemplate']) ? $variableSetting['quickCartCarouselTemplate'] : 'template_1';
-        $quickCartCarouselTemplateMeta                = get_post_meta($post->ID, '_quick_cart_carousel_template_meta', true);
-        $defaultValueQuickCartCarouselTemplateMeta    = !empty($quickCartCarouselTemplateMeta) ? $quickCartCarouselTemplateMeta : $quickCartCarouselTemplate;
-
         $selectVariationTemplateOnOff                 = isset($variableSetting['selectVariationTemplateOnOff']) ? $variableSetting['selectVariationTemplateOnOff'] : '';
         $variationListMeta                            = get_post_meta($post->ID, '_variation_list_meta', true);
         $defaultValueVariationListMeta                = !empty($variationListMeta) ? $variationListMeta : $selectVariationTemplateOnOff;
@@ -57,18 +53,6 @@ class VARIMO_Dokan_Integration {
         $beforeCartQuickTableOnOff                    = isset($variableSetting['beforeCartQuickTableOnOff']) ? $variableSetting['beforeCartQuickTableOnOff'] : '';
         $beforeCartVariationTableMeta                 = get_post_meta($post->ID, '_before_cart_variation_table_meta', true);
         $defaultBeforeCartValueVariationTableMeta     = !empty($beforeCartVariationTableMeta) ? $beforeCartVariationTableMeta : $beforeCartQuickTableOnOff;
-
-        $variationListTemplate                        = isset($variableSetting['variationListTemplate']) ? $variableSetting['variationListTemplate'] : 'template_1';
-        $variationListTemplateMeta                    = get_post_meta($post->ID, '_variation_list_template_meta', true);
-        $defaultValueVariationListTemplateMeta        = !empty($variationListTemplateMeta) ? $variationListTemplateMeta : $variationListTemplate;
-
-        $variationTableTemplate                       = isset($variableSetting['variationTableTemplate']) ? $variableSetting['variationTableTemplate'] : 'template_1';
-        $variationTableTemplateMeta                   = get_post_meta($post->ID, '_variation_table_template', true);
-        $defaultValueVariationTableTemplateMeta       = !empty($variationTableTemplateMeta) ? $variationTableTemplateMeta : $variationTableTemplate;
-
-        $designAddCartTableTemplate2                  = isset($variableSetting['designAddCartTableTemplate2']) ? $variableSetting['designAddCartTableTemplate2'] : 'template_1';
-        $variationTable2CartTemplateMeta              = get_post_meta($post->ID, '_table_template2_cart_section_style_template', true);
-        $defaultValueVariationTable2CartTemplateMeta  = !empty($variationTable2CartTemplateMeta) ? $variationTable2CartTemplateMeta : $designAddCartTableTemplate2;
 
         $showAttributeSwatchesArchive                 = isset($variableSetting['showAttributeSwatchesArchive'][0]) ? $variableSetting['showAttributeSwatchesArchive'][0] : '';
         $showAttributeSwatchesArchiveMeta             = get_post_meta($post->ID, '_variation_swatches_archive_page_meta', true);
@@ -105,18 +89,6 @@ class VARIMO_Dokan_Integration {
                                     </select>
                                     <span class="varimo-help-tip" data-tip="Variation quick cart carousel enable disable for this product">?</span>
                                 </p>
-
-                                <p class="dokan-varimo-form-field _quick_cart_carousel_template_meta_field">
-                                    <label for="_quick_cart_carousel_template_meta">Carousel Template</label>
-                                    <select id="_quick_cart_carousel_template_meta" name="_quick_cart_carousel_template_meta" class="select short" data-placeholder="">
-                                        <option value="none" <?php selected($defaultValueQuickCartCarouselTemplateMeta, 'none'); ?>>Select</option>
-                                        <option value="template_1" <?php selected($defaultValueQuickCartCarouselTemplateMeta, 'template_1'); ?>>Template 1</option>
-                                        <option value="template_2" <?php selected($defaultValueQuickCartCarouselTemplateMeta, 'template_2'); ?>>Template 2</option>
-                                        <option value="template_3" <?php selected($defaultValueQuickCartCarouselTemplateMeta, 'template_3'); ?>>Template 3</option>
-                                        <option value="template_4" <?php selected($defaultValueQuickCartCarouselTemplateMeta, 'template_4'); ?>>Template 4</option>
-                                    </select>
-                                    <span class="varimo-help-tip" data-tip="Carousel template for this product. Also you can show this template from our global settings">?</span>
-                                </p>
                             <?php endif; ?>
 
                             <!-- Variation List Section -->
@@ -128,16 +100,6 @@ class VARIMO_Dokan_Integration {
                                         <option value="false" <?php selected($defaultValueVariationListMeta, 'false'); ?>>Off</option>
                                     </select>
                                     <span class="varimo-help-tip" data-tip="Variation List enable disable for this product">?</span>
-                                </p>
-
-                                <p class="dokan-varimo-form-field _variation_list_template_meta_field">
-                                    <label for="_variation_list_template_meta">Variation List Template</label>
-                                    <select id="_variation_list_template_meta" name="_variation_list_template_meta" class="select short" data-placeholder="">
-                                        <option value="none" <?php selected($defaultValueVariationListTemplateMeta, 'none'); ?>>Select</option>
-                                        <option value="template_1" <?php selected($defaultValueVariationListTemplateMeta, 'template_1'); ?>>Template 1</option>
-                                        <option value="template_2" <?php selected($defaultValueVariationListTemplateMeta, 'template_2'); ?>>Template 2</option>
-                                    </select>
-                                    <span class="varimo-help-tip" data-tip="Variation list template for this product. Also you can show this template from our global settings">?</span>
                                 </p>
                             <?php endif; ?>
 
@@ -162,26 +124,6 @@ class VARIMO_Dokan_Integration {
                                         <option value="false" <?php selected($defaultValueVariationTableMeta, 'false'); ?>>Off</option>
                                     </select>
                                     <span class="varimo-help-tip" data-tip="Variation table enable disable for this product">?</span>
-                                </p>
-
-                                <p class="dokan-varimo-form-field _variation_table_template_field">
-                                    <label for="_variation_table_template">Variation Table Template</label>
-                                    <select id="_variation_table_template" name="_variation_table_template" class="select short" data-placeholder="">
-                                        <option value="none" <?php selected($defaultValueVariationTableTemplateMeta, 'none'); ?>>select</option>
-                                        <option value="template_1" <?php selected($defaultValueVariationTableTemplateMeta, 'template_1'); ?>>Template 1</option>
-                                        <option value="template_2" <?php selected($defaultValueVariationTableTemplateMeta, 'template_2'); ?>>Template 2</option>
-                                    </select>
-                                    <span class="varimo-help-tip" data-tip="Variation table template for this product. Also you can show this template from our global settings">?</span>
-                                </p>
-
-                                <p class="dokan-varimo-form-field _table_template2_cart_section_style_template_field">
-                                    <label for="_table_template2_cart_section_style_template">Cart Section Style Template</label>
-                                    <select id="_table_template2_cart_section_style_template" name="_table_template2_cart_section_style_template" class="select short" data-placeholder="">
-                                        <option value="none" <?php selected($defaultValueVariationTable2CartTemplateMeta, 'none'); ?>>Select</option>
-                                        <option value="template_1" <?php selected($defaultValueVariationTable2CartTemplateMeta, 'template_1'); ?>>Template 1</option>
-                                        <option value="template_2" <?php selected($defaultValueVariationTable2CartTemplateMeta, 'template_2'); ?>>Template 2</option>
-                                    </select>
-                                    <span class="varimo-help-tip" data-tip="Cart section style template in table template 2 for this product. Also you can show this template from our global settings">?</span>
                                 </p>
                             <?php endif; ?>
 
@@ -586,14 +528,10 @@ class VARIMO_Dokan_Integration {
         }
 
         $quick_cart_carousel_meta          = isset( $_POST['_quick_cart_carousel_meta'] ) ? sanitize_text_field( wp_unslash( $_POST['_quick_cart_carousel_meta'] ) ) : '';
-        $quick_cart_carousel_template_meta = isset( $_POST['_quick_cart_carousel_template_meta'] ) ? sanitize_text_field( wp_unslash( $_POST['_quick_cart_carousel_template_meta'] ) ) : '';
         $variation_list_meta               = isset( $_POST['_variation_list_meta'] ) ? sanitize_text_field( wp_unslash( $_POST['_variation_list_meta'] ) ) : '';
-        $variation_list_template           = isset( $_POST['_variation_list_template_meta'] ) ? sanitize_text_field( wp_unslash( $_POST['_variation_list_template_meta'] ) ) : '';
         $variation_swatches_meta           = isset( $_POST['_variation_swatches_meta'] ) ? sanitize_text_field( wp_unslash( $_POST['_variation_swatches_meta'] ) ) : '';
         $variation_table_meta              = isset( $_POST['_variation_table_meta'] ) ? sanitize_text_field( wp_unslash( $_POST['_variation_table_meta'] ) ) : '';
         $before_cart_variation_table_meta  = isset( $_POST['_before_cart_variation_table_meta'] ) ? sanitize_text_field( wp_unslash( $_POST['_before_cart_variation_table_meta'] ) ) : '';
-        $variation_table_template          = isset( $_POST['_variation_table_template'] ) ? sanitize_text_field( wp_unslash( $_POST['_variation_table_template'] ) ) : '';
-        $cart_section_style_template       = isset( $_POST['_table_template2_cart_section_style_template'] ) ? sanitize_text_field( wp_unslash( $_POST['_table_template2_cart_section_style_template'] ) ) : '';
         $swatches_archive_page_meta        = isset( $_POST['_variation_swatches_archive_page_meta'] ) ? sanitize_text_field( wp_unslash( $_POST['_variation_swatches_archive_page_meta'] ) ) : '';
         $attribute_display_type            = isset( $_POST['attribute_display_type'] ) ? array_map('sanitize_text_field', wp_unslash($_POST['attribute_display_type'])) : '';
         $show_attribute_archive_page       = isset( $_POST['show_attribute_archive_page'] ) ? array_map('sanitize_text_field', wp_unslash($_POST['show_attribute_archive_page'])) : '';
@@ -605,14 +543,10 @@ class VARIMO_Dokan_Integration {
         $term_gallery_image                = isset( $_POST['term_gallery_image']) ? map_deep(wp_unslash($_POST['term_gallery_image']), 'sanitize_text_field') : [];
 
         update_post_meta( $post_id, '_quick_cart_carousel_meta', $quick_cart_carousel_meta );
-        update_post_meta( $post_id, '_quick_cart_carousel_template_meta', $quick_cart_carousel_template_meta );
         update_post_meta( $post_id, '_variation_list_meta', $variation_list_meta );
-        update_post_meta( $post_id, '_variation_list_template_meta', $variation_list_template );
         update_post_meta( $post_id, '_variation_swatches_meta', $variation_swatches_meta );
         update_post_meta( $post_id, '_variation_table_meta', $variation_table_meta );
         update_post_meta( $post_id, '_before_cart_variation_table_meta', $before_cart_variation_table_meta );
-        update_post_meta( $post_id, '_variation_table_template', $variation_table_template );
-        update_post_meta( $post_id, '_table_template2_cart_section_style_template', $cart_section_style_template );
         update_post_meta( $post_id, '_variation_swatches_archive_page_meta', $swatches_archive_page_meta );
 
 

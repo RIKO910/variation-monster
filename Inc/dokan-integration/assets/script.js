@@ -6,54 +6,6 @@ jQuery(document).ready(function (){
 
     jQuery(document).ready(function($) {
 
-        // Cart Show Hide.
-        function toggleCartSectionTemplate() {
-            var selectedCartTemplate = jQuery('#_variation_table_template').val();
-            var tableMetaTemplate = jQuery('#_variation_table_meta').val();
-
-            if (selectedCartTemplate === 'template_2' && tableMetaTemplate === 'true') {
-                jQuery('._table_template2_cart_section_style_template_field').show();
-            } else {
-                jQuery('._table_template2_cart_section_style_template_field').hide();
-            }
-        }
-
-        // Table Show Hide.
-        function toggleTableSectionTemplate() {
-            var tableMetaTemplate = jQuery('#_variation_table_meta').val();
-
-            if (tableMetaTemplate === 'true') {
-                jQuery('._variation_table_template_field').show();
-            } else {
-                jQuery('._variation_table_template_field').hide();
-            }
-            toggleCartSectionTemplate();
-        }
-
-        // Initial calls to set the correct visibility for cart table
-        toggleTableSectionTemplate();
-        toggleCartSectionTemplate();
-
-        // Event Listeners for Cart Table
-        jQuery('#_variation_table_template, #_variation_table_meta').on('change', function () {
-            toggleTableSectionTemplate();
-            toggleCartSectionTemplate();
-        });
-
-        // List Show Hide.
-        function toggleListSectionTemplate() {
-            var selectedTemplateList = jQuery('#_variation_list_meta').val();
-            if (selectedTemplateList === 'true') {
-                jQuery('._variation_list_template_meta_field').show();
-            } else {
-                jQuery('._variation_list_template_meta_field').hide();
-            }
-        }
-        toggleListSectionTemplate();
-        jQuery('#_variation_list_meta').on('change', function() {
-            toggleListSectionTemplate();
-        });
-
         // redirect single product page, Show in archive show hide
 
         function toggleRedirectSingleProductPage() {

@@ -572,10 +572,6 @@ class VARIMO_Admin{
         $quickCarouselMeta                            = get_post_meta($post->ID, '_quick_cart_carousel_meta', true);
         $defaultValueQuickCarouselMeta                = !empty($quickCarouselMeta) ? $quickCarouselMeta : $quickCarouselOnOff;
 
-        $quickCartCarouselTemplate                    = isset($variableSetting['quickCartCarouselTemplate']) ? $variableSetting['quickCartCarouselTemplate'] : 'template_1';
-        $quickCartCarouselTemplateMeta                = get_post_meta($post->ID, '_quick_cart_carousel_template_meta', true);
-        $defaultValueQuickCartCarouselTemplateMeta    = !empty($quickCartCarouselTemplateMeta) ? $quickCartCarouselTemplateMeta : $quickCartCarouselTemplate;
-
         $selectVariationTemplateOnOff                 = isset($variableSetting['selectVariationTemplateOnOff']) ? $variableSetting['selectVariationTemplateOnOff'] : '';
         $variationListMeta                            = get_post_meta($post->ID, '_variation_list_meta', true);
         $defaultValueVariationListMeta                = !empty($variationListMeta) ? $variationListMeta : $selectVariationTemplateOnOff;
@@ -591,18 +587,6 @@ class VARIMO_Admin{
         $beforeCartQuickTableOnOff                    = isset($variableSetting['beforeCartQuickTableOnOff']) ? $variableSetting['beforeCartQuickTableOnOff'] : '';
         $beforeCartVariationTableMeta                 = get_post_meta($post->ID, '_before_cart_variation_table_meta', true);
         $defaultBeforeCartValueVariationTableMeta     = !empty($beforeCartVariationTableMeta) ? $beforeCartVariationTableMeta : '';
-
-        $variationListTemplate                        = isset($variableSetting['variationListTemplate']) ? $variableSetting['variationListTemplate'] : 'template_1';
-        $variationListTemplateMeta                    = get_post_meta($post->ID, '_variation_list_template_meta', true);
-        $defaultValueVariationListTemplateMeta        = !empty($variationListTemplateMeta) ? $variationListTemplateMeta : $variationListTemplate;
-
-        $variationTableTemplate                       = isset($variableSetting['variationTableTemplate']) ? $variableSetting['variationTableTemplate'] : 'template_1';
-        $variationTableTemplateMeta                   = get_post_meta($post->ID, '_variation_table_template', true);
-        $defaultValueVariationTableTemplateMeta       = !empty($variationTableTemplateMeta) ? $variationTableTemplateMeta : $variationTableTemplate;
-
-        $designAddCartTableTemplate2                  = isset($variableSetting['designAddCartTableTemplate2']) ? $variableSetting['designAddCartTableTemplate2'] : 'template_1';
-        $variationTable2CartTemplateMeta              = get_post_meta($post->ID, '_table_template2_cart_section_style_template', true);
-        $defaultValueVariationTable2CartTemplateMeta  = !empty($variationTable2CartTemplateMeta) ? $variationTable2CartTemplateMeta : $designAddCartTableTemplate2;
 
         $showAttributeSwatchesArchive                 = isset($variableSetting['showAttributeSwatchesArchive'][0]) ? $variableSetting['showAttributeSwatchesArchive'][0] : '';
         $showAttributeSwatchesArchiveMeta             = get_post_meta($post->ID, '_variation_swatches_archive_page_meta', true);
@@ -633,22 +617,6 @@ class VARIMO_Admin{
                             )
                         );
 
-                        woocommerce_wp_select(
-                            array(
-                                'id'          => '_quick_cart_carousel_template_meta',
-                                'label'       => __( 'Carousel Template', 'variation-monster' ),
-                                'description' => __( 'Carousel template for this product. Also you can show this template from our global settings', 'variation-monster' ),
-                                'desc_tip'    => 'true',
-                                'options'     => array(
-                                    'none'       => __( 'Select', 'variation-monster' ),
-                                    'template_1' => __( 'Template 1', 'variation-monster' ),
-                                    'template_2' => __( 'Template 2', 'variation-monster' ),
-                                    'template_3' => __( 'Template 3', 'variation-monster' ),
-                                    'template_4' => __( 'Template 4', 'variation-monster' ),
-                                ),
-                                'value'        => $defaultValueQuickCartCarouselTemplateMeta,
-                            )
-                        );
                     }
 
                     if ($selectVariationTemplateOnOff === 'true'){
@@ -663,21 +631,6 @@ class VARIMO_Admin{
                                     'false' => __( 'Off', 'variation-monster' ),
                                 ),
                                 'value'       => $defaultValueVariationListMeta,  // Set the default value
-                            )
-                        );
-
-                        woocommerce_wp_select(
-                            array(
-                                'id'          => '_variation_list_template_meta',
-                                'label'       => __( 'Variation List Template', 'variation-monster' ),
-                                'description' => __( 'Variation list template for this product. Also you can show this template from our global settings', 'variation-monster' ),
-                                'desc_tip'    => 'true',
-                                'options'     => array(
-                                    'none'       => __( 'Select', 'variation-monster' ),
-                                    'template_1' => __( 'Template 1', 'variation-monster' ),
-                                    'template_2' => __( 'Template 2', 'variation-monster' ),
-                                ),
-                                'value'        => $defaultValueVariationListTemplateMeta,
                             )
                         );
                     }
@@ -712,37 +665,6 @@ class VARIMO_Admin{
                                     'false' => __( 'Off', 'variation-monster' ),
                                 ),
                                 'value'       => $defaultValueVariationTableMeta,  // Set the default value
-                            )
-                        );
-
-                        woocommerce_wp_select(
-                            array(
-                                'id'          => '_variation_table_template',
-                                'label'       => __( 'Variation Table Template', 'variation-monster' ),
-                                'description' => __( 'Variation table template for this product. Also you can show this template from our global settings', 'variation-monster' ),
-                                'desc_tip'    => 'true',
-                                'options'     => array(
-                                    'none'    => __( 'select', 'variation-monster' ),
-                                    'template_1' => __( 'Template 1', 'variation-monster' ),
-                                    'template_2' => __( 'Template 2', 'variation-monster' ),
-                                ),
-                                'value'       => $defaultValueVariationTableTemplateMeta,
-                            )
-                        );
-
-
-                        woocommerce_wp_select(
-                            array(
-                                'id'          => '_table_template2_cart_section_style_template',
-                                'label'       => __( 'Cart Section Style Template', 'variation-monster' ),
-                                'description' => __( 'Cart section style template in table template 2 for this product. Also you can show this template from our global settings', 'variation-monster' ),
-                                'desc_tip'    => 'true',
-                                'options'     => array(
-                                    'none'    => __( 'Select', 'variation-monster' ),
-                                    'template_1' => __( 'Template 1', 'variation-monster' ),
-                                    'template_2' => __( 'Template 2', 'variation-monster' ),
-                                ),
-                                'value'      => $defaultValueVariationTable2CartTemplateMeta,
                             )
                         );
                     }
@@ -1151,14 +1073,10 @@ class VARIMO_Admin{
         }
 
         $quick_cart_carousel_meta          = isset( $_POST['_quick_cart_carousel_meta'] ) ? sanitize_text_field( wp_unslash( $_POST['_quick_cart_carousel_meta'] ) ) : '';
-        $quick_cart_carousel_template_meta = isset( $_POST['_quick_cart_carousel_template_meta'] ) ? sanitize_text_field( wp_unslash( $_POST['_quick_cart_carousel_template_meta'] ) ) : '';
         $variation_list_meta               = isset( $_POST['_variation_list_meta'] ) ? sanitize_text_field( wp_unslash( $_POST['_variation_list_meta'] ) ) : '';
-        $variation_list_template           = isset( $_POST['_variation_list_template_meta'] ) ? sanitize_text_field( wp_unslash( $_POST['_variation_list_template_meta'] ) ) : '';
         $variation_swatches_meta           = isset( $_POST['_variation_swatches_meta'] ) ? sanitize_text_field( wp_unslash( $_POST['_variation_swatches_meta'] ) ) : '';
         $variation_table_meta              = isset( $_POST['_variation_table_meta'] ) ? sanitize_text_field( wp_unslash( $_POST['_variation_table_meta'] ) ) : '';
         $before_cart_variation_table_meta  = isset( $_POST['_before_cart_variation_table_meta'] ) ? sanitize_text_field( wp_unslash( $_POST['_before_cart_variation_table_meta'] ) ) : '';
-        $variation_table_template          = isset( $_POST['_variation_table_template'] ) ? sanitize_text_field( wp_unslash( $_POST['_variation_table_template'] ) ) : '';
-        $cart_section_style_template       = isset( $_POST['_table_template2_cart_section_style_template'] ) ? sanitize_text_field( wp_unslash( $_POST['_table_template2_cart_section_style_template'] ) ) : '';
         $swatches_archive_page_meta        = isset( $_POST['_variation_swatches_archive_page_meta'] ) ? sanitize_text_field( wp_unslash( $_POST['_variation_swatches_archive_page_meta'] ) ) : '';
         $attribute_display_type            = isset( $_POST['attribute_display_type'] ) ? array_map('sanitize_text_field', wp_unslash($_POST['attribute_display_type'])) : '';
         $show_attribute_archive_page       = isset( $_POST['show_attribute_archive_page'] ) ? array_map('sanitize_text_field', wp_unslash($_POST['show_attribute_archive_page'])) : '';
@@ -1170,14 +1088,10 @@ class VARIMO_Admin{
         $term_gallery_image                = isset( $_POST['term_gallery_image']) ? map_deep(wp_unslash($_POST['term_gallery_image']), 'sanitize_text_field') : [];
 
         update_post_meta( $post_id, '_quick_cart_carousel_meta', $quick_cart_carousel_meta );
-        update_post_meta( $post_id, '_quick_cart_carousel_template_meta', $quick_cart_carousel_template_meta );
         update_post_meta( $post_id, '_variation_list_meta', $variation_list_meta );
-        update_post_meta( $post_id, '_variation_list_template_meta', $variation_list_template );
         update_post_meta( $post_id, '_variation_swatches_meta', $variation_swatches_meta );
         update_post_meta( $post_id, '_variation_table_meta', $variation_table_meta );
         update_post_meta( $post_id, '_before_cart_variation_table_meta', $before_cart_variation_table_meta );
-        update_post_meta( $post_id, '_variation_table_template', $variation_table_template );
-        update_post_meta( $post_id, '_table_template2_cart_section_style_template', $cart_section_style_template );
         update_post_meta( $post_id, '_variation_swatches_archive_page_meta', $swatches_archive_page_meta );
 
 
