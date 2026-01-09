@@ -10,7 +10,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Define products with their details (WordPress.org free plugins)
-$products = [
+$varimo_products = [
     [
         'id' => 'variation-monster',
         'name' => __('Giveaway Lottery for WooCommerce', 'variation-monster'),
@@ -351,7 +351,7 @@ $products = [
     }
 
     .wx-products-footer h3 {
-        color: #FFFFFF;
+        color: black;
         margin-bottom: 15px;
     }
 
@@ -442,63 +442,63 @@ $products = [
     </div>
 
     <div class="wx-products-grid">
-        <?php foreach ($products as $product): ?>
-            <div class="wx-product-card" style="--product-color: <?php echo esc_attr($product['color']); ?>">
-                <?php if ($product['badge']): ?>
-                    <div class="wx-product-badge"><?php echo esc_html($product['badge']); ?></div>
+        <?php foreach ($varimo_products as $varimo_product): ?>
+            <div class="wx-product-card" style="--product-color: <?php echo esc_attr($varimo_product['color']); ?>">
+                <?php if ($varimo_product['badge']): ?>
+                    <div class="wx-product-badge"><?php echo esc_html($varimo_product['badge']); ?></div>
                 <?php endif; ?>
 
                 <div class="wx-product-header">
                     <div class="wx-product-icon">
-                        <span class="dashicons <?php echo esc_attr($product['icon']); ?>"></span>
+                        <span class="dashicons <?php echo esc_attr($varimo_product['icon']); ?>"></span>
                     </div>
-                    <h3 class="wx-product-title"><?php echo esc_html($product['name']); ?></h3>
-                    <div class="wx-product-price"><?php echo esc_html($product['price']); ?></div>
+                    <h3 class="wx-product-title"><?php echo esc_html($varimo_product['name']); ?></h3>
+                    <div class="wx-product-price"><?php echo esc_html($varimo_product['price']); ?></div>
 
                     <div class="wx-product-stats">
                         <div class="wx-product-tags">
-                            <?php if (isset($product['is_woocommerce']) && $product['is_woocommerce']): ?>
+                            <?php if (isset($varimo_product['is_woocommerce']) && $varimo_product['is_woocommerce']): ?>
                                 <span class="wx-plugin-tag wc">WooCommerce</span>
                             <?php endif; ?>
                         </div>
                         <div class="wx-product-rating">
                         <span class="wx-product-stars">
                             <?php
-                            $rating = $product['rating'];
-                            $full_stars = floor($rating);
-                            $half_star = ($rating - $full_stars) >= 0.5;
+                            $varimo_rating = $varimo_product['rating'];
+                            $varimo_full_stars = floor($varimo_rating);
+                            $varimo_half_star = ($varimo_rating - $varimo_full_stars) >= 0.5;
 
-                            for ($i = 0; $i < $full_stars; $i++) {
+                            for ($varimo_i = 0; $varimo_i < $varimo_full_stars; $varimo_i++) {
                                 echo '★';
                             }
-                            if ($half_star) {
+                            if ($varimo_half_star) {
                                 echo '½';
                             }
-                            for ($i = $full_stars + ($half_star ? 1 : 0); $i < 5; $i++) {
+                            for ($varimo_i = $varimo_full_stars + ($varimo_half_star ? 1 : 0); $varimo_i < 5; $varimo_i++) {
                                 echo '☆';
                             }
                             ?>
                         </span>
-                            <span><?php echo number_format($product['rating'], 1); ?></span>
+                            <span><?php echo number_format($varimo_product['rating'], 1); ?></span>
                         </div>
                     </div>
                 </div>
 
                 <div class="wx-product-body">
-                    <p class="wx-product-description"><?php echo esc_html($product['description']); ?></p>
+                    <p class="wx-product-description"><?php echo esc_html($varimo_product['description']); ?></p>
 
                     <ul class="wx-product-features">
-                        <?php foreach (array_slice($product['features'], 0, 6) as $feature): ?>
-                            <li><?php echo esc_html($feature); ?></li>
+                        <?php foreach (array_slice($varimo_product['features'], 0, 6) as $varimo_feature): ?>
+                            <li><?php echo esc_html($varimo_feature); ?></li>
                         <?php endforeach; ?>
                     </ul>
 
                     <div class="wx-product-buttons">
-                        <a href="<?php echo esc_url(isset($product['install_link']) ? $product['install_link'] : $product['link']); ?>" class="wx-product-button">
+                        <a href="<?php echo esc_url(isset($varimo_product['install_link']) ? $varimo_product['install_link'] : $varimo_product['link']); ?>" class="wx-product-button">
                             <span class="dashicons dashicons-download"></span>
                             <?php esc_html_e('Install Now', 'variation-monster'); ?>
                         </a>
-                        <a href="<?php echo esc_url($product['link']); ?>" target="_blank" class="wx-product-button wx-product-button-secondary">
+                        <a href="<?php echo esc_url($varimo_product['link']); ?>" target="_blank" class="wx-product-button wx-product-button-secondary">
                             <span class="dashicons dashicons-external"></span>
                             <?php esc_html_e('View Details', 'variation-monster'); ?>
                         </a>
