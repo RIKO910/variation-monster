@@ -91,10 +91,11 @@ foreach ($variations as $varimo_variation) {
         ];
     }
 }
-
+$varimo_is_block_theme = wp_is_block_theme();
+$varimo_ignore_attr = $varimo_is_block_theme ? 'data-wp-ignore' : '';
 ?>
 
-<div <?php if ($varimoVariableHoverClick == "" ){ ?> style="display: none" <?php } ?> class="quick-variable-tooltip tooltiptext quick-hidden popup-template-four-modal"
+<div <?php echo esc_attr($varimo_ignore_attr); ?> <?php if ($varimoVariableHoverClick == "" ){ ?> style="display: none" <?php } ?> class="quick-variable-tooltip tooltiptext quick-hidden popup-template-four-modal"
                                             data-all-variation-gallery-tooltip='<?php echo esc_attr(json_encode($varimo_all_variation_gallery_tooltip)); ?>'
                                             data-all-variation-new-meta-show='<?php echo esc_attr(json_encode($varimoNewMetaShow)); ?>'
                                             data-all-variation-price-sku-tooltip='<?php echo esc_attr(json_encode($varimo_all_variation_price_sku_tooltip)); ?>'>

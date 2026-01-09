@@ -977,13 +977,67 @@ jQuery(document).ready(function () {
     });
   });
 
-  varimoVariationSwatchesTemplateFour();
-  varimoSwatchesArchivePageCart();
-    if ((jQuery('.vmonster-quick-view-modal-content').length) && (jQuery('.content-popup-template-four').length) && (jQuery('.variation-monster-swatches-archive-cart').length) ){
-        varimoQuickViewButtonSelected();
-    }
-    varimoslickSliderShopPage();
 });
+
+(function ($) {
+    function varimoReInitShopPage() {
+
+        varimoVariationSwatchesTemplateFour();
+        varimoSwatchesArchivePageCart();
+
+        if (
+            jQuery('.vmonster-quick-view-modal-content').length &&
+            jQuery('.content-popup-template-four').length &&
+            jQuery('.variation-monster-swatches-archive-cart').length
+        ) {
+            varimoQuickViewButtonSelected();
+        }
+
+        if (jQuery('.quick-variable-slide').length) {
+            varimoslickSliderShopPage();
+        }
+    }
+
+    // Initial load
+    jQuery(document).ready(function () {
+        varimoReInitShopPage();
+    });
+
+    // For Twenty Twenty-Five block theme
+    document.addEventListener('DOMContentLoaded', function() {
+        // Method 1: Listen for WooCommerce blocks update
+        if (typeof wc !== 'undefined' && wc.blockComponents) {
+            wc.blockComponents.subscribe(function() {
+                setTimeout(varimoReInitShopPage, 150);
+            });
+        }
+
+        // Method 2: Listen for URL changes (for pagination)
+        let lastUrl = location.href;
+        new MutationObserver(() => {
+            const url = location.href;
+            if (url !== lastUrl) {
+                lastUrl = url;
+                setTimeout(varimoReInitShopPage, 250);
+            }
+        }).observe(document, { subtree: true, childList: true });
+
+        // Method 3: Specific WooCommerce pagination events
+        jQuery(document.body).on('post-load', function() {
+            setTimeout(varimoReInitShopPage, 100);
+        });
+
+        // Method 4: Listen for clicks on pagination links
+        jQuery(document).on('click', 'a.page-numbers, a.next, a.prev', function() {
+            setTimeout(function() {
+                varimoReInitShopPage();
+            }, 500); // Longer delay for page transition
+        });
+    });
+
+})(jQuery);
+
+
 
 function xxxvarimoQuickViewButtonSelected() {
     const selectors = ['.custom-wc-buttons', '.custom-wc-images', '.custom-wc-colors'];

@@ -16,10 +16,11 @@ $varimoAddToCartSuccessColor   = isset($varimoVariableSettings['addToCartSuccess
 $varimoQuickCartIcon           = isset($varimoVariableSettings['quickCartIcon']) ? $varimoVariableSettings['quickCartIcon'] : 'fa fa-shopping-cart';
 $varimoQuickCartIconImageLink  = isset($varimoVariableSettings['quickCartIconImageLink']) ? $varimoVariableSettings['quickCartIconImageLink'] : '';
 $varimoMoreInfoTextChange      = isset($varimoVariableSettings['moreInfoTextChange']) ? $varimoVariableSettings['moreInfoTextChange'] : 'More Information';
-
+$varimo_is_block_theme = wp_is_block_theme();
+$varimo_ignore_attr = $varimo_is_block_theme ? 'data-wp-ignore' : '';
 ?>
 
-<div <?php if ($varimoVariableHoverClick == "" ){ ?> style="display: none" <?php } ?> class="quick-variable-tooltip tooltiptext quick-hidden popup-template-three-modal">
+<div <?php echo esc_attr($varimo_ignore_attr); ?> <?php if ($varimoVariableHoverClick == "" ){ ?> style="display: none" <?php } ?> class="quick-variable-tooltip tooltiptext quick-hidden popup-template-three-modal">
     <p><span onclick="varimoTemplateCloseButton()" class='closebtn quick-variable-tooltip-closebtn-template-three'>&times;</span></p>
 
     <div class="content-popup-template-three">

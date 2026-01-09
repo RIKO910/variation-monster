@@ -14,10 +14,11 @@ $varimoNameImageRedirect       = isset($varimoVariableSettings['nameImageRedirec
 $varimoAddToCartSuccessColor   = isset($varimoVariableSettings['addToCartSuccessColor']) ? $varimoVariableSettings['addToCartSuccessColor'] : '#fff';
 $varimoQuickCartIcon           = isset($varimoVariableSettings['quickCartIcon']) ? $varimoVariableSettings['quickCartIcon'] : 'fa fa-shopping-cart';
 $varimoQuickCartIconImageLink  = isset($varimoVariableSettings['quickCartIconImageLink']) ? $varimoVariableSettings['quickCartIconImageLink'] : '';
-
+$varimo_is_block_theme = wp_is_block_theme();
+$varimo_ignore_attr = $varimo_is_block_theme ? 'data-wp-ignore' : '';
 ?>
 
-<div <?php if ($varimoVariableHoverClick == "" ){ ?> style="display: none" <?php } ?> class="quick-variable-tooltip tooltiptext quick-hidden <?php if ($varimoTooltipPosition != "quick-tooltip-position-center") { echo esc_attr($varimoTooltipPosition); } ?>">
+<div <?php echo esc_attr($varimo_ignore_attr); ?> <?php if ($varimoVariableHoverClick == "" ){ ?> style="display: none" <?php } ?> class="quick-variable-tooltip tooltiptext quick-hidden <?php if ($varimoTooltipPosition != "quick-tooltip-position-center") { echo esc_attr($varimoTooltipPosition); } ?>">
     <p><span onclick="varimoTemplateCloseButton()" class='closebtn'>&times;</span></p>
 
     <?php if (!empty($varimoVariableDetailsImage) && !empty($varimoVariableSettings)) {

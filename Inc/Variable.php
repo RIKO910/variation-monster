@@ -898,8 +898,10 @@ class VARIMO_Variables
                 if ($product->is_type('variable')) {
                     $attributes = $product->get_variation_attributes();
                     $attribute_keys = array_keys($attributes);
+                    $varimo_is_block_theme = wp_is_block_theme();
+                    $varimo_ignore_attr = $varimo_is_block_theme ? 'data-wp-ignore' : '';
 
-                    echo '<div class="variations-display-redirecting-single-product">';
+                    echo '<div '. esc_attr($varimo_ignore_attr) .' class="variations-display-redirecting-single-product">';
 
                     foreach ($attribute_keys as $attribute_key) {
                         $args = [
@@ -1735,9 +1737,10 @@ class VARIMO_Variables
                         $all_variation_gallery_tooltip[$variation_id] = $gallery_images_url;
                     }
 
+                    $varimo_is_block_theme = wp_is_block_theme();
+                    $varimo_ignore_attr = $varimo_is_block_theme ? 'data-wp-ignore' : '';
 
-
-                    echo "<div data-all-variation-gallery-tooltip='" . esc_attr(json_encode($all_variation_gallery_tooltip)) . "' class='variations-display variation-monster-swatches-archive-cart variation-monster-quick-cart-" . esc_attr( $post->ID ) . "'>";
+                    echo "<div ". esc_attr($varimo_ignore_attr) ." data-all-variation-gallery-tooltip='" . esc_attr(json_encode($all_variation_gallery_tooltip)) . "' class='variations-display variation-monster-swatches-archive-cart variation-monster-quick-cart-" . esc_attr( $post->ID ) . "'>";
 
 
                     foreach ($attribute_keys as $attribute_key) {

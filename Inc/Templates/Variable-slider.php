@@ -18,8 +18,10 @@ if (isset($product) && $product->is_type("variable")) {
     $this->quickVariablePopup();
     if($varimoQuickCarouselOnOff === 'true') {
         if ($varimoMetaVariableListTemplate === 'true' || $varimoMetaVariableListTemplate === '') {
+            $varimo_is_block_theme = wp_is_block_theme();
+            $varimo_ignore_attr = $varimo_is_block_theme ? 'data-wp-ignore' : '';
     ?>
-    <div class="quick-variable-slide" data-autoplay="<?php echo esc_attr($varimoQuickCarouselAutoplay); ?>" ><?php
+    <div <?php echo esc_attr($varimo_ignore_attr); ?> class="quick-variable-slide" data-autoplay="<?php echo esc_attr($varimoQuickCarouselAutoplay); ?>" ><?php
         $varimo_variations                     = $product->get_available_variations();
         $varimo_enable_global_stock_management = $product->get_manage_stock();
         $varimo_global_stock_quantity          = $product->get_stock_quantity();
