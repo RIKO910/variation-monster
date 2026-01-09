@@ -915,7 +915,10 @@ class VARIMO_Variables
                         ];
 
                         // Call custom function to render the color, image, or button options.
-                        echo wp_kses_post(varimo_variation_swatches_redirect_archive_to_single('', $args));
+                        $custom_output = varimo_variation_swatches_redirect_archive_to_single('', $args);
+                        if (!is_null($custom_output)) {
+                            echo wp_kses_post($custom_output);
+                        }
                     }
 
                     echo '</div>';
