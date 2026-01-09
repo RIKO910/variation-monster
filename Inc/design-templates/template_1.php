@@ -132,7 +132,7 @@ $varimoPopUPImageShow                 = isset($varimoVariableSetting['popUPImage
                 ?>
                 <div class="mobile-variation-row stock-notification">
                     <?php if (0 === ($varimo_variation_stock_quantity ?: $varimo_global_stock_quantity)) : ?>
-                        <p><?php esc_html_e('Out Of Stock', 'variation-monster-pro'); ?></p>
+                        <p><?php esc_html_e('Out Of Stock', 'variation-monster'); ?></p>
                     <?php else : ?>
                         <button style="width: 50%; text-align: center" class="quick-add-to-cart" data-productId="<?php echo esc_attr($product->get_id()); ?>" data-variationId="<?php echo esc_attr($varimo_variation_id); ?>">
                             <i class="fa fa-cart-plus" aria-hidden="true"></i>

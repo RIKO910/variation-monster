@@ -123,7 +123,7 @@ function varimo_variation_table_before_add_to_cart() {
                 }else{
                     ?>
                     <td>
-                        <span style="font-size: 11px; color: red; margin: 0; padding: 0"> <?php esc_html_e('Out of Stock', 'variation-monster-pro'); ?> </span>
+                        <span style="font-size: 11px; color: red; margin: 0; padding: 0"> <?php esc_html_e('Out of Stock', 'variation-monster'); ?> </span>
                     </td>
                     <?php
                 }
@@ -328,7 +328,7 @@ function varimo_more_variations_list_template_two(){
                     <!-- SKU Label -->
                     <span class="variation-price" >
                         <strong><?php if ($listLabelOnOff === "true" && $listSkuOnOff === "true"){
-                                esc_html_e('SKU: ', 'variation-monster-pro');
+                                esc_html_e('SKU: ', 'variation-monster');
                             } ?></strong>
                         <span><?php if ($listSkuOnOff === "true"){
                             echo wp_kses_post($variation_obj->get_sku()); // nosemgrep
@@ -388,7 +388,7 @@ function varimo_more_variations_list_template_two(){
                     <!-- Price Label -->
                     <span class="variation-price" >
                         <strong><?php if ($listLabelOnOff === "true" && $listPriceOnOff === "true"){
-                                esc_html_e('Price: ', 'variation-monster-pro');
+                                esc_html_e('Price: ', 'variation-monster');
                             } ?></strong>
                         <span><?php if ($listPriceOnOff === "true"){
                             echo wp_kses_post($variation_obj->get_price_html()); // nosemgrep
@@ -400,7 +400,7 @@ function varimo_more_variations_list_template_two(){
                         ?>
                         <span class="variation-price" >
                             <strong><?php if ($listLabelOnOff === "true" && $listQuantityOnOff === "true"){
-                                    esc_html_e('Quantity: ', 'variation-monster-pro');
+                                    esc_html_e('Quantity: ', 'variation-monster');
                                 } ?></strong>
                             <span><?php if ($listQuantityOnOff === "true"){
                                 echo wp_kses_post($variation_obj->get_stock_quantity()); // nosemgrep
@@ -541,7 +541,7 @@ function varimo_more_variations_list_template_one(){
                     <!-- SKU Label -->
                     <span class="variation-price" style="display: flex; flex-direction: column">
                         <strong><?php if ($listLabelOnOff === "true" && $listSkuOnOff === "true"){
-                                esc_html_e('SKU', 'variation-monster-pro');
+                                esc_html_e('SKU', 'variation-monster');
                             } ?></strong>
                         <span><?php if ($listSkuOnOff === "true"){
                             echo wp_kses_post($variation_obj->get_sku()); // nosemgrep
@@ -588,7 +588,7 @@ function varimo_more_variations_list_template_one(){
                                     <select name="attribute_<?php echo esc_attr($attribute_name); ?>" class="attribute-select">
                                         <option value="">
                                             <?php // nosemgrep: audit.php.wp.security.xss.unescaped-stored-option
-                                            esc_html_e('Choose', 'variation-monster-pro'); ?> <?php echo wp_kses_post(wc_attribute_label($attribute_name)); ?>
+                                            esc_html_e('Choose', 'variation-monster'); ?> <?php echo wp_kses_post(wc_attribute_label($attribute_name)); ?>
                                         </option>
                                         <?php foreach ($options as $option) :
                                             ?>
@@ -605,7 +605,7 @@ function varimo_more_variations_list_template_one(){
                     <!-- Title Label -->
                     <span class="variation-price" style="display: flex; flex-direction: column">
                         <strong><?php if ($listLabelOnOff === "true" && $listTitleShow === "true"){
-                                esc_html_e('Title', 'variation-monster-pro');
+                                esc_html_e('Title', 'variation-monster');
                             } ?></strong>
                         <span><?php if ($listTitleShow === "true"){
                             echo wp_kses_post($variation_obj->get_name()); // nosemgrep
@@ -615,7 +615,7 @@ function varimo_more_variations_list_template_one(){
             <!-- Price Label -->
                     <span class="variation-price" style="display: flex; flex-direction: column">
                         <strong><?php if ($listLabelOnOff === "true" && $listPriceOnOff === "true"){
-                                esc_html_e('Price', 'variation-monster-pro');
+                                esc_html_e('Price', 'variation-monster');
                             } ?></strong>
                         <span><?php if ($listPriceOnOff === "true"){
                             echo wp_kses_post($variation_obj->get_price_html()); // nosemgrep
@@ -627,7 +627,7 @@ function varimo_more_variations_list_template_one(){
                         ?>
                         <span class="variation-price" style="display: flex; flex-direction: column">
                             <strong><?php if ($listLabelOnOff === "true" && $listQuantityOnOff === "true"){
-                                    esc_html_e('Quantity', 'variation-monster-pro');
+                                    esc_html_e('Quantity', 'variation-monster');
                                 } ?></strong>
                             <span><?php if ($listQuantityOnOff === "true"){
                                 echo wp_kses_post($variation_obj->get_stock_quantity()); // nosemgrep
@@ -806,7 +806,7 @@ function varimo_more_variations_table_template_two() {
 
                     <?php if ($skuHideShow === "true"){ ?>
                         <div>
-                            <strong><?php esc_html_e('SKU: ', 'variation-monster-pro'); ?></strong> <?php echo esc_html($variation->get_sku()); ?>
+                            <strong><?php esc_html_e('SKU: ', 'variation-monster'); ?></strong> <?php echo esc_html($variation->get_sku()); ?>
                         </div>
                     <?php }?>
 
@@ -817,7 +817,7 @@ function varimo_more_variations_table_template_two() {
                         if ($weight) {
                             ?>
                             <div>
-                                <strong><?php esc_html_e('Weight: ', 'variation-monster-pro'); ?></strong> <?php echo esc_html($weight) . ' ' . esc_html(get_option('woocommerce_weight_unit')); ?>
+                                <strong><?php esc_html_e('Weight: ', 'variation-monster'); ?></strong> <?php echo esc_html($weight) . ' ' . esc_html(get_option('woocommerce_weight_unit')); ?>
                             </div>
                         <?php } ?>
 
@@ -830,7 +830,7 @@ function varimo_more_variations_table_template_two() {
                         if ($length || $width || $height) {
                             ?>
                             <div>
-                                <strong><?php esc_html_e('Dimensions: ', 'variation-monster-pro'); ?></strong>
+                                <strong><?php esc_html_e('Dimensions: ', 'variation-monster'); ?></strong>
                                 <?php
                                 echo esc_html($length ? $length : '-') . ' x ' .
                                     esc_html($width ? $width : '-') . ' x ' .
@@ -915,7 +915,7 @@ function varimo_more_variations_table_template_two() {
                             ?>
                             <div class="stock-notification" style="padding-left: 25%; padding-right: 25%">
                                 <?php if (0 === ($variation_stock_quantity ?: $global_stock_quantity)) : ?>
-                                    <p><?php esc_html_e('Out Of Stock', 'variation-monster-pro'); ?></p>
+                                    <p><?php esc_html_e('Out Of Stock', 'variation-monster'); ?></p>
                                 <?php else : ?>
                                     <button style="width: 100%; text-align: center" class="quick-add-to-cart" data-productId="<?php echo esc_attr($product->get_id()); ?>" data-variationId="<?php echo esc_attr($variation_id); ?>">
                                         <?php if (!empty($quickCartIconImageLink)): ?>
@@ -949,7 +949,7 @@ function varimo_more_variations_table_template_two() {
                                 ?>
                                 <div class="stock-notification">
                                     <?php if (0 === ($variation_stock_quantity ?: $global_stock_quantity)) : ?>
-                                        <p><?php esc_html_e('Out Of Stock', 'variation-monster-pro'); ?></p>
+                                        <p><?php esc_html_e('Out Of Stock', 'variation-monster'); ?></p>
                                     <?php else : ?>
                                         <button style="text-align: center; border-radius: 50%; height: 28px; width: 28px" class="quick-add-to-cart" data-productId="<?php echo esc_attr($product->get_id()); ?>" data-variationId="<?php echo esc_attr($variation_id); ?>">
                                             <?php if (!empty($quickCartIconImageLink)): ?>
@@ -984,7 +984,7 @@ function varimo_more_variations_table_template_two() {
                             ?>
                             <div class="stock-notification" style="padding-left: 25%; padding-right: 25%">
                                 <?php if (0 === ($variation_stock_quantity ?: $global_stock_quantity)) : ?>
-                                    <p><?php esc_html_e('Out Of Stock', 'variation-monster-pro'); ?></p>
+                                    <p><?php esc_html_e('Out Of Stock', 'variation-monster'); ?></p>
                                 <?php else : ?>
                                     <button style="width: 100%; text-align: center" class="quick-add-to-cart" data-productId="<?php echo esc_attr($product->get_id()); ?>" data-variationId="<?php echo esc_attr($variation_id); ?>">
                                         <?php if (!empty($quickCartIconImageLink)): ?>
@@ -1018,7 +1018,7 @@ function varimo_more_variations_table_template_two() {
                                 ?>
                                 <div class="stock-notification">
                                     <?php if (0 === ($variation_stock_quantity ?: $global_stock_quantity)) : ?>
-                                        <p><?php esc_html_e('Out Of Stock', 'variation-monster-pro'); ?></p>
+                                        <p><?php esc_html_e('Out Of Stock', 'variation-monster'); ?></p>
                                     <?php else : ?>
                                         <button style="text-align: center; border-radius: 50%; height: 28px; width: 28px" class="quick-add-to-cart" data-productId="<?php echo esc_attr($product->get_id()); ?>" data-variationId="<?php echo esc_attr($variation_id); ?>">
                                             <?php if (!empty($quickCartIconImageLink)): ?>
@@ -1039,12 +1039,12 @@ function varimo_more_variations_table_template_two() {
                 <div><?php
                     if ($variation->get_stock_status() === "outofstock"){
                         ?>
-                        <p><?php esc_html_e('Out Of Stock', 'variation-monster-pro'); ?></p>
+                        <p><?php esc_html_e('Out Of Stock', 'variation-monster'); ?></p>
                         <?php
                     }else{
                         if ($stockStatusHideShow === 'true'){
                             ?>
-                            <p><?php esc_html_e('In Stock', 'variation-monster-pro'); ?></p>
+                            <p><?php esc_html_e('In Stock', 'variation-monster'); ?></p>
                             <?php
                         }
                     }?></div>
@@ -1269,7 +1269,7 @@ function varimo_more_variations() {
                 ?>
                 <td class="stock-notification" style="padding: 20px; text-align: center ; justify-items: center">
                     <?php if (0 === ($variation_stock_quantity) || $variation->get_stock_status() === "outofstock") : ?>
-                        <p><?php esc_html_e('Out Of Stock', 'variation-monster-pro'); ?></p>
+                        <p><?php esc_html_e('Out Of Stock', 'variation-monster'); ?></p>
                     <?php else : ?>
                         <button style="width: 100%; text-align: center" class="quick-add-to-cart" data-productId="<?php echo esc_attr($product->get_id()); ?>" data-variationId="<?php echo esc_attr($variation_id); ?>">
                             <?php if (!empty($quickCartIconImageLink)): ?>

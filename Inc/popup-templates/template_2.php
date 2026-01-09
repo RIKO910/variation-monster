@@ -73,13 +73,13 @@ $varimo_ignore_attr = $varimo_is_block_theme ? 'data-wp-ignore' : '';
                 <?php if (!empty($varimoVariableSKU) && !empty($varimoVariableSettings)) { ?>
 
                     <div style="display: flex; gap: 4px; justify-content: center">
-                        <strong><?php  echo esc_html("SKU:", 'variation-monster-pro') ?> </strong>
+                        <strong><?php  echo esc_html("SKU:", 'variation-monster') ?> </strong>
                         <p class="variable-sku <?php if (empty($varimoVariableSKU) && !empty($varimoVariableSettings)) { echo esc_attr("quick-hidden"); } ?>"></p>
                     </div>
 
                 <?php } ?>
 
-                <p><strong><?php echo esc_html("Price:", 'variation-monster-pro'); ?> </strong><span id="variable-product-price"></span></p>
+                <p><strong><?php echo esc_html("Price:", 'variation-monster'); ?> </strong><span id="variable-product-price"></span></p>
                 <div id="new-meta-data-show-for-variation" style="display: flex;flex-direction: column; align-items: center;"></div>
                 <div id="variable-product-variations"></div>
             </div>
@@ -87,9 +87,9 @@ $varimo_ignore_attr = $varimo_is_block_theme ? 'data-wp-ignore' : '';
             <!-- Quantity and Add-to-Cart Button -->
             <div class="quick-quantity-container" style="flex-direction:column;">
                 <div style="display: flex !important;gap: 5px;">
-                    <button onclick="varimoShopPageQuantityDecrease(this)" class="quick-quantity-decrease" id="decrease"><?php echo esc_html("-", 'variation-monster-pro'); ?></button>
+                    <button onclick="varimoShopPageQuantityDecrease(this)" class="quick-quantity-decrease" id="decrease"><?php echo esc_html("-", 'variation-monster'); ?></button>
                     <input type="text" autocomplete="off" id="quantity" class="quick-quantity-input" value="1" data-max="">
-                    <button onclick="varimoShopPageQuantityIncrese(this)" class="quick-quantity-increase" id="increase"><?php echo esc_html("+", 'variation-monster-pro'); ?></button>
+                    <button onclick="varimoShopPageQuantityIncrese(this)" class="quick-quantity-increase" id="increase"><?php echo esc_html("+", 'variation-monster'); ?></button>
                 </div>
 
                 <button id="quick-add-to-cart-shop-page" onclick="varimoAddToCartShopPageQuick(this)"

@@ -68,7 +68,7 @@ $varimoPopUPImageShow                 = isset($varimoVariableSetting['popUPImage
 
             <?php if ($varimoImageHideShow === "true"){
                 ?>
-                <th><?php esc_html_e('Image', 'variation-monster-pro'); ?></th>
+                <th><?php esc_html_e('Image', 'variation-monster'); ?></th>
                 <?php
             }?>
 
@@ -78,7 +78,7 @@ $varimoPopUPImageShow                 = isset($varimoVariableSetting['popUPImage
 
                 <th>
                     <span>
-                        <?php esc_html_e('SKU', 'variation-monster-pro'); ?>
+                        <?php esc_html_e('SKU', 'variation-monster'); ?>
                     </span>
                     <span style=" float: right" id="sku-sort-arrows">
                         <span class="dashicons dashicons-arrow-up-alt" id="sort-asc"></span>
@@ -130,7 +130,7 @@ $varimoPopUPImageShow                 = isset($varimoVariableSetting['popUPImage
                 ?>
                 <th>
                     <span>
-                        <?php esc_html_e('Price', 'variation-monster-pro'); ?>
+                        <?php esc_html_e('Price', 'variation-monster'); ?>
                     </span>
                     <span style="float: right" id="price-sort-arrows">
                         <span class="dashicons dashicons-arrow-up-alt" id="price-sort-toggle"></span>
@@ -141,13 +141,13 @@ $varimoPopUPImageShow                 = isset($varimoVariableSetting['popUPImage
 
             <?php if ($varimoQuantityHideShow === "true"){
                 ?>
-                <th><?php esc_html_e('Quantity', 'variation-monster-pro'); ?></th>
+                <th><?php esc_html_e('Quantity', 'variation-monster'); ?></th>
                 <?php
             }?>
 
             <?php if ($varimoActionHideShow === "true"){
                 ?>
-                <th><?php esc_html_e('Action', 'variation-monster-pro'); ?></th>
+                <th><?php esc_html_e('Action', 'variation-monster'); ?></th>
                 <?php
             }?>
 
@@ -265,7 +265,7 @@ $varimoPopUPImageShow                 = isset($varimoVariableSetting['popUPImage
                                     false, // No icon
                                     array(
                                         'id' => 'popupImage',
-                                        'alt' => esc_attr__('Popup Image', 'variation-monster-pro'),
+                                        'alt' => esc_attr__('Popup Image', 'variation-monster'),
                                         'style' => sprintf(
                                             'object-fit: contain; %s',
                                             $varimoPopUPImageShow === 'default' ?
@@ -341,7 +341,7 @@ $varimoPopUPImageShow                 = isset($varimoVariableSetting['popUPImage
                     ?>
                     <td class="stock-notification" style="padding: 20px; text-align: center ; justify-items: center">
                         <?php if (0 === ($varimo_variation_stock_quantity ?: $varimo_global_stock_quantity)) : ?>
-                            <p><?php esc_html_e('Out Of Stock', 'variation-monster-pro'); ?></p>
+                            <p><?php esc_html_e('Out Of Stock', 'variation-monster'); ?></p>
                         <?php else : ?>
                             <button style="width: 100%; text-align: center" class="quick-add-to-cart" data-productId="<?php echo esc_attr($product->get_id()); ?>" data-variationId="<?php echo esc_attr($varimo_variation_id); ?>">
                                 <i class="fa fa-cart-plus" aria-hidden="true"></i>

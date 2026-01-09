@@ -16,9 +16,9 @@ class VARIMO_WC_Attributes_Filter_Widget extends WP_Widget {
     public function __construct() {
         parent::__construct(
             'VARIMO_WC_Attributes_Filter_Widget',
-            __('WooCommerce Attributes Filter', 'variation-monster-pro'),
+            __('WooCommerce Attributes Filter', 'variation-monster'),
             array(
-                'description' => __('Filter products by all available attributes.', 'variation-monster-pro'),
+                'description' => __('Filter products by all available attributes.', 'variation-monster'),
                 'customize_selective_refresh' => true
             )
         );
@@ -200,22 +200,22 @@ class VARIMO_WC_Attributes_Filter_Widget extends WP_Widget {
      * @return void
      */
     public function form($instance) {
-        $title      = isset($instance['title']) ? $instance['title'] : __('Filter Products', 'variation-monster-pro');
+        $title      = isset($instance['title']) ? $instance['title'] : __('Filter Products', 'variation-monster');
         $query_type = isset($instance['query_type']) ? $instance['query_type'] : 'and';
         ?>
         <p>
-            <label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php esc_html_e('Title:', 'variation-monster-pro'); ?></label>
+            <label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php esc_html_e('Title:', 'variation-monster'); ?></label>
             <input class="widefat" id="<?php echo esc_attr($this->get_field_id('title')); ?>"
                    name="<?php echo esc_attr($this->get_field_name('title')); ?>"
                    type="text" value="<?php echo esc_attr($title); ?>" />
         </p>
 
         <p>
-            <label for="<?php echo esc_attr($this->get_field_id('query_type')); ?>"><?php esc_html_e('Query Type:', 'variation-monster-pro'); ?></label>
+            <label for="<?php echo esc_attr($this->get_field_id('query_type')); ?>"><?php esc_html_e('Query Type:', 'variation-monster'); ?></label>
             <select class="widefat" id="<?php echo esc_attr($this->get_field_id('query_type')); ?>"
                     name="<?php echo esc_attr($this->get_field_name('query_type')); ?>">
-                <option value="and" <?php selected($query_type, 'and'); ?>><?php esc_html_e('AND - Products must match all selected filters', 'variation-monster-pro'); ?></option>
-                <option value="or" <?php selected($query_type, 'or'); ?>><?php esc_html_e('OR - Products can match any selected filter', 'variation-monster-pro'); ?></option>
+                <option value="and" <?php selected($query_type, 'and'); ?>><?php esc_html_e('AND - Products must match all selected filters', 'variation-monster'); ?></option>
+                <option value="or" <?php selected($query_type, 'or'); ?>><?php esc_html_e('OR - Products can match any selected filter', 'variation-monster'); ?></option>
             </select>
         </p>
         <?php

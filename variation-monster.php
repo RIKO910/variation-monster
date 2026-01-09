@@ -1,19 +1,17 @@
 <?php
 /**
- * Plugin Name:          Variation Monster Pro
- * Plugin URI:           https://woocommerce.com/products/variation-monster-pro
- * Description:          Boost WooCommerce variable products with advanced variation tables, quick cart, swatches & galleries for higher conversions.
- * Version:              1.0.0
- * Requires at least:    5.2
- * Requires PHP:         7.2
- * Author:               WebCartisan
- * Author URI:           https://woocommerce.com/vendor/webcartisan/
- * License:              GPL v2 or later
- * License URI:          https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:          variation-monster-pro
- * Requires Plugins:     woocommerce
- * WC requires at least: 5.5
- * WC tested up to:      10.0.3
+ * Plugin Name:       Variation Monster — Variation Tables, Swatches & Quick View for WooCommerce
+ * Plugin URI:        http://webcartisan.com/variation-monster/
+ * Description:       Boost WooCommerce variable products with advanced variation tables, quick cart, swatches & galleries for higher conversions.
+ * Version:           1.0.1
+ * Requires at least: 5.2
+ * Requires PHP:      7.2
+ * Author:            WebCartisan
+ * Author URI:        http://webcartisan.com/
+ * License:           GPL v2 or later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain:       variation-monster
+ * Requires Plugins:  woocommerce
  */
 
 if (!defined('ABSPATH')) exit;
@@ -46,7 +44,7 @@ function varimo_variation_monster_check_conflicts() {
     $conflicting_plugins = [
         'product-variation-table-with-quick-cart/product-variation-table-with-quick-cart.php',
         'product-variation-table-with-quick-cart-pro/product-variation-table-with-quick-cart-pro.php',
-        'variation-monster/variation-monster.php',
+        'variation-monster-pro/variation-monster-pro.php',
     ];
 
     if (!function_exists('is_plugin_active')) {
@@ -66,12 +64,12 @@ function varimo_variation_monster_check_conflicts() {
                 ?>
                 <div class="notice notice-error is-dismissible">
                     <p>
-                        <strong><?php echo esc_html__('Variation Monster:', 'variation-monster-pro'); ?></strong>
-                        <?php echo esc_html__(' This plugin cannot be activated because', 'variation-monster-pro'); ?>
+                        <strong><?php echo esc_html__('Variation Monster:', 'variation-monster'); ?></strong>
+                        <?php echo esc_html__(' This plugin cannot be activated because', 'variation-monster'); ?>
                         <strong><?php echo esc_html($plugin_name); ?></strong>
-                        <?php echo esc_html__(' is already active.', 'variation-monster-pro'); ?>
+                        <?php echo esc_html__(' is already active.', 'variation-monster'); ?>
                         <br><br>
-                        <?php echo esc_html__('Please deactivate it first and then try again.', 'variation-monster-pro'); ?>
+                        <?php echo esc_html__('Please deactivate it first and then try again.', 'variation-monster'); ?>
                     </p>
                 </div>
                 <?php
@@ -201,7 +199,7 @@ if (varimo_variation_monster_check_conflicts() === true){
          */
         public function variation_table_quick_cart_settings_link( $links ) {
             $action_links = array(
-                'settings' => '<a href="' . admin_url( 'admin.php?page=wc-settings&tab=variation-monster-setting' ) . '" aria-label="' . esc_attr__( 'View Variation Table with Quick Cart Settings', 'variation-monster-pro' ) . '">' . esc_html__( 'Settings', 'variation-monster-pro' ) . '</a>',
+                'settings' => '<a href="' . admin_url( 'admin.php?page=wc-settings&tab=variation-monster-setting' ) . '" aria-label="' . esc_attr__( 'View Variation Table with Quick Cart Settings', 'variation-monster' ) . '">' . esc_html__( 'Settings', 'variation-monster' ) . '</a>',
             );
 
             return array_merge( $action_links, $links );
@@ -258,7 +256,7 @@ add_action('dokan_product_after_variation_pricing', function ($loop, $variation_
     $image_ids      = $gallery_images ? explode(',', $gallery_images) : [];
     ?>
     <div class="form-row form-row-full" style="margin-top: 10px; margin-bottom: 10px; border: 1px solid lightgrey; padding: 5px; border-radius: 5px;">
-        <label style="font-weight:bold;"><?php esc_html_e('Gallery Images', 'variation-monster-pro'); ?></label>
+        <label style="font-weight:bold;"><?php esc_html_e('Gallery Images', 'variation-monster'); ?></label>
         <ul id="gallery-container-<?php echo esc_attr($variation->ID); ?>" class="variation-gallery-container" style="margin-top: 5px;">
             <?php foreach ($image_ids as $image_id): ?>
                 <li class="variation-gallery-item" data-image-id="<?php echo esc_attr($image_id); ?>">
@@ -281,7 +279,7 @@ add_action('dokan_product_after_variation_pricing', function ($loop, $variation_
         </ul>
         <input type="hidden" name="variation_gallery_nonce[<?php echo esc_attr($variation->ID); ?>]" value="<?php echo esc_attr(wp_create_nonce('save_variation_gallery_' . $variation->ID)); ?>" />
         <input type="hidden" name="variation_gallery_image[<?php echo esc_attr($variation->ID); ?>]" id="variation-gallery-input-<?php echo esc_attr($variation->ID); ?>" value="<?php echo esc_attr($gallery_images); ?>" />
-        <button type="button" style="margin-top:10px;" class="button upload-variation-gallery-image" data-variation-id="<?php echo esc_attr($variation->ID); ?>"><?php esc_html_e('Upload Images', 'variation-monster-pro'); ?></button>
+        <button type="button" style="margin-top:10px;" class="button upload-variation-gallery-image" data-variation-id="<?php echo esc_attr($variation->ID); ?>"><?php esc_html_e('Upload Images', 'variation-monster'); ?></button>
     </div>
     <?php
 }, 10, 3);

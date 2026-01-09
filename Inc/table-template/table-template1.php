@@ -87,7 +87,7 @@ if (isset($product) && $product->is_type("variable")) {
 
                 <?php if ($varimoImageHideShow === "true"){
                     ?>
-                    <th><?php esc_html_e('Image', 'variation-monster-pro'); ?></th>
+                    <th><?php esc_html_e('Image', 'variation-monster'); ?></th>
                     <?php
                 }?>
 
@@ -96,7 +96,7 @@ if (isset($product) && $product->is_type("variable")) {
 
                     <th>
                         <span style="display: inline-block; margin-top: 9px">
-                            <?php esc_html_e('SKU', 'variation-monster-pro'); ?>
+                            <?php esc_html_e('SKU', 'variation-monster'); ?>
                         </span>
                         <span style=" float: right; display: grid;" id="sku-sort-arrows">
                             <span style="height: 10px" class="dashicons dashicons-arrow-up" id="sort-arrow-up"></span>
@@ -151,7 +151,7 @@ if (isset($product) && $product->is_type("variable")) {
                     ?>
                     <th >
                         <span style="display: inline-block; margin-top: 9px">
-                        <?php esc_html_e('Price', 'variation-monster-pro'); ?>
+                        <?php esc_html_e('Price', 'variation-monster'); ?>
                         </span>
                         <span style="float: right; display: grid" id="price-sort-arrows">
                             <span style="height: 10px" class="dashicons dashicons-arrow-up" id="price-sort-arrow-up"></span>
@@ -168,13 +168,13 @@ if (isset($product) && $product->is_type("variable")) {
 
                 if ($varimoQuantityHideShow === "true"){
                     ?>
-                    <th><?php esc_html_e('Quantity', 'variation-monster-pro'); ?></th>
+                    <th><?php esc_html_e('Quantity', 'variation-monster'); ?></th>
                     <?php
                 }?>
 
                 <?php if ($varimoActionHideShow === "true"){
                     ?>
-                    <th><?php esc_html_e('Action', 'variation-monster-pro'); ?></th>
+                    <th><?php esc_html_e('Action', 'variation-monster'); ?></th>
                     <?php
                 }?>
 
@@ -364,7 +364,7 @@ if (isset($product) && $product->is_type("variable")) {
                         ?>
                         <td class="stock-notification" style="padding: 20px; text-align: center ; justify-items: center">
                             <?php if (0 === ($varimo_variation_stock_quantity) || $varimo_variation->get_stock_status() === "outofstock") : ?>
-                                <p><?php esc_html_e('Out Of Stock', 'variation-monster-pro'); ?></p>
+                                <p><?php esc_html_e('Out Of Stock', 'variation-monster'); ?></p>
                             <?php else : ?>
                                 <button style="width: 100%; text-align: center" class="quick-add-to-cart" data-productId="<?php echo esc_attr($product->get_id()); ?>" data-variationId="<?php echo esc_attr($varimo_variation_id); ?>">
                                     <?php if (!empty($varimoQuickCartIconImageLink)): ?>
@@ -401,8 +401,8 @@ if (isset($product) && $product->is_type("variable")) {
 
         <!-- Pagination Controls -->
         <div id="pagination">
-            <button style="margin-right: 5px" id="prevPage" disabled><?php esc_html_e('Previous', 'variation-monster-pro'); ?></button>
-            <button id="nextPage"><?php esc_html_e('Next', 'variation-monster-pro'); ?></button>
+            <button style="margin-right: 5px" id="prevPage" disabled><?php esc_html_e('Previous', 'variation-monster'); ?></button>
+            <button id="nextPage"><?php esc_html_e('Next', 'variation-monster'); ?></button>
         </div>
     </div>
     <?php

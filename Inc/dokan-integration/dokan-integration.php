@@ -81,8 +81,8 @@ class VARIMO_Dokan_Integration {
 
         <div class="dokan-attribute-variation-options dokan-edit-row dokan-clearfix hide_if_external">
             <div class="dokan-section-heading" data-togglehandler="dokan_attribute_variation_options">
-                <h2><i class="fas fa-cubes" aria-hidden="true"></i> <span class="show_if_variable show_if_variable-subscription"><?php esc_html_e( 'Variation Monster', 'variation-monster-pro' ); ?></span></h2>
-                <p class="show_if_variable show_if_variable-subscription"><?php esc_html_e( 'Manage variation monster meta data settings for this variable product.', 'variation-monster-pro' ); ?></p>
+                <h2><i class="fas fa-cubes" aria-hidden="true"></i> <span class="show_if_variable show_if_variable-subscription"><?php esc_html_e( 'Variation Monster', 'variation-monster' ); ?></span></h2>
+                <p class="show_if_variable show_if_variable-subscription"><?php esc_html_e( 'Manage variation monster meta data settings for this variable product.', 'variation-monster' ); ?></p>
 
                 <a href="#" class="dokan-section-toggle">
                     <i class="fas fa-sort-down fa-flip-vertical" aria-hidden="true"></i>
@@ -213,7 +213,7 @@ class VARIMO_Dokan_Integration {
                         </div>
                     </div>
 
-                    <h2 style="font-weight: bold"><?php esc_html_e('Extend Attribute Settings', 'variation-monster-pro'); ?></h2>
+                    <h2 style="font-weight: bold"><?php esc_html_e('Extend Attribute Settings', 'variation-monster'); ?></h2>
                     <table class="wp-list-table widefat fixed striped" id="attribute-table" style="cursor: pointer; display: contents;">
                         <tbody>
                         <?php
@@ -239,19 +239,19 @@ class VARIMO_Dokan_Integration {
                                         <h4 style="font-weight: bold;"><?php echo esc_html($attribute_name); ?></h4>
                                     </td>
                                     <td style="display: flex; gap:20px;" class="show-in-archive-page-attribute-select-option">
-                                        <label style="min-width: fit-content"><?php esc_html_e('Show in Archive Page:', 'variation-monster-pro'); ?></label>
+                                        <label style="min-width: fit-content"><?php esc_html_e('Show in Archive Page:', 'variation-monster'); ?></label>
                                         <select name="show_attribute_archive_page[<?php echo esc_attr($attribute_slug); ?>]" id="show_attribute_archive_page_[<?php echo esc_attr($attribute_slug); ?>]">
-                                            <option value="yes" <?php selected($show_archive, 'yes'); ?>><?php esc_html_e('Yes', 'variation-monster-pro'); ?></option>
-                                            <option value="" <?php selected($show_archive, ''); ?>><?php esc_html_e('No', 'variation-monster-pro'); ?></option>
+                                            <option value="yes" <?php selected($show_archive, 'yes'); ?>><?php esc_html_e('Yes', 'variation-monster'); ?></option>
+                                            <option value="" <?php selected($show_archive, ''); ?>><?php esc_html_e('No', 'variation-monster'); ?></option>
                                         </select>
                                     </td>
                                     <td class="varimo-dokan-display-type-attribute" style="display: flex; gap:20px;">
-                                        <label style="min-width: fit-content"><?php esc_html_e('Display Type:', 'variation-monster-pro'); ?></label>
+                                        <label style="min-width: fit-content"><?php esc_html_e('Display Type:', 'variation-monster'); ?></label>
                                         <select data-rowSlug-displayType="<?php echo esc_attr($attribute_slug); ?>" name="attribute_display_type[<?php echo esc_attr($attribute_slug); ?>]" id="attribute_display_type_<?php echo esc_attr($attribute_slug); ?>">
-                                            <option value="button" <?php selected($display_type, 'button'); ?>><?php esc_html_e('Button', 'variation-monster-pro'); ?></option>
-                                            <option value="color" <?php selected($display_type, 'color'); ?>><?php esc_html_e('Color', 'variation-monster-pro'); ?></option>
-                                            <option value="image" <?php selected($display_type, 'image'); ?>><?php esc_html_e('Image', 'variation-monster-pro'); ?></option>
-                                            <option value="radio" <?php selected($display_type, 'radio'); ?>><?php esc_html_e('Radio', 'variation-monster-pro'); ?></option>
+                                            <option value="button" <?php selected($display_type, 'button'); ?>><?php esc_html_e('Button', 'variation-monster'); ?></option>
+                                            <option value="color" <?php selected($display_type, 'color'); ?>><?php esc_html_e('Color', 'variation-monster'); ?></option>
+                                            <option value="image" <?php selected($display_type, 'image'); ?>><?php esc_html_e('Image', 'variation-monster'); ?></option>
+                                            <option value="radio" <?php selected($display_type, 'radio'); ?>><?php esc_html_e('Radio', 'variation-monster'); ?></option>
                                         </select>
                                         <p class="attribute-toggle-btn" data-row-id="<?php echo esc_attr($attribute_slug); ?>" style="cursor: pointer; display: inline-flex; align-items: center; margin-left: 80px">
                                             <span class="dashicons dashicons-arrow-down toggle-icon"></span>
@@ -299,7 +299,7 @@ class VARIMO_Dokan_Integration {
                                                         <td style="min-width: 100px; font-weight:bold;"><?php echo esc_html(get_term($term_id)->name); ?></td>
                                                         <td>
                                                             <div class="color-meta display-typeShow-color-<?php echo esc_attr($attribute_slug); ?>" id="display-select-option-color-<?php echo esc_attr($term_id); ?>-<?php echo esc_attr($attribute_id); ?>" style="display: none; display: flex; gap: 78px; margin-top: 10px">
-                                                                <label style="font-weight:bold;"><?php esc_html_e('Color:', 'variation-monster-pro'); ?></label>
+                                                                <label style="font-weight:bold;"><?php esc_html_e('Color:', 'variation-monster'); ?></label>
                                                                 <input type="text"
                                                                        name="variation_meta_color[<?php echo esc_attr($term_id); ?>][<?php echo esc_attr($attribute_id); ?>]"
                                                                        id="variation_meta_color_<?php echo esc_attr($term_id); ?>_<?php echo esc_attr($attribute_id); ?>"
@@ -308,7 +308,7 @@ class VARIMO_Dokan_Integration {
                                                             </div>
 
                                                             <div class="color-meta display-typeShow-color-<?php echo esc_attr($attribute_slug); ?>" id="display-select-option-secondary-color-<?php echo esc_attr($term_id); ?>-<?php echo esc_attr($attribute_id); ?>" style="display: none; display: flex; gap: 50px; margin-top: 10px">
-                                                                <label style="font-weight:bold;"><?php esc_html_e('Secondary Color:', 'variation-monster-pro'); ?></label>
+                                                                <label style="font-weight:bold;"><?php esc_html_e('Secondary Color:', 'variation-monster'); ?></label>
                                                                 <input type="text"
                                                                        name="variation_meta_secondary_color[<?php echo esc_attr($term_id); ?>][<?php echo esc_attr($attribute_id); ?>]"
                                                                        id="variation_meta_secondary_color_<?php echo esc_attr($term_id); ?>_<?php echo esc_attr($attribute_id); ?>"
@@ -317,7 +317,7 @@ class VARIMO_Dokan_Integration {
                                                             </div>
 
                                                             <div class="image-meta display-typeShow-image-<?php echo esc_attr($attribute_slug); ?>" id="display-select-option-image-<?php echo esc_attr($term_id); ?>-<?php echo esc_attr($attribute_id); ?>" style="display: none; display: flex; gap: 50px; margin-top: 10px">
-                                                                <label style="font-weight:bold;"><?php esc_html_e('Image:', 'variation-monster-pro'); ?></label>
+                                                                <label style="font-weight:bold;"><?php esc_html_e('Image:', 'variation-monster'); ?></label>
                                                                 <div>
                                                                     <img id="meta_term_image_preview_<?php echo esc_attr($term_id); ?>"
                                                                          class="meta_term_image_preview"
@@ -330,13 +330,13 @@ class VARIMO_Dokan_Integration {
                                                                            class="meta_term_image"
                                                                            value="<?php echo esc_attr($image_url); ?>">
                                                                     <div style="display: flex; gap: 10px;">
-                                                                        <button type="button" class="button meta_upload_image_button"><?php esc_html_e('Upload Image', 'variation-monster-pro'); ?></button>
-                                                                        <button type="button" class="button meta_image_button_remove" style="background-color: firebrick; color: white;"><?php esc_html_e('Remove Image', 'variation-monster-pro'); ?></button>
+                                                                        <button type="button" class="button meta_upload_image_button"><?php esc_html_e('Upload Image', 'variation-monster'); ?></button>
+                                                                        <button type="button" class="button meta_image_button_remove" style="background-color: firebrick; color: white;"><?php esc_html_e('Remove Image', 'variation-monster'); ?></button>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="tooltip-meta" style="margin-top: 10px; display: flex; gap: 50px;">
-                                                                <label style="font-weight:bold;"><?php esc_html_e('Tooltip:', 'variation-monster-pro'); ?></label>
+                                                                <label style="font-weight:bold;"><?php esc_html_e('Tooltip:', 'variation-monster'); ?></label>
                                                                 <input type="text" placeholder=""
                                                                        name="variation_meta_tooltip[<?php echo esc_attr($term_id); ?>][<?php echo esc_attr($attribute_id); ?>]"
                                                                        id="variation_meta_tooltip_<?php echo esc_attr($term_id); ?>"
@@ -344,7 +344,7 @@ class VARIMO_Dokan_Integration {
                                                             </div>
 
                                                             <div class="tooltip-image-meta" id="" style="margin-top: 44px; display: flex; gap: 50px;">
-                                                                <label style="font-weight:bold;"><?php esc_html_e('Tooltip Image:', 'variation-monster-pro'); ?></label>
+                                                                <label style="font-weight:bold;"><?php esc_html_e('Tooltip Image:', 'variation-monster'); ?></label>
                                                                 <div>
                                                                     <img id="tooltip_meta_term_image_preview_<?php echo esc_attr($term_id); ?>"
                                                                          class="tooltip_meta_term_image_preview"
@@ -357,8 +357,8 @@ class VARIMO_Dokan_Integration {
                                                                            class="tooltip_meta_term_image"
                                                                            value="<?php echo esc_attr($tooltip_meta_image_url); ?>">
                                                                     <div style="display: flex; gap: 10px;">
-                                                                        <button type="button" class="button tooltip_meta_upload_image_button"><?php esc_html_e('Upload Image', 'variation-monster-pro'); ?></button>
-                                                                        <button type="button" class="button tooltip_meta_image_button_remove" style="background-color: firebrick; color: white;"><?php esc_html_e('Remove Image', 'variation-monster-pro'); ?></button>
+                                                                        <button type="button" class="button tooltip_meta_upload_image_button"><?php esc_html_e('Upload Image', 'variation-monster'); ?></button>
+                                                                        <button type="button" class="button tooltip_meta_image_button_remove" style="background-color: firebrick; color: white;"><?php esc_html_e('Remove Image', 'variation-monster'); ?></button>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -375,7 +375,7 @@ class VARIMO_Dokan_Integration {
 
                                                                     ?>
                                                                     <div class="form-row form-row-full" >
-                                                                        <label style="font-weight:bold;"><?php esc_html_e('Gallery Image:', 'variation-monster-pro'); ?></label>
+                                                                        <label style="font-weight:bold;"><?php esc_html_e('Gallery Image:', 'variation-monster'); ?></label>
                                                                         <ul id="gallery-container-<?php echo esc_attr($term_id); ?>" class="variation-gallery-container" style="margin-top: 5px;">
                                                                             <?php foreach ($term_image_ids as $image_id): ?>
                                                                                 <li class="variation-gallery-item" data-image-id="<?php echo esc_attr($image_id); ?>">
@@ -397,7 +397,7 @@ class VARIMO_Dokan_Integration {
                                                                             <?php endforeach; ?>
                                                                         </ul>
                                                                         <input type="hidden" name="term_gallery_image[<?php echo esc_attr($term_id); ?>][<?php echo esc_attr($attribute_id); ?>]" id="variation-gallery-input-<?php echo esc_attr($term_id); ?>" value="<?php echo esc_attr($term_gallery_images); ?>" />
-                                                                        <button type="button" class="button upload-variation-gallery-image" data-variation-id="<?php echo esc_attr($term_id); ?>"><?php esc_html_e('Upload Images', 'variation-monster-pro'); ?></button>
+                                                                        <button type="button" class="button upload-variation-gallery-image" data-variation-id="<?php echo esc_attr($term_id); ?>"><?php esc_html_e('Upload Images', 'variation-monster'); ?></button>
                                                                     </div>
 
                                                                 </div>
@@ -426,7 +426,7 @@ class VARIMO_Dokan_Integration {
                                                         <td style="min-width: 100px; font-weight: bold;"><?php echo esc_html($custom_value); ?></td>
                                                         <td>
                                                             <div class="color-meta display-typeShow-color-<?php echo esc_attr($attribute_slug); ?>" id="display-select-option-custom-color-<?php echo esc_attr($custom_value_id); ?>-<?php echo esc_attr($attribute_id); ?>" style="display: none; display: flex; gap:78px; margin-top: 10px">
-                                                                <label style="font-weight:bold;"><?php esc_html_e('Color:', 'variation-monster-pro'); ?></label>
+                                                                <label style="font-weight:bold;"><?php esc_html_e('Color:', 'variation-monster'); ?></label>
                                                                 <input type="text"
                                                                        name="variation_meta_color[<?php echo esc_attr($custom_value_slug); ?>][<?php echo esc_attr($attribute_id); ?>]"
                                                                        id="variation_meta_color_<?php echo esc_attr($custom_value_slug); ?>_<?php echo esc_attr($attribute_id); ?>"
@@ -435,7 +435,7 @@ class VARIMO_Dokan_Integration {
                                                             </div>
 
                                                             <div class="color-meta display-typeShow-color-<?php echo esc_attr($attribute_slug); ?>" id="display-select-option-custom-secondary-color-<?php echo esc_attr($custom_value_id); ?>-<?php echo esc_attr($attribute_id); ?>" style="display: none; display: flex; gap:50px; margin-top: 10px">
-                                                                <label style="font-weight:bold;"><?php esc_html_e('Secondary Color:', 'variation-monster-pro'); ?></label>
+                                                                <label style="font-weight:bold;"><?php esc_html_e('Secondary Color:', 'variation-monster'); ?></label>
                                                                 <input type="text"
                                                                        name="variation_meta_secondary_color[<?php echo esc_attr($custom_value_slug); ?>][<?php echo esc_attr($attribute_id); ?>]"
                                                                        id="variation_meta_secondary_color_<?php echo esc_attr($custom_value_slug); ?>_<?php echo esc_attr($attribute_id); ?>"
@@ -444,7 +444,7 @@ class VARIMO_Dokan_Integration {
                                                             </div>
 
                                                             <div class="image-meta display-typeShow-image-<?php echo esc_attr($attribute_slug); ?>" id="display-select-option-custom-image-<?php echo esc_attr($custom_value_id); ?>-<?php echo esc_attr($attribute_id); ?>" style="display: none; display: flex; gap: 50px; margin-top: 10px">
-                                                                <label style="font-weight:bold;"><?php esc_html_e('Image:', 'variation-monster-pro'); ?></label>
+                                                                <label style="font-weight:bold;"><?php esc_html_e('Image:', 'variation-monster'); ?></label>
                                                                 <div>
                                                                     <img id="meta_term_image_preview_<?php echo esc_attr($custom_value_slug); ?>"
                                                                          class="meta_term_image_preview"
@@ -463,7 +463,7 @@ class VARIMO_Dokan_Integration {
                                                                 </div>
                                                             </div>
                                                             <div class="tooltip-meta" style="margin-top: 10px; display: flex; gap: 50px;">
-                                                                <label style="font-weight:bold;"><?php esc_html_e('Tooltip:', 'variation-monster-pro'); ?></label>
+                                                                <label style="font-weight:bold;"><?php esc_html_e('Tooltip:', 'variation-monster'); ?></label>
                                                                 <input type="text" placeholder="Tooltip"
                                                                        name="variation_meta_tooltip[<?php echo esc_attr($custom_value_slug); ?>][<?php echo esc_attr($attribute_id); ?>]"
                                                                        id="variation_meta_tooltip_<?php echo esc_attr($custom_value_slug); ?>"
@@ -471,7 +471,7 @@ class VARIMO_Dokan_Integration {
                                                             </div>
 
                                                             <div class="tooltip-image-meta" id="" style="margin-top: 44px; display: flex; gap: 50px">
-                                                                <label style="font-weight:bold;"><?php esc_html_e('Tooltip Image:', 'variation-monster-pro'); ?></label>
+                                                                <label style="font-weight:bold;"><?php esc_html_e('Tooltip Image:', 'variation-monster'); ?></label>
                                                                 <div>
                                                                     <img id="tooltip_meta_term_image_preview_<?php echo esc_attr($custom_value_slug); ?>"
                                                                          class="tooltip_meta_term_image_preview"
@@ -501,7 +501,7 @@ class VARIMO_Dokan_Integration {
 
                                                                     ?>
                                                                     <div class="form-row form-row-full" >
-                                                                        <label style="font-weight:bold;"><?php esc_html_e('Gallery Image:', 'variation-monster-pro'); ?></label>
+                                                                        <label style="font-weight:bold;"><?php esc_html_e('Gallery Image:', 'variation-monster'); ?></label>
                                                                         <ul id="gallery-container-<?php echo esc_attr($custom_value_slug); ?>" class="variation-gallery-container" style="margin-top: 5px;">
                                                                             <?php foreach ($term_image_ids as $image_id): ?>
                                                                                 <li class="variation-gallery-item" data-image-id="<?php echo esc_attr($image_id); ?>">
@@ -523,7 +523,7 @@ class VARIMO_Dokan_Integration {
                                                                             <?php endforeach; ?>
                                                                         </ul>
                                                                         <input type="hidden" name="term_gallery_image[<?php echo esc_attr($custom_value_slug); ?>][<?php echo esc_attr($attribute_id); ?>]" id="variation-gallery-input-<?php echo esc_attr($custom_value_slug); ?>" value="<?php echo esc_attr($term_gallery_images); ?>" />
-                                                                        <button type="button" class="button upload-variation-gallery-image" data-variation-id="<?php echo esc_attr($custom_value_slug); ?>"><?php esc_html_e('Upload Images', 'variation-monster-pro'); ?></button>
+                                                                        <button type="button" class="button upload-variation-gallery-image" data-variation-id="<?php echo esc_attr($custom_value_slug); ?>"><?php esc_html_e('Upload Images', 'variation-monster'); ?></button>
                                                                     </div>
 
                                                                 </div>
@@ -540,7 +540,7 @@ class VARIMO_Dokan_Integration {
                                             }
 
                                             if (empty($term_ids) && empty($custom_attribute_values)) {
-                                                echo '<tr><td colspan="2">' . esc_html__('No attributes found for this product.', 'variation-monster-pro') . '</td></tr>';
+                                                echo '<tr><td colspan="2">' . esc_html__('No attributes found for this product.', 'variation-monster') . '</td></tr>';
                                             }
                                             ?>
 
@@ -552,7 +552,7 @@ class VARIMO_Dokan_Integration {
                                 <?php
                             }
                         } else {
-                            echo '<tr><td colspan="2">' . esc_html__('No attributes found.', 'variation-monster-pro') . '</td></tr>';
+                            echo '<tr><td colspan="2">' . esc_html__('No attributes found.', 'variation-monster') . '</td></tr>';
                         }
                         ?>
                         </tbody>

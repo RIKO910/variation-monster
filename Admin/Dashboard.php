@@ -171,40 +171,40 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
     <div class="tab">
         <a style="padding:8px;" class="tablinks" onclick="event.preventDefault(); varimoDashboardClick(event, 'general')" id="defaultOpen">
-            <i class="fas fa-cog"></i> <?php echo wp_kses(' General Setting','variation-monster-pro'); ?>
+            <i class="fas fa-cog"></i> <?php echo wp_kses(' General Setting','variation-monster'); ?>
         </a>
         <div class="vertical-divider"></div>
         <a style="padding:8px" class="tablinks" onclick="event.preventDefault(); varimoDashboardClick(event, 'carousel')">
-            <i class="fas fa-sliders-h"></i> <?php echo wp_kses(' Carousel Settings','variation-monster-pro'); ?>
+            <i class="fas fa-sliders-h"></i> <?php echo wp_kses(' Carousel Settings','variation-monster'); ?>
         </a>
         <div class="vertical-divider"></div>
         <a style="padding:8px" class="tablinks" onclick="event.preventDefault(); varimoDashboardClick(event, 'table')">
-            <i class="fas fa-table"></i> <?php echo wp_kses(' Table Setting','variation-monster-pro'); ?>
+            <i class="fas fa-table"></i> <?php echo wp_kses(' Table Setting','variation-monster'); ?>
         </a>
         <div class="vertical-divider"></div>
         <a style="padding:8px" class="tablinks" onclick="event.preventDefault(); varimoDashboardClick(event, 'select-variation')">
-            <i class="fas fa-layer-group"></i> <?php echo wp_kses(' Variation Swatches','variation-monster-pro'); ?>
+            <i class="fas fa-layer-group"></i> <?php echo wp_kses(' Variation Swatches','variation-monster'); ?>
         </a>
         <div class="vertical-divider"></div>
         <a style="padding:8px" class="tablinks" onclick="event.preventDefault(); varimoDashboardClick(event, 'select-variation-ul-li')">
-            <i class="fas fa-list"></i> <?php echo wp_kses(' Variation List','variation-monster-pro'); ?>
+            <i class="fas fa-list"></i> <?php echo wp_kses(' Variation List','variation-monster'); ?>
         </a>
         <div class="vertical-divider"></div>
         <a style="padding:8px" class="tablinks" onclick="event.preventDefault(); varimoDashboardClick(event, 'variation-gallery')">
-            <i class="fas fa-images"></i> <?php echo wp_kses(' Variation Gallery','variation-monster-pro'); ?>
+            <i class="fas fa-images"></i> <?php echo wp_kses(' Variation Gallery','variation-monster'); ?>
         </a>
         <div class="vertical-divider"></div>
         <a style="padding:8px" class="tablinks" onclick="event.preventDefault(); varimoDashboardClick(event, 'attribute-gallery')">
-            <i class="fas fa-shapes"></i> <?php echo wp_kses(' Attribute Gallery','variation-monster-pro'); ?>
+            <i class="fas fa-shapes"></i> <?php echo wp_kses(' Attribute Gallery','variation-monster'); ?>
         </a>
     </div>
 
     <div id="general" class="tabcontent" >
         <div id="quickSwitchesWrapper">
-            <h2><?php echo esc_html('Carousel and Table General Setting','variation-monster-pro'); ?></h2>
+            <h2><?php echo esc_html('Carousel and Table General Setting','variation-monster'); ?></h2>
 
             <div class="quick-selections" style="display: flex; align-items: center;">
-                <h4><?php echo wp_kses('Show Sell Price If Available: ','variation-monster-pro');
+                <h4><?php echo wp_kses('Show Sell Price If Available: ','variation-monster');
 
 
 
@@ -220,7 +220,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
             </div>
 
             <div class="quick-selections" style="display: flex; align-items: center;">
-                <h4><?php echo wp_kses('Add to Cart Icon (Font Awesome 5): ','variation-monster-pro');?></h4>
+                <h4><?php echo wp_kses('Add to Cart Icon (Font Awesome 5): ','variation-monster');?></h4>
                 <div class="quick-selectors-wrapper">
                     <div class="icon-design" style="display: flex; gap: 10px; align-items: center;">
 
@@ -258,21 +258,21 @@ $varimoLicense_active                     = get_option('quick_license_key');
             <h4 style="margin-top: 20px">OR</h4>
             <div class="quick-selections">
                 <div class="quick-selectors-wrapper m-top">
-                    <label for="quick-cart-icon-image-link"><strong><?php esc_html_e('Add to Cart Icon Image Link:','variation-monster-pro'); ?></strong></label>
+                    <label for="quick-cart-icon-image-link"><strong><?php esc_html_e('Add to Cart Icon Image Link:','variation-monster'); ?></strong></label>
                     <input id="quick-cart-icon-image-link" type="text" class="quick-cart-icon-image-link" value="<?php echo  esc_attr($varimoQuickCartIconImageLink); ?>">
                 </div>
             </div>
 
             <div class="quick-selections">
                 <div class="quick-selectors-wrapper m-top">
-                    <label for="quick-add-to-cart-text"><strong><?php esc_html_e('Add to Cart Button Text:','variation-monster-pro'); ?></strong></label>
+                    <label for="quick-add-to-cart-text"><strong><?php esc_html_e('Add to Cart Button Text:','variation-monster'); ?></strong></label>
                     <input id="quick-add-to-cart-text" type="text" class="quick-add-to-cart-text" value="<?php echo  esc_attr($varimoCartButtonText); ?>">
                 </div>
             </div>
 
             <div class="quick-selections">
                 <div class="quick-selectors-wrapper m-top">
-                    <label for="add-to-cart-bg"><strong><?php esc_html_e('Add to Cart Button Background Color:','variation-monster-pro'); ?></strong></label>
+                    <label for="add-to-cart-bg"><strong><?php esc_html_e('Add to Cart Button Background Color:','variation-monster'); ?></strong></label>
                     <input id="add-to-cart-bg" name="add-to-cart-bg" value="<?php echo esc_attr($varimoCartButtonBg); ?>" data-jscolor="{}">
                 </div>
             </div>
@@ -280,56 +280,56 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
             <div class="quick-selections">
                 <div class="quick-selectors-wrapper m-top">
-                    <label for="add-to-cart-bg-hover"><strong><?php echo wp_kses('Add to Cart Button Background Hover Color: ','variation-monster-pro');?></strong></label>
+                    <label for="add-to-cart-bg-hover"><strong><?php echo wp_kses('Add to Cart Button Background Hover Color: ','variation-monster');?></strong></label>
                     <input id="add-to-cart-bg-hover" name="add-to-cart-bg-hover" value="<?php echo esc_attr($varimoCartButtonBgHover); ?>" data-jscolor="{}">
                 </div>
             </div>
 
             <div class="quick-selections">
                 <div class="quick-selectors-wrapper m-top">
-                    <label for="add-to-cart-text"><strong><?php echo wp_kses('Add to Cart Button Text Color: ','variation-monster-pro');?></strong></label>
+                    <label for="add-to-cart-text"><strong><?php echo wp_kses('Add to Cart Button Text Color: ','variation-monster');?></strong></label>
                     <input id="add-to-cart-text" name="add-to-cart-text" value="<?php echo esc_attr($varimoCartButtonTextColor); ?>" data-jscolor="{}">
                 </div>
             </div>
 
             <div class="quick-selections">
                 <div class="quick-selectors-wrapper m-top">
-                    <label for="add-to-cart-text-hover-color"><strong><?php echo wp_kses('Add to Cart Button Text Hover Color: ','variation-monster-pro');?></strong></label>
+                    <label for="add-to-cart-text-hover-color"><strong><?php echo wp_kses('Add to Cart Button Text Hover Color: ','variation-monster');?></strong></label>
                     <input id="add-to-cart-text-hover-color" name="add-to-cart-text-hover-color" value="<?php echo esc_attr($varimoCartButtonTextHoverColor); ?>" data-jscolor="{}">
                 </div>
             </div>
 
             <div class="quick-selections">
                 <div class="quick-selectors-wrapper m-top">
-                    <label for="quantity-bg-color"><strong><?php echo esc_html('Quantity Plus Minus Button Background Color:','variation-monster-pro'); ?></strong></label>
+                    <label for="quantity-bg-color"><strong><?php echo esc_html('Quantity Plus Minus Button Background Color:','variation-monster'); ?></strong></label>
                     <input id="quantity-bg-color" name="quantity-bg-color" value="<?php echo esc_attr($varimoQuantityBg); ?>" data-jscolor="{}">
                 </div>
             </div>
 
             <div class="quick-selections">
                 <div class="quick-selectors-wrapper m-top">
-                    <label for="quantity-bg-color-hover"><strong><?php echo wp_kses('Quantity Plus Minus Button Background Hover Color: ','variation-monster-pro');?></strong></label>
+                    <label for="quantity-bg-color-hover"><strong><?php echo wp_kses('Quantity Plus Minus Button Background Hover Color: ','variation-monster');?></strong></label>
                     <input id="quantity-bg-color-hover" name="quantity-bg-color-hover" value="<?php echo esc_attr($varimoPlusMinusBgColorHover); ?>" data-jscolor="{}">
                 </div>
             </div>
 
             <div class="quick-selections">
                 <div class="quick-selectors-wrapper m-top">
-                    <label for="quantity-text-color"><strong> <?php echo wp_kses('Quantity Plus Minus Button Text Color: ','variation-monster-pro');?></strong></label>
+                    <label for="quantity-text-color"><strong> <?php echo wp_kses('Quantity Plus Minus Button Text Color: ','variation-monster');?></strong></label>
                     <input id="quantity-text-color" name="quantity-text-color" value="<?php echo esc_attr($varimoQuantityTextColor); ?>"  data-jscolor="{}">
                 </div>
             </div>
 
             <div class="quick-selections">
                 <div class="quick-selectors-wrapper m-top">
-                    <label for="quantity-text-hover-color"><strong> <?php echo wp_kses('Quantity Plus Minus Button Text Hover Color: ','variation-monster-pro');?></strong></label>
+                    <label for="quantity-text-hover-color"><strong> <?php echo wp_kses('Quantity Plus Minus Button Text Hover Color: ','variation-monster');?></strong></label>
                     <input id="quantity-text-hover-color" name="quantity-text-hover-color" value="<?php echo esc_attr($varimoQuantityTextHoverColor); ?>"  data-jscolor="{}">
                 </div>
             </div>
 
             <div class="quick-selections">
                 <div class="quick-selectors-wrapper m-top">
-                    <label for="quantity-border-color"><strong> <?php echo wp_kses('Quantity Border Color:','variation-monster-pro'); ?></strong></label>
+                    <label for="quantity-border-color"><strong> <?php echo wp_kses('Quantity Border Color:','variation-monster'); ?></strong></label>
                     <input id="quantity-border-color" name="quantity-border-color" value="<?php echo esc_attr( $varimoQuantityBorderColor ); ?>"  data-jscolor="{}">
                 </div>
             </div>
@@ -340,10 +340,10 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
     <div id="carousel" class="tabcontent">
         <div id="quickSwitchesWrapper">
-            <h2><?php echo esc_html('Variation Quick Cart Carousel Setting','variation-monster-pro'); ?></h2>
+            <h2><?php echo esc_html('Variation Quick Cart Carousel Setting','variation-monster'); ?></h2>
 
             <div class="quick-selections" style="display: flex; align-items: center;">
-                <h4><?php echo wp_kses('Variation Quick Cart Carousel On:', 'variation-monster-pro'); ?></h4>
+                <h4><?php echo wp_kses('Variation Quick Cart Carousel On:', 'variation-monster'); ?></h4>
                 <div class="quick-selectors-wrapper">
                     <div class="quick-carousel-on-off">
                         <label class="switch">
@@ -355,7 +355,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
             </div>
 
             <div class="quick-selections" style="display: flex; align-items: center;">
-                <h4><?php echo wp_kses('Quick view On:', 'variation-monster-pro'); ?></h4>
+                <h4><?php echo wp_kses('Quick view On:', 'variation-monster'); ?></h4>
                 <div class="quick-selectors-wrapper">
                     <div class="quick-view-on-off">
                         <label class="switch">
@@ -368,14 +368,14 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
             <div class="quick-selections quick-selections-style" style="display: flex; gap: 50%">
                 <div>
-                    <h4><?php echo wp_kses('Quick Cart Carousel Template: ','variation-monster-pro');?></h4>
+                    <h4><?php echo wp_kses('Quick Cart Carousel Template: ','variation-monster');?></h4>
 
                     <div>
                         <select id="quick-cart-carousel-template" class="quick-cart-carousel-template" style="outline: none">
-                            <option value="template_1" <?php selected($varimoQuickCartCarouselTemplate, 'template_1'); ?>><?php echo wp_kses('Template 1','variation-monster-pro');?></option>
-                            <option value="template_2" <?php selected($varimoQuickCartCarouselTemplate, 'template_2'); ?>><?php echo wp_kses('Template 2','variation-monster-pro');?></option>
-                            <option value="template_3" <?php selected($varimoQuickCartCarouselTemplate, 'template_3'); ?>><?php echo wp_kses('Template 3','variation-monster-pro');?></option>
-                            <option value="template_4" <?php selected($varimoQuickCartCarouselTemplate, 'template_4'); ?>><?php echo wp_kses('Template 4','variation-monster-pro');?></option>
+                            <option value="template_1" <?php selected($varimoQuickCartCarouselTemplate, 'template_1'); ?>><?php echo wp_kses('Template 1','variation-monster');?></option>
+                            <option value="template_2" <?php selected($varimoQuickCartCarouselTemplate, 'template_2'); ?>><?php echo wp_kses('Template 2','variation-monster');?></option>
+                            <option value="template_3" <?php selected($varimoQuickCartCarouselTemplate, 'template_3'); ?>><?php echo wp_kses('Template 3','variation-monster');?></option>
+                            <option value="template_4" <?php selected($varimoQuickCartCarouselTemplate, 'template_4'); ?>><?php echo wp_kses('Template 4','variation-monster');?></option>
                         </select>
                     </div>
                 </div>
@@ -383,7 +383,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
             <!-- Variable Carousel Position Select -->
             <div class="quick-selections quick-selections-style" >
-                <h4 ><?php echo wp_kses('Variation Quick Cart Carousel Position: ','variation-monster-pro');
+                <h4 ><?php echo wp_kses('Variation Quick Cart Carousel Position: ','variation-monster');
 
                     ?></h4>
                 <div style="display: flex; gap: 1%;">
@@ -431,7 +431,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
             <!-- Carousel Image Size -->
             <div class="quick-selections quick-selections-style">
-                <h4><?php echo wp_kses('Carousel Thumbnail Size : ','variation-monster-pro');
+                <h4><?php echo wp_kses('Carousel Thumbnail Size : ','variation-monster');
 
                     ?></h4>
 
@@ -470,7 +470,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
 
             <div class="quick-selections quick-selections-style">
-                <h4><?php echo wp_kses('Popup Image Size : ','variation-monster-pro');
+                <h4><?php echo wp_kses('Popup Image Size : ','variation-monster');
 
                     ?></h4>
 
@@ -509,7 +509,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
 
             <div class="quick-selections" style="display: flex; align-items: center;">
-                <h4><?php echo wp_kses('Carousel Autoplay On: ','variation-monster-pro');?></h4>
+                <h4><?php echo wp_kses('Carousel Autoplay On: ','variation-monster');?></h4>
                 <div class="quick-selectors-wrapper">
                     <div class="quick-carousel-autoplay">
                         <label class="switch">
@@ -521,7 +521,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
             </div>
 
             <div class="quick-selections" style="display: flex; align-items: center;">
-                <h4><?php echo wp_kses('Redirect to Single Product Page: ','variation-monster-pro');?>
+                <h4><?php echo wp_kses('Redirect to Single Product Page: ','variation-monster');?>
                     <span class="redirect-single-page-help" data-tooltip="When click on image or title in popup">?</span>
                 </h4>
                 <div class="quick-selectors-wrapper">
@@ -536,47 +536,47 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
             <div class="quick-selections">
                 <div class="quick-selectors-wrapper" >
-                    <label for="quick-carousel-button-bg-color"><strong> <?php echo esc_html('Carousel Nav Background Color:','variation-monster-pro'); ?></strong></label>
+                    <label for="quick-carousel-button-bg-color"><strong> <?php echo esc_html('Carousel Nav Background Color:','variation-monster'); ?></strong></label>
                     <input id="quick-carousel-button-bg-color" name="quick-carousel-button-bg-color" value="<?php echo esc_attr( $varimoCarouselButtonBgColor ); ?>"  data-jscolor="{}">
                 </div>
             </div>
 
             <div class="quick-selections">
                 <div class="quick-selectors-wrapper m-top">
-                    <label for="quick-carousel-button-icon-color"><strong> <?php echo wp_kses('Carousel Navigation Button Icon Color: ','variation-monster-pro');?></strong></label>
+                    <label for="quick-carousel-button-icon-color"><strong> <?php echo wp_kses('Carousel Navigation Button Icon Color: ','variation-monster');?></strong></label>
                     <input id="quick-carousel-button-icon-color" name="quick-carousel-button-icon-color" value="<?php echo esc_attr( $varimoCarouselButtonIconColor ); ?>"  data-jscolor="{}">
                 </div>
             </div>
             <!-- Variable Details Box Show Checkboxes -->
             <div class="quick-selections quick-selections-style">
-                <h4><?php esc_html_e('Popup Show:','variation-monster-pro'); ?></h4>
+                <h4><?php esc_html_e('Popup Show:','variation-monster'); ?></h4>
                 <div class="quick-selectors-wrapper">
                     <div class="quick-hover-click">
                         <label class="switch">
                             <input type="checkbox" value="variable-hover" <?php if($varimoVariableHoverClick == "variable-hover"): echo esc_attr("checked"); endif; ?>>
                             <span class="slider round"></span>
                         </label>
-                        <span><?php esc_html_e('On Hover','variation-monster-pro'); ?></span>
+                        <span><?php esc_html_e('On Hover','variation-monster'); ?></span>
                     </div>
                     <div class="quick-hover-click">
                         <label class="switch">
                             <input type="checkbox" value="variable-click" <?php if($varimoVariableHoverClick== "variable-click"): echo esc_attr("checked"); endif; ?>>
                             <span class="slider round"></span>
                         </label>
-                        <span><?php esc_html_e('On Click ','variation-monster-pro'); ?></span>
+                        <span><?php esc_html_e('On Click ','variation-monster'); ?></span>
                     </div>
                 </div>
             </div>
             <!-- Variable Details Box Position Checkboxes -->
             <div class="quick-selections quick-selections-style">
-                <h4><?php esc_html_e('Popup Position:','variation-monster-pro'); ?></h4>
+                <h4><?php esc_html_e('Popup Position:','variation-monster'); ?></h4>
                 <div class="quick-selectors-wrapper">
                     <div class="quick-box-position-click">
                         <label class="switch">
                             <input type="checkbox" value="quick-tooltip-position-center" <?php if($varimoVariableTooltipPosition == "quick-tooltip-position-center" || $varimoVariableTooltipPosition == "" || empty($varimoVariableSetting)): echo esc_attr("checked"); endif; ?>>
                             <span class="slider round"></span>
                         </label>
-                        <span><?php esc_html_e('Center','variation-monster-pro'); ?></span>
+                        <span><?php esc_html_e('Center','variation-monster'); ?></span>
                     </div>
 
                     <div class="quick-box-position-click">
@@ -584,7 +584,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                             <input type="checkbox" value="quick-tooltip-position-left" <?php if($varimoVariableTooltipPosition == "quick-tooltip-position-left"): echo esc_attr("checked"); endif; ?>>
                             <span class="slider round"></span>
                         </label>
-                        <span><?php esc_html_e('Left ','variation-monster-pro');?></span>
+                        <span><?php esc_html_e('Left ','variation-monster');?></span>
                     </div>
 
                     <div class="quick-box-position-click">
@@ -592,12 +592,12 @@ $varimoLicense_active                     = get_option('quick_license_key');
                             <input type="checkbox" value="quick-tooltip-position-right"  <?php if($varimoVariableTooltipPosition == "quick-tooltip-position-right"): echo esc_attr("checked"); endif; ?>>
                             <span class="slider round"></span>
                         </label>
-                        <span><?php esc_html_e('Right ','variation-monster-pro');?></span>
+                        <span><?php esc_html_e('Right ','variation-monster');?></span>
                     </div>
                 </div>
             </div>
             <div class="quick-selections quick-selections-style">
-                <h4><?php esc_html_e('Popup Contents:','variation-monster-pro'); ?></h4>
+                <h4><?php esc_html_e('Popup Contents:','variation-monster'); ?></h4>
                 <div class="quick-selectors-wrapper">
 
                     <div class="quick-box-content-click">
@@ -605,7 +605,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                             <input type="checkbox" value="variable-title-in-box" <?php if( !empty($varimoVariableDetailsTitle) || empty($varimoVariableSetting) ): echo esc_attr("checked"); endif; ?>>
                             <span class="slider round"></span>
                         </label>
-                        <span><?php esc_html_e('Title','variation-monster-pro'); ?></span>
+                        <span><?php esc_html_e('Title','variation-monster'); ?></span>
                     </div>
 
                     <div class="quick-box-content-click">
@@ -613,7 +613,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                             <input type="checkbox" value="variable-image-in-box" <?php if( !empty($varimoVariableDetailsImage) || empty($varimoVariableSetting) ): echo esc_attr("checked"); endif; ?>>
                             <span class="slider round"></span>
                         </label>
-                        <span><?php esc_html_e('Image','variation-monster-pro'); ?></span>
+                        <span><?php esc_html_e('Image','variation-monster'); ?></span>
                     </div>
 
                     <div class="quick-box-content-click">
@@ -621,7 +621,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                             <input type="checkbox" value="variable-excerpt-in-box" <?php if( !empty($varimoVariableDetailsExcerpt) ): echo esc_attr("checked"); endif; ?>>
                             <span class="slider round"></span>
                         </label>
-                        <span><?php esc_html_e('Excerpt ','variation-monster-pro');?></span> <span class="quickPro">(Pro)</span>
+                        <span><?php esc_html_e('Excerpt ','variation-monster');?></span> <span class="quickPro">(Pro)</span>
                     </div>
 
 
@@ -630,7 +630,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                             <input type="checkbox" value="variable-sku-in-box" <?php if( !empty($varimoVariableDetailsSKU) ): echo esc_attr("checked"); endif; ?>>
                             <span class="slider round"></span>
                         </label>
-                        <span><?php esc_html_e('SKU','variation-monster-pro'); ?></span>
+                        <span><?php esc_html_e('SKU','variation-monster'); ?></span>
                     </div>
 
                 </div>
@@ -693,49 +693,49 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
             <div class="quick-selections">
                 <div class="quick-selectors-wrapper m-top">
-                    <label for="tooltip-bg"><strong><?php echo esc_html('Popup Background Color:','variation-monster-pro'); ?></strong></label>
+                    <label for="tooltip-bg"><strong><?php echo esc_html('Popup Background Color:','variation-monster'); ?></strong></label>
                     <input id="tooltip-bg" name="tooltip-bg" value="<?php echo esc_attr($varimoTooltipBgColor); ?>" data-jscolor="{}">
                 </div>
             </div>
             <!-- Quantity Button -->
             <div class="quick-selections">
                 <div class="quick-selectors-wrapper m-top">
-                    <label for="tooltip-text"><strong><?php echo wp_kses('Popup Text Color: ','variation-monster-pro');?></strong></label>
+                    <label for="tooltip-text"><strong><?php echo wp_kses('Popup Text Color: ','variation-monster');?></strong></label>
                     <input id="tooltip-text" name="tooltip-text" value="<?php echo esc_attr($varimoTooltipTextColor); ?>" data-jscolor="{}">
                 </div>
             </div>
 
             <div class="quick-selections">
                 <div class="quick-selectors-wrapper">
-                    <label for="add-to-cart-success-message"><strong> <?php echo wp_kses('Add to Cart Success Message: ','variation-monster-pro');?></strong></label>
+                    <label for="add-to-cart-success-message"><strong> <?php echo wp_kses('Add to Cart Success Message: ','variation-monster');?></strong></label>
                     <input id="add-to-cart-success-message" class="add-to-cart-success-message" type="text" name="add-to-cart-success-message" value="<?php echo esc_attr( $varimoAddToCartSuccessMessage ); ?>"  >
                 </div>
             </div>
 
             <div class="quick-selections">
                 <div class="quick-selectors-wrapper">
-                    <label for="quick-view-text-change"><strong> <?php echo wp_kses('Quick View Text Change: ','variation-monster-pro');?></strong></label>
+                    <label for="quick-view-text-change"><strong> <?php echo wp_kses('Quick View Text Change: ','variation-monster');?></strong></label>
                     <input id="quick-view-text-change" class="quick-view-text-change" type="text" name="quick-view-text-change" value="<?php echo esc_attr( $varimoQuickViewTextChange ); ?>"  >
                 </div>
             </div>
 
             <div class="quick-selections">
                 <div class="quick-selectors-wrapper">
-                    <label for="more-info-text-change"><strong> <?php echo wp_kses('More Information Text Change: ','variation-monster-pro');?></strong></label>
+                    <label for="more-info-text-change"><strong> <?php echo wp_kses('More Information Text Change: ','variation-monster');?></strong></label>
                     <input id="more-info-text-change" class="more-info-text-change" type="text" name="more-info-text-change" value="<?php echo esc_attr( $varimoMoreInfoTextChange ); ?>"  >
                 </div>
             </div>
 
             <div class="quick-selections">
                 <div class="quick-selectors-wrapper m-top">
-                    <label for="add-to-cart-success-color"><strong><?php echo wp_kses('Add to Cart Success Text Color: ','variation-monster-pro');?></strong></label>
+                    <label for="add-to-cart-success-color"><strong><?php echo wp_kses('Add to Cart Success Text Color: ','variation-monster');?></strong></label>
                     <input id="add-to-cart-success-color" name="add-to-cart-success-color" value="<?php echo esc_attr($varimoAddToCartSuccessColor); ?>" data-jscolor="{}">
                 </div>
             </div>
 
             <div class="quick-selections">
                 <div class="quick-selectors-wrapper m-top">
-                    <label for="add-to-cart-error-color"><strong><?php echo wp_kses('Add to Cart Failed Text Color: ','variation-monster-pro');?></strong></label>
+                    <label for="add-to-cart-error-color"><strong><?php echo wp_kses('Add to Cart Failed Text Color: ','variation-monster');?></strong></label>
                     <input id="add-to-cart-error-color" name="add-to-cart-error-color" value="<?php echo esc_attr($varimoAddToCartErrorColor); ?>" data-jscolor="{}">
                 </div>
             </div>
@@ -746,12 +746,12 @@ $varimoLicense_active                     = get_option('quick_license_key');
     <div id="table" class="tabcontent" style="">
 
         <div id="quickSwitchesWrapper">
-            <h2><?php echo esc_html('Variation Table Setting','variation-monster-pro'); ?></h2>
+            <h2><?php echo esc_html('Variation Table Setting','variation-monster'); ?></h2>
 
             <div style="display: flex;">
                 <div>
                     <div class="quick-selections" style="display: flex; align-items: center">
-                        <h4><?php echo wp_kses('Variation Table On: ','variation-monster-pro');?></h4>
+                        <h4><?php echo wp_kses('Variation Table On: ','variation-monster');?></h4>
                         <div class="quick-selectors-wrapper">
                             <div class="quick-table-on-off">
                                 <label class="switch">
@@ -763,7 +763,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                     </div>
 
                     <div class="quick-selections" style="display: flex; align-items: center">
-                        <h4><?php echo wp_kses('Overwrite Default Add to Cart by Table: ','variation-monster-pro');?>
+                        <h4><?php echo wp_kses('Overwrite Default Add to Cart by Table: ','variation-monster');?>
                             <span>
                                 <!-- Help Start -->
                                 <button class="help-button-overwrite-default-cart-table variation-cart-carousel-setting-help">?</button>
@@ -791,12 +791,12 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
                     <div class="quick-selections quick-selections-style" style="display: flex; gap: 50%">
                         <div>
-                            <h4><?php echo wp_kses('Overwrite Default Cart Table Template: ','variation-monster-pro');?></h4>
+                            <h4><?php echo wp_kses('Overwrite Default Cart Table Template: ','variation-monster');?></h4>
 
                             <div>
                                 <select id="overwrite-default-cart-table-template" class="overwrite-default-cart-table-template" style="outline: none">
-                                    <option value="template_1" <?php selected($varimoOverwriteDefaultCartTableTemplate, 'template_1'); ?>><?php echo wp_kses('Template 1','variation-monster-pro');?></option>
-                                    <option value="template_2" <?php selected($varimoOverwriteDefaultCartTableTemplate, 'template_2'); ?>><?php echo wp_kses('Template 2','variation-monster-pro');?></option>
+                                    <option value="template_1" <?php selected($varimoOverwriteDefaultCartTableTemplate, 'template_1'); ?>><?php echo wp_kses('Template 1','variation-monster');?></option>
+                                    <option value="template_2" <?php selected($varimoOverwriteDefaultCartTableTemplate, 'template_2'); ?>><?php echo wp_kses('Template 2','variation-monster');?></option>
                                 </select>
                             </div>
                         </div>
@@ -821,7 +821,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                         ?>
 
                         <div class="quick-selectors-wrapper m-top">
-                            <p> <strong><?php esc_html_e('Show Meta Data for Overwrite Default Cart Table Template:', 'variation-monster-pro'); ?></strong></p>
+                            <p> <strong><?php esc_html_e('Show Meta Data for Overwrite Default Cart Table Template:', 'variation-monster'); ?></strong></p>
                             <div class="search-new-meta-data-add-by-selector-two-table-overwrite">
                                 <select id="meta-key-selector-table-overwrite" multiple class="wc-enhanced-select" style="width: 100%;">
                                     <?php foreach ($meta_keys_table_overwrite as $varimo_meta_key_table): ?>
@@ -860,7 +860,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
                     <!-- Variation Table Images -->
                     <div class="quick-selections quick-selections-style">
-                        <h4><?php echo wp_kses('Table Image Size: ','variation-monster-pro');?></h4>
+                        <h4><?php echo wp_kses('Table Image Size: ','variation-monster');?></h4>
 
                         <div style="display: flex; gap: 80px;">
                             <select id="pop-up-image-show" class="pop-up-image-show">
@@ -897,12 +897,12 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
                     <div class="quick-selections quick-selections-style" style="display: flex; gap: 50%">
                         <div>
-                            <h4><?php echo wp_kses('Variation Table Template: ','variation-monster-pro');?></h4>
+                            <h4><?php echo wp_kses('Variation Table Template: ','variation-monster');?></h4>
 
                             <div>
                                 <select id="select-design-variation-table-template" class="variation-table-template" style="outline: none">
-                                    <option value="template_1" <?php selected($varimoVariationTableTemplate, 'template_1'); ?>><?php echo wp_kses('Template 1','variation-monster-pro');?></option>
-                                    <option value="template_2" <?php selected($varimoVariationTableTemplate, 'template_2'); ?>><?php echo wp_kses('Template 2','variation-monster-pro');?></option>
+                                    <option value="template_1" <?php selected($varimoVariationTableTemplate, 'template_1'); ?>><?php echo wp_kses('Template 1','variation-monster');?></option>
+                                    <option value="template_2" <?php selected($varimoVariationTableTemplate, 'template_2'); ?>><?php echo wp_kses('Template 2','variation-monster');?></option>
                                 </select>
                             </div>
                         </div>
@@ -910,7 +910,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
                     <!-- Variation Table Position Select -->
                     <div class="quick-selections quick-selections-style">
-                        <h4><?php echo wp_kses('Variation Table Position: ','variation-monster-pro');?></h4>
+                        <h4><?php echo wp_kses('Variation Table Position: ','variation-monster');?></h4>
 
                         <div style="display: flex; gap: 67px;">
                             <select id="table-position" class="quick-table-position">
@@ -956,39 +956,39 @@ $varimoLicense_active                     = get_option('quick_license_key');
                     <div id="variation-table-template2-options" style="display: none;">
                         <div class="quick-selections">
                             <div class="quick-selectors-wrapper">
-                                <label for="template2-table-bg-color"><strong> <?php echo wp_kses('Template 2 Table Bg Color: ','variation-monster-pro');?></strong></label>
+                                <label for="template2-table-bg-color"><strong> <?php echo wp_kses('Template 2 Table Bg Color: ','variation-monster');?></strong></label>
                                 <input id="template2-table-bg-color" name="template2-table-bg-color" value="<?php echo esc_attr( $varimoTemplate2TableBgColor ); ?>"  data-jscolor="{}">
                             </div>
                         </div>
 
                         <div class="quick-selections">
                             <div class="quick-selectors-wrapper">
-                                <label for="template2-details-section-bg-color"><strong> <?php echo wp_kses('Template 2 Details Section Bg Color: ','variation-monster-pro');?></strong></label>
+                                <label for="template2-details-section-bg-color"><strong> <?php echo wp_kses('Template 2 Details Section Bg Color: ','variation-monster');?></strong></label>
                                 <input id="template2-details-section-bg-color" name="template2-details-section-bg-color" value="<?php echo esc_attr( $varimoTemplate2DetailsSectionBgColor ); ?>"  data-jscolor="{}">
                             </div>
                         </div>
 
                         <div class="quick-selections">
                             <div class="quick-selectors-wrapper">
-                                <label for="template2-cart-section-bg-color"><strong> <?php echo wp_kses('Template 2 Cart Section Bg Color: ','variation-monster-pro');?></strong></label>
+                                <label for="template2-cart-section-bg-color"><strong> <?php echo wp_kses('Template 2 Cart Section Bg Color: ','variation-monster');?></strong></label>
                                 <input id="template2-cart-section-bg-color" name="template2-cart-section-bg-color" value="<?php echo esc_attr( $varimoTemplate2CartSectionBgColor ); ?>"  data-jscolor="{}">
                             </div>
                         </div>
 
                         <div class="quick-selections quick-selections-style" style="display: flex; gap: 50%">
                             <div>
-                                <h4><?php echo wp_kses('Style Add to Cart for Template 2: ','variation-monster-pro');?></h4>
+                                <h4><?php echo wp_kses('Style Add to Cart for Template 2: ','variation-monster');?></h4>
                                 <div>
                                     <select id="select-design-add-cart-table-template2" class="design-add-cart-table-template2" style="outline: none">
-                                        <option value="template_1" <?php selected($varimoDesignAddCartTableTemplate2, 'template_1'); ?>><?php echo wp_kses('Template 1','variation-monster-pro');?></option>
-                                        <option value="template_2" <?php selected($varimoDesignAddCartTableTemplate2, 'template_2'); ?>><?php echo wp_kses('Template 2','variation-monster-pro');?></option>
+                                        <option value="template_1" <?php selected($varimoDesignAddCartTableTemplate2, 'template_1'); ?>><?php echo wp_kses('Template 1','variation-monster');?></option>
+                                        <option value="template_2" <?php selected($varimoDesignAddCartTableTemplate2, 'template_2'); ?>><?php echo wp_kses('Template 2','variation-monster');?></option>
                                     </select>
                                 </div>
                             </div>
                         </div>
                         <div class="quick-selections">
                             <div class="quick-selectors-wrapper m-top">
-                                <label for="select-all-name-change"><strong> <?php echo wp_kses('Custom Bulk Selection Text: ','variation-monster-pro');?></strong></label>
+                                <label for="select-all-name-change"><strong> <?php echo wp_kses('Custom Bulk Selection Text: ','variation-monster');?></strong></label>
                                 <input id="select-all-name-change" class="select-all-name-change" type="text" name="select-all-name-change" value="<?php echo esc_attr( $varimoSelectAllNameChange ); ?>"  >
                             </div>
                         </div>
@@ -996,7 +996,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                     <!--Variation Table Template 1 All options-->
                     <div id="variation-table-template1-options" style="display: none;">
                         <div class="quick-selections" style="display: flex; align-items: center">
-                            <h4><?php echo wp_kses('Variation Table Border Show: ','variation-monster-pro');
+                            <h4><?php echo wp_kses('Variation Table Border Show: ','variation-monster');
 
                                 ?></h4>
                             <div class="quick-selectors-wrapper">
@@ -1011,49 +1011,49 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
                         <div class="quick-selections">
                             <div class="quick-selectors-wrapper">
-                                <label for="quick-table-head-bg-color"><strong> <?php echo wp_kses('Table Head Background Color: ','variation-monster-pro');?></strong></label>
+                                <label for="quick-table-head-bg-color"><strong> <?php echo wp_kses('Table Head Background Color: ','variation-monster');?></strong></label>
                                 <input id="quick-table-head-bg-color" name="quick-table-head-bg-color" value="<?php echo esc_attr( $varimoTableHeadBgColor ); ?>"  data-jscolor="{}">
                             </div>
                         </div>
 
                         <div class="quick-selections">
                             <div class="quick-selectors-wrapper m-top" >
-                                <label for="quick-table-head-text-color"><strong> <?php echo wp_kses('Table Head Text Color: ','variation-monster-pro');?></strong></label>
+                                <label for="quick-table-head-text-color"><strong> <?php echo wp_kses('Table Head Text Color: ','variation-monster');?></strong></label>
                                 <input id="quick-table-head-text-color" name="quick-table-head-text-color" value="<?php echo esc_attr( $varimoTableHeadTextColor ); ?>"  data-jscolor="{}">
                             </div>
                         </div>
 
                         <div class="quick-selections">
                             <div class="quick-selectors-wrapper m-top">
-                                <label for="quick-table-border-color"><strong> <?php echo wp_kses('Table Border Color: ','variation-monster-pro');?></strong></label>
+                                <label for="quick-table-border-color"><strong> <?php echo wp_kses('Table Border Color: ','variation-monster');?></strong></label>
                                 <input id="quick-table-border-color" name="quick-table-border-color" value="<?php echo esc_attr( $varimoTableBorderColor ); ?>"  data-jscolor="{}">
                             </div>
                         </div>
 
                         <div class="quick-selections">
                             <div class="quick-selectors-wrapper m-top">
-                                <label for="quick-table-variable-title-color"><strong> <?php echo wp_kses('Variation Table Title Color: ','variation-monster-pro');?></strong></label>
+                                <label for="quick-table-variable-title-color"><strong> <?php echo wp_kses('Variation Table Title Color: ','variation-monster');?></strong></label>
                                 <input id="quick-table-variable-title-color" name="quick-table-variable-title-color" value="<?php echo esc_attr( $varimoTableVariableTitleColor ); ?>"  data-jscolor="{}">
                             </div>
                         </div>
 
                         <div class="quick-selections">
                             <div class="quick-selectors-wrapper m-top">
-                                <label for="quick-table-variable-bg-color-odd"><strong> <?php echo wp_kses('Variation Table Background Color(Odd): ','variation-monster-pro');?></strong></label>
+                                <label for="quick-table-variable-bg-color-odd"><strong> <?php echo wp_kses('Variation Table Background Color(Odd): ','variation-monster');?></strong></label>
                                 <input id="quick-table-variable-bg-color-odd" name="quick-table-variable-bg-color-odd" value="<?php echo esc_attr( $varimoTableBgColorOdd ); ?>"  data-jscolor="{}">
                             </div>
                         </div>
 
                         <div class="quick-selections">
                             <div class="quick-selectors-wrapper m-top">
-                                <label for="quick-table-variable-bg-color-even"><strong> <?php echo wp_kses('Variation Table Background Color(Even): ','variation-monster-pro');?></strong></label>
+                                <label for="quick-table-variable-bg-color-even"><strong> <?php echo wp_kses('Variation Table Background Color(Even): ','variation-monster');?></strong></label>
                                 <input id="quick-table-variable-bg-color-even" name="quick-table-variable-bg-color-even" value="<?php echo esc_attr( $varimoTableBgColorEven ); ?>"  data-jscolor="{}">
                             </div>
                         </div>
 
                         <div class="quick-selections">
                             <div class="quick-selectors-wrapper m-top">
-                                <label for="quick-table-variable-hover-color"><strong> <?php echo wp_kses('Variation Table Background Color Hover: ','variation-monster-pro');?></strong></label>
+                                <label for="quick-table-variable-hover-color"><strong> <?php echo wp_kses('Variation Table Background Color Hover: ','variation-monster');?></strong></label>
                                 <input style="outline: none !important;" id="quick-table-variable-hover-color" name="quick-table-variable-hover-color" value="<?php echo esc_attr( $varimoTableBgColorHover ); ?>"  data-jscolor="{}">
                             </div>
                         </div>
@@ -1062,63 +1062,63 @@ $varimoLicense_active                     = get_option('quick_license_key');
                     <!-- Table Row Pagination -->
                     <div class="quick-selections">
                         <div class="quick-selectors-wrapper m-top">
-                            <label for="table-row-pagination"><strong> <?php echo wp_kses('Table Row Pagination: ','variation-monster-pro');?></strong></label>
+                            <label for="table-row-pagination"><strong> <?php echo wp_kses('Table Row Pagination: ','variation-monster');?></strong></label>
                             <input id="table-row-pagination" class="table-row-pagination" type="number" min="1" name="table-row-pagination" value="<?php echo esc_attr( $varimoTableRowPagination ); ?>"  >
                         </div>
                     </div>
 
                     <div class="quick-selections">
                         <div class="quick-selectors-wrapper">
-                            <label for="pagination-button-bg-color"><strong> <?php echo wp_kses('Pagination Button Background Color: ','variation-monster-pro');?></strong></label>
+                            <label for="pagination-button-bg-color"><strong> <?php echo wp_kses('Pagination Button Background Color: ','variation-monster');?></strong></label>
                             <input id="pagination-button-bg-color" name="pagination-button-bg-color" value="<?php echo esc_attr( $varimoPaginationButtonBgColor ); ?>"  data-jscolor="{}">
                         </div>
                     </div>
 
                     <div class="quick-selections">
                         <div class="quick-selectors-wrapper">
-                            <label for="pagination-button-hover-bg-color"><strong> <?php echo wp_kses('Pagination Button Hover Background Color: ','variation-monster-pro');?></strong></label>
+                            <label for="pagination-button-hover-bg-color"><strong> <?php echo wp_kses('Pagination Button Hover Background Color: ','variation-monster');?></strong></label>
                             <input id="pagination-button-hover-bg-color" name="pagination-button-hover-bg-color" value="<?php echo esc_attr( $varimoPaginationButtonHoverBgColor ); ?>"  data-jscolor="{}">
                         </div>
                     </div>
 
                     <div class="quick-selections">
                         <div class="quick-selectors-wrapper">
-                            <label for="pagination-button-text-color"><strong> <?php echo wp_kses('Pagination Button Text Color: ','variation-monster-pro');?></strong></label>
+                            <label for="pagination-button-text-color"><strong> <?php echo wp_kses('Pagination Button Text Color: ','variation-monster');?></strong></label>
                             <input id="pagination-button-text-color" name="pagination-button-text-color" value="<?php echo esc_attr( $varimoPaginationButtonTextColor ); ?>"  data-jscolor="{}">
                         </div>
                     </div>
 
                     <div class="quick-selections">
                         <div class="quick-selectors-wrapper">
-                            <label for="pagination-button-text-hover-color"><strong> <?php echo wp_kses('Pagination Button Text Hover Color: ','variation-monster-pro');?></strong></label>
+                            <label for="pagination-button-text-hover-color"><strong> <?php echo wp_kses('Pagination Button Text Hover Color: ','variation-monster');?></strong></label>
                             <input id="pagination-button-text-hover-color" name="pagination-button-text-hover-color" value="<?php echo esc_attr( $varimoPaginationButtonTextHoverColor ); ?>"  data-jscolor="{}">
                         </div>
                     </div>
 
                     <div class="quick-selections">
                         <div class="quick-selectors-wrapper">
-                            <label for="bulk-add-cart-bg-color"><strong> <?php echo wp_kses('Bulk Add to Cart Background Color: ','variation-monster-pro');?></strong></label>
+                            <label for="bulk-add-cart-bg-color"><strong> <?php echo wp_kses('Bulk Add to Cart Background Color: ','variation-monster');?></strong></label>
                             <input id="bulk-add-cart-bg-color" name="bulk-add-cart-bg-color" value="<?php echo esc_attr( $varimoBulkAddCartBgColor ); ?>"  data-jscolor="{}">
                         </div>
                     </div>
 
                     <div class="quick-selections">
                         <div class="quick-selectors-wrapper">
-                            <label for="bulk-add-cart-text-color"><strong> <?php echo wp_kses('Bulk Add to Cart Text Color: ','variation-monster-pro');?></strong></label>
+                            <label for="bulk-add-cart-text-color"><strong> <?php echo wp_kses('Bulk Add to Cart Text Color: ','variation-monster');?></strong></label>
                             <input id="bulk-add-cart-text-color" name="bulk-add-cart-text-color" value="<?php echo esc_attr( $varimoBulkAddCartTextColor ); ?>"  data-jscolor="{}">
                         </div>
                     </div>
 
                     <div class="quick-selections">
                         <div class="quick-selectors-wrapper">
-                            <label for="bulk-add-cart-hover-bg-color"><strong> <?php echo wp_kses('Bulk Add to Cart Hover Background Color: ','variation-monster-pro');?></strong></label>
+                            <label for="bulk-add-cart-hover-bg-color"><strong> <?php echo wp_kses('Bulk Add to Cart Hover Background Color: ','variation-monster');?></strong></label>
                             <input id="bulk-add-cart-hover-bg-color" name="bulk-add-cart-hover-bg-color" value="<?php echo esc_attr( $varimoBulkAddCartHoverBgColor ); ?>"  data-jscolor="{}">
                         </div>
                     </div>
 
                     <div class="quick-selections">
                         <div class="quick-selectors-wrapper">
-                            <label for="bulk-add-cart-hover-text-color"><strong> <?php echo wp_kses('Bulk Add to Cart Hover Text Color: ','variation-monster-pro');?></strong></label>
+                            <label for="bulk-add-cart-hover-text-color"><strong> <?php echo wp_kses('Bulk Add to Cart Hover Text Color: ','variation-monster');?></strong></label>
                             <input id="bulk-add-cart-hover-text-color" name="bulk-add-cart-hover-text-color" value="<?php echo esc_attr( $varimoBulkAddCartHoverTextColor ); ?>"  data-jscolor="{}">
                         </div>
                     </div>
@@ -1126,14 +1126,14 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
                     <div class="quick-selections">
                         <div class="quick-selectors-wrapper m-top">
-                            <label for="on-sale-name-change"><strong> <?php echo wp_kses('On Sale Name Change: ','variation-monster-pro');?></strong></label>
+                            <label for="on-sale-name-change"><strong> <?php echo wp_kses('On Sale Name Change: ','variation-monster');?></strong></label>
                             <input id="on-sale-name-change" class="on-sale-name-change" type="text" name="on-sale-name-change" value="<?php echo esc_attr( $varimoOnSaleNameChange ); ?>"  >
                         </div>
                     </div>
 
                     <div class="quick-selections">
                         <div class="quick-selectors-wrapper m-top">
-                            <label for="search-option-text-change"><strong> <?php echo wp_kses('Search Option Text Change: ','variation-monster-pro');?></strong></label>
+                            <label for="search-option-text-change"><strong> <?php echo wp_kses('Search Option Text Change: ','variation-monster');?></strong></label>
                             <input id="search-option-text-change" class="search-option-text-change" type="text" name="search-option-text-change" value="<?php echo esc_attr( $varimoSearchOptionTextChange ); ?>"  >
                         </div>
                     </div>
@@ -1157,7 +1157,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                         ?>
 
                         <div class="quick-selectors-wrapper m-top">
-                            <p> <strong><?php esc_html_e('Show Meta Data for Table Template:', 'variation-monster-pro'); ?></strong></p>
+                            <p> <strong><?php esc_html_e('Show Meta Data for Table Template:', 'variation-monster'); ?></strong></p>
                             <div class="search-new-meta-data-add-by-selector-two-table">
                                 <select id="meta-key-selector-table" multiple class="wc-enhanced-select" style="width: 100%;">
                                     <?php foreach ($meta_keys_table as $varimo_table_key): ?>
@@ -1195,7 +1195,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                     </div>
 
                     <div class="quick-selections" style="display: flex; align-items: center">
-                        <h4><?php echo wp_kses('Show Popup Image: ','variation-monster-pro');?></h4>
+                        <h4><?php echo wp_kses('Show Popup Image: ','variation-monster');?></h4>
                         <div class="quick-selectors-wrapper">
                             <div class="show-popup-image">
                                 <label class="switch">
@@ -1207,7 +1207,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                     </div>
 
                     <div id="show-gallery-image-into-popup" class="quick-selections" style="display: flex; align-items: center">
-                        <h4><?php echo wp_kses('Show Gallery Image into Popup: ','variation-monster-pro');?></h4>
+                        <h4><?php echo wp_kses('Show Gallery Image into Popup: ','variation-monster');?></h4>
                         <div class="quick-selectors-wrapper">
                             <div class="show-gallery-image-into-popup">
                                 <label class="switch">
@@ -1220,7 +1220,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
 
                     <div class="quick-selections" style="display: flex; align-items: center">
-                        <h4><?php echo wp_kses('Show Bulk Selection: ','variation-monster-pro');?></h4>
+                        <h4><?php echo wp_kses('Show Bulk Selection: ','variation-monster');?></h4>
                         <div class="quick-selectors-wrapper">
                             <div class="bulk-selection-hide-show">
                                 <label class="switch">
@@ -1232,7 +1232,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                     </div>
 
                     <div class="quick-selections" style="display: flex; align-items: center">
-                        <h4><?php echo wp_kses('Show Image: ','variation-monster-pro');?></h4>
+                        <h4><?php echo wp_kses('Show Image: ','variation-monster');?></h4>
                         <div class="quick-selectors-wrapper">
                             <div class="image-hide-show">
                                 <label class="switch">
@@ -1244,7 +1244,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                     </div>
 
                     <div class="quick-selections" style="display: flex; align-items: center">
-                        <h4><?php echo wp_kses('Show SKU: ','variation-monster-pro');?></h4>
+                        <h4><?php echo wp_kses('Show SKU: ','variation-monster');?></h4>
                         <div class="quick-selectors-wrapper">
                             <div class="sku-hide-show">
                                 <label class="switch">
@@ -1256,7 +1256,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                     </div>
 
                     <div class="quick-selections" style="display: flex; align-items: center">
-                        <h4><?php echo wp_kses('Show Title: ','variation-monster-pro');?></h4>
+                        <h4><?php echo wp_kses('Show Title: ','variation-monster');?></h4>
                         <div class="quick-selectors-wrapper">
                             <div class="title-hide-show">
                                 <label class="switch">
@@ -1268,7 +1268,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                     </div>
 
                     <div class="quick-selections" style="display: flex; align-items: center">
-                        <h4><?php echo wp_kses('Show Description: ','variation-monster-pro');?></h4>
+                        <h4><?php echo wp_kses('Show Description: ','variation-monster');?></h4>
                         <div class="quick-selectors-wrapper">
                             <div class="description-hide-show">
                                 <label class="switch">
@@ -1281,7 +1281,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                     </div>
 
                     <div class="quick-selections" style="display: flex; align-items: center">
-                        <h4><?php echo wp_kses('Show Weight & Dimensions: ','variation-monster-pro');?></h4>
+                        <h4><?php echo wp_kses('Show Weight & Dimensions: ','variation-monster');?></h4>
                         <div class="quick-selectors-wrapper">
                             <div class="weight-dimension-hide-show">
                                 <label class="switch">
@@ -1294,7 +1294,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                     </div>
 
                     <div class="quick-selections" style="display: flex; align-items: center">
-                        <h4><?php echo wp_kses('Show Attribute: ','variation-monster-pro');?></h4>
+                        <h4><?php echo wp_kses('Show Attribute: ','variation-monster');?></h4>
                         <div class="quick-selectors-wrapper">
                             <div class="all-attribute-hide-show">
                                 <label class="switch">
@@ -1306,7 +1306,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                     </div>
 
                     <div class="quick-selections" style="display: flex; align-items: center">
-                        <h4><?php echo wp_kses('Show Price: ','variation-monster-pro');?></h4>
+                        <h4><?php echo wp_kses('Show Price: ','variation-monster');?></h4>
                         <div class="quick-selectors-wrapper">
                             <div class="price-hide-show">
                                 <label class="switch">
@@ -1319,7 +1319,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
 
                     <div class="quick-selections" style="display: flex; align-items: center">
-                        <h4><?php echo wp_kses('Show Quantity: ','variation-monster-pro');?></h4>
+                        <h4><?php echo wp_kses('Show Quantity: ','variation-monster');?></h4>
                         <div class="quick-selectors-wrapper">
                             <div class="quantity-hide-show">
                                 <label class="switch">
@@ -1331,7 +1331,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                     </div>
 
                     <div class="quick-selections" style="display: flex; align-items: center">
-                        <h4><?php echo wp_kses('Show Stock Status: ','variation-monster-pro');?></h4>
+                        <h4><?php echo wp_kses('Show Stock Status: ','variation-monster');?></h4>
                         <div class="quick-selectors-wrapper">
                             <div class="stock-status-hide-show">
                                 <label class="switch">
@@ -1343,7 +1343,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                     </div>
 
                     <div class="quick-selections" style="display: flex; align-items: center">
-                        <h4><?php echo wp_kses('Show Action: ','variation-monster-pro');?></h4>
+                        <h4><?php echo wp_kses('Show Action: ','variation-monster');?></h4>
                         <div class="quick-selectors-wrapper">
                             <div class="action-hide-show">
                                 <label class="switch">
@@ -1355,7 +1355,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                     </div>
 
                     <div class="quick-selections" style="display: flex; align-items: center">
-                        <h4><?php echo wp_kses('Show Search Option: ','variation-monster-pro');?></h4>
+                        <h4><?php echo wp_kses('Show Search Option: ','variation-monster');?></h4>
                         <div class="quick-selectors-wrapper">
                             <div class="search-option-hide-show">
                                 <label class="switch">
@@ -1367,7 +1367,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                     </div>
 
                     <div class="quick-selections" style="display: flex; align-items: center">
-                        <h4><?php echo wp_kses('Show On Sale Option: ','variation-monster-pro');?></h4>
+                        <h4><?php echo wp_kses('Show On Sale Option: ','variation-monster');?></h4>
                         <div class="quick-selectors-wrapper">
                             <div class="on-sale-hide-show">
                                 <label class="switch">
@@ -1379,7 +1379,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                     </div>
 
                     <div class="quick-selections quick-selections-style">
-                        <h4><?php echo wp_kses('Bulk Add to Cart Position: ','variation-monster-pro');?></h4>
+                        <h4><?php echo wp_kses('Bulk Add to Cart Position: ','variation-monster');?></h4>
 
                         <div >
                             <select id="table-position" class="bulk-add-to-cart-position">
@@ -1394,13 +1394,13 @@ $varimoLicense_active                     = get_option('quick_license_key');
                     <div class="quick-selections quick-selections-style" style="display: flex; gap: 50%">
 
                         <div>
-                            <h4><?php echo wp_kses('Design for Mobile Single Product Page: ','variation-monster-pro');?></h4>
+                            <h4><?php echo wp_kses('Design for Mobile Single Product Page: ','variation-monster');?></h4>
                             <div >
                                 <select id="select-design" class="design-single-product-page-mobile" style="outline: none">
-                                    <option value="template_1" <?php selected($varimoDesignSingleProductPageMobile, 'template_1'); ?>><?php echo wp_kses('Template 1','variation-monster-pro');?></option>
-                                    <option value="template_2" <?php selected($varimoDesignSingleProductPageMobile, 'template_2'); ?>><?php echo wp_kses('Template 2','variation-monster-pro');?></option>
-                                    <option value="template_3" <?php selected($varimoDesignSingleProductPageMobile, 'template_3'); ?>><?php echo wp_kses('Template 3','variation-monster-pro');?></option>
-                                    <option value="template_4" <?php selected($varimoDesignSingleProductPageMobile, 'template_4'); ?>><?php echo wp_kses('Template 4','variation-monster-pro');?></option>
+                                    <option value="template_1" <?php selected($varimoDesignSingleProductPageMobile, 'template_1'); ?>><?php echo wp_kses('Template 1','variation-monster');?></option>
+                                    <option value="template_2" <?php selected($varimoDesignSingleProductPageMobile, 'template_2'); ?>><?php echo wp_kses('Template 2','variation-monster');?></option>
+                                    <option value="template_3" <?php selected($varimoDesignSingleProductPageMobile, 'template_3'); ?>><?php echo wp_kses('Template 3','variation-monster');?></option>
+                                    <option value="template_4" <?php selected($varimoDesignSingleProductPageMobile, 'template_4'); ?>><?php echo wp_kses('Template 4','variation-monster');?></option>
                                 </select>
                             </div>
                         </div>
@@ -1431,10 +1431,10 @@ $varimoLicense_active                     = get_option('quick_license_key');
     <div id="select-variation" class="tabcontent" style="">
 
         <div id="quickSwitchesWrapper">
-            <h2><?php echo esc_html('Variation Swatches for Single Product and Archive Page','variation-monster-pro'); ?></h2>
+            <h2><?php echo esc_html('Variation Swatches for Single Product and Archive Page','variation-monster'); ?></h2>
 
                 <div class="quick-selections" style="display: flex; align-items: center">
-                    <h4><?php echo wp_kses('Variation Swatches Enable: ','variation-monster-pro');?></h4>
+                    <h4><?php echo wp_kses('Variation Swatches Enable: ','variation-monster');?></h4>
                     <div class="quick-selectors-wrapper">
                         <div class="variation-select-on-off">
                             <label class="switch">
@@ -1446,7 +1446,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                 </div>
 
                 <div class="quick-selections" style="display: flex; align-items: center">
-                    <h4><?php echo wp_kses('Show Selected Attribute: ','variation-monster-pro');?></h4>
+                    <h4><?php echo wp_kses('Show Selected Attribute: ','variation-monster');?></h4>
                     <div class="quick-selectors-wrapper">
                         <div class="show-selected-attribute">
                             <label class="switch">
@@ -1458,7 +1458,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                 </div>
 
                 <div class="quick-selections" style="display: flex; align-items: center">
-                    <h4><?php echo wp_kses('Variation Label Separator: ','variation-monster-pro');?></h4>
+                    <h4><?php echo wp_kses('Variation Label Separator: ','variation-monster');?></h4>
                     <div class="quick-selectors-wrapper">
                         <label for="variation-label-separator">
                             <input id="variation-label-separator" class="variation-label-separator" type="text" name="variation-label-separator" value="<?php echo esc_attr( $varimoVariationLabelSeparator ); ?>"  style="max-width:50px;">
@@ -1467,7 +1467,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                 </div>
 
                 <div class="quick-selections" style="display: flex; align-items: center">
-                    <h4><?php echo wp_kses('Generate Variation URl: ','variation-monster-pro');?></h4>
+                    <h4><?php echo wp_kses('Generate Variation URl: ','variation-monster');?></h4>
                     <div class="quick-selectors-wrapper">
                         <div class="generate-variation-url">
                             <label class="switch">
@@ -1479,7 +1479,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                 </div>
 
                 <div class="quick-selections" style="display: flex; align-items: center">
-                    <h4><?php echo wp_kses('Variation Stock Info: ','variation-monster-pro');?></h4>
+                    <h4><?php echo wp_kses('Variation Stock Info: ','variation-monster');?></h4>
                     <div class="quick-selectors-wrapper">
                         <div class="variation-stock-info">
                             <label class="switch">
@@ -1492,7 +1492,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
 
                 <div class="quick-selections" style="display: flex; align-items: center">
-                    <h4><?php echo wp_kses('Attribute Display Limit Enable: ','variation-monster-pro');?></h4>
+                    <h4><?php echo wp_kses('Attribute Display Limit Enable: ','variation-monster');?></h4>
                     <div class="quick-selectors-wrapper">
                         <div class="attribute-display-limit-enable">
                             <label class="switch">
@@ -1504,7 +1504,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                 </div>
 
                 <div class="quick-selections" style="display: flex; align-items: center">
-                    <h4><?php echo wp_kses('Attribute Display Limit: ','variation-monster-pro');?></h4>
+                    <h4><?php echo wp_kses('Attribute Display Limit: ','variation-monster');?></h4>
                     <div class="quick-selectors-wrapper">
                         <label for="attribute-display-limit">
                             <input id="attribute-display-limit" class="attribute-display-limit" type="number" name="attribute-display-limit" value="<?php echo esc_attr( $varimoAttributeDisplayLimit ); ?>"  style="max-width:50px;">
@@ -1513,7 +1513,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                 </div>
 
                 <div class="quick-selections" style="display: flex; align-items: center">
-                    <h4><?php echo wp_kses('Show on Filter Widget: ','variation-monster-pro');?></h4>
+                    <h4><?php echo wp_kses('Show on Filter Widget: ','variation-monster');?></h4>
                     <div class="quick-selectors-wrapper">
                         <div class="show-on-filter-widget">
                             <label class="switch">
@@ -1525,7 +1525,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                 </div>
 
                 <div class="quick-selections" style="display: flex; align-items: center">
-                    <h4><?php echo wp_kses('Filter Attribute Display Limit: ','variation-monster-pro');?></h4>
+                    <h4><?php echo wp_kses('Filter Attribute Display Limit: ','variation-monster');?></h4>
                     <div class="quick-selectors-wrapper">
                         <label for="filter-attribute-display-limit">
                             <input id="filter-attribute-display-limit" class="filter-attribute-display-limit" type="number" name="filter-attribute-display-limit" value="<?php echo esc_attr( $varimoFilterAttributeDisplayLimit ); ?>"  style="max-width:50px;">
@@ -1534,7 +1534,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                 </div>
 
                 <div class="quick-selections quick-selections-style">
-                    <h4><?php echo wp_kses('Attribute Image Size: ','variation-monster-pro');?></h4>
+                    <h4><?php echo wp_kses('Attribute Image Size: ','variation-monster');?></h4>
 
                     <div style="display: flex; gap: 80px;">
                         <select id="attribute-image-show" class="attribute-image-show">
@@ -1570,7 +1570,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
                 <!-- Variation Swatches Archive Page Position Select -->
                 <div class="quick-selections quick-selections-style" >
-                    <h4 ><?php echo wp_kses('Display Position on Archive Page: ','variation-monster-pro');
+                    <h4 ><?php echo wp_kses('Display Position on Archive Page: ','variation-monster');
 
                         ?></h4>
                     <div style="display: flex; gap: 10%;">
@@ -1602,45 +1602,45 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
                 <div class="quick-selections quick-selections-style" >
                     <div style="display:flex">
-                        <h4><?php echo wp_kses('Swatches Align in Archive: ','variation-monster-pro');?></h4>
+                        <h4><?php echo wp_kses('Swatches Align in Archive: ','variation-monster');?></h4>
                         <div>
                             <select id="varimo-swatches-align-archive" class="varimo-swatches-align-archive" style="outline: none">
-                                <option value="left" <?php selected($varimoSwatchesAlignArchive, 'left'); ?>><?php echo wp_kses('Left','variation-monster-pro');?></option>
-                                <option value="center" <?php selected($varimoSwatchesAlignArchive, 'center'); ?>><?php echo wp_kses('Center','variation-monster-pro');?></option>
+                                <option value="left" <?php selected($varimoSwatchesAlignArchive, 'left'); ?>><?php echo wp_kses('Left','variation-monster');?></option>
+                                <option value="center" <?php selected($varimoSwatchesAlignArchive, 'center'); ?>><?php echo wp_kses('Center','variation-monster');?></option>
                             </select>
                         </div>
                     </div>
                 </div>
 
                 <div class="quick-selections quick-selections-style">
-                    <h4><?php echo esc_html('Archive Page:','variation-monster-pro'); ?></h4>
+                    <h4><?php echo esc_html('Archive Page:','variation-monster'); ?></h4>
                     <div class="quick-selectors-wrapper">
                         <div class="show-attribute-swatches-archive">
                             <label class="switch">
                                 <input type="checkbox" value="attribute-archive" <?php if($varimoShowAttributeSwatchesArchive == "attribute-archive"): echo esc_attr("checked"); endif; ?>>
                                 <span class="slider round"></span>
                             </label>
-                            <span><?php echo esc_html('Show Attribute into Archive (Redirect)','variation-monster-pro');?></span>
+                            <span><?php echo esc_html('Show Attribute into Archive (Redirect)','variation-monster');?></span>
                         </div>
                         <div class="show-attribute-swatches-archive">
                             <label class="switch">
                                 <input type="checkbox" value="attribute-swatches" <?php if($varimoShowAttributeSwatchesArchive== "attribute-swatches"): echo esc_attr("checked"); endif; ?>>
                                 <span class="slider round"></span>
                             </label>
-                            <span><?php echo esc_html('Show Swatches Quick Cart into Archive','variation-monster-pro');?></span>
+                            <span><?php echo esc_html('Show Swatches Quick Cart into Archive','variation-monster');?></span>
                         </div>
                         <div class="show-attribute-swatches-archive">
                             <label class="switch">
                                 <input type="checkbox" value="none" <?php if($varimoShowAttributeSwatchesArchive== "none"): echo esc_attr("checked"); endif; ?>>
                                 <span class="slider round"></span>
                             </label>
-                            <span><?php echo esc_html('None','variation-monster-pro');?></span>
+                            <span><?php echo esc_html('None','variation-monster');?></span>
                         </div>
                     </div>
                 </div>
 
                 <div class="quick-selections" style="display: flex; align-items: center">
-                    <h4><?php echo wp_kses('Display Flex Label And Value: ','variation-monster-pro');?></h4>
+                    <h4><?php echo wp_kses('Display Flex Label And Value: ','variation-monster');?></h4>
                     <div class="quick-selectors-wrapper">
                         <div class="display-flex-label-value">
                             <label class="switch">
@@ -1652,48 +1652,48 @@ $varimoLicense_active                     = get_option('quick_license_key');
                 </div>
 
                 <div class="quick-selections quick-selections-style">
-                    <h4><?php echo esc_html('Disabled Button Settings:','variation-monster-pro'); ?></h4>
+                    <h4><?php echo esc_html('Disabled Button Settings:','variation-monster'); ?></h4>
                     <div class="quick-selectors-wrapper">
                         <div class="variation-swatches-disable-settings">
                             <label class="switch">
                                 <input type="checkbox" value="not-disable" <?php if($varimoVariationSwatchesDisableSettings == "not-disable"): echo esc_attr("checked"); endif; ?>>
                                 <span class="slider round"></span>
                             </label>
-                            <span><?php echo esc_html('Default','variation-monster-pro');?></span>
+                            <span><?php echo esc_html('Default','variation-monster');?></span>
                         </div>
                         <div class="variation-swatches-disable-settings">
                             <label class="switch">
                                 <input type="checkbox" value="clickable-disable" <?php if($varimoVariationSwatchesDisableSettings== "clickable-disable"): echo esc_attr("checked"); endif; ?>>
                                 <span class="slider round"></span>
                             </label>
-                            <span><?php echo esc_html('Out of Stock Clickable','variation-monster-pro');?></span>
+                            <span><?php echo esc_html('Out of Stock Clickable','variation-monster');?></span>
                         </div>
                         <div class="variation-swatches-disable-settings">
                             <label class="switch">
                                 <input type="checkbox" value="disable-not-clickable" <?php if($varimoVariationSwatchesDisableSettings== "disable-not-clickable"): echo esc_attr("checked"); endif; ?>>
                                 <span class="slider round"></span>
                             </label>
-                            <span><?php echo esc_html('Disable out of Stock','variation-monster-pro');?></span>
+                            <span><?php echo esc_html('Disable out of Stock','variation-monster');?></span>
                         </div>
                     </div>
                 </div>
 
                 <div class="quick-selections quick-selections-style" style="display: flex; gap: 50%">
                     <div>
-                        <h4><?php echo wp_kses('Disable Attribute Style: ','variation-monster-pro');?></h4>
+                        <h4><?php echo wp_kses('Disable Attribute Style: ','variation-monster');?></h4>
                         <div>
                             <select id="select-design-list" class="disable-attribute-style" style="outline: none">
-                                <option value="blur_with_cross" <?php selected($varimoDisableAttributeStyle, 'blur_with_cross'); ?>><?php echo wp_kses('Blur with Cross','variation-monster-pro');?></option>
-                                <option value="blur" <?php selected($varimoDisableAttributeStyle, 'blur'); ?>><?php echo wp_kses('Blur','variation-monster-pro');?></option>
-                                <option value="hide" <?php selected($varimoDisableAttributeStyle, 'hide'); ?>><?php echo wp_kses('Hide','variation-monster-pro');?></option>
-                                <option value="single_line_cross" <?php selected($varimoDisableAttributeStyle, 'single_line_cross'); ?>><?php echo wp_kses('Blur with Single Line Cross','variation-monster-pro');?></option>
+                                <option value="blur_with_cross" <?php selected($varimoDisableAttributeStyle, 'blur_with_cross'); ?>><?php echo wp_kses('Blur with Cross','variation-monster');?></option>
+                                <option value="blur" <?php selected($varimoDisableAttributeStyle, 'blur'); ?>><?php echo wp_kses('Blur','variation-monster');?></option>
+                                <option value="hide" <?php selected($varimoDisableAttributeStyle, 'hide'); ?>><?php echo wp_kses('Hide','variation-monster');?></option>
+                                <option value="single_line_cross" <?php selected($varimoDisableAttributeStyle, 'single_line_cross'); ?>><?php echo wp_kses('Blur with Single Line Cross','variation-monster');?></option>
                             </select>
                         </div>
                     </div>
                 </div>
 
                 <div class="quick-selections" style="display: flex; align-items: center">
-                    <h4><?php echo wp_kses('Selected Icon Show: ','variation-monster-pro');?></h4>
+                    <h4><?php echo wp_kses('Selected Icon Show: ','variation-monster');?></h4>
                     <div class="quick-selectors-wrapper">
                         <div class="selected-icon-show">
                             <label class="switch">
@@ -1706,11 +1706,11 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
                 <div class="quick-selections quick-selections-style" style="display: flex; gap: 50%">
                     <div>
-                        <h4><?php echo wp_kses('Selected Icon Template: ','variation-monster-pro');?></h4>
+                        <h4><?php echo wp_kses('Selected Icon Template: ','variation-monster');?></h4>
                         <div>
                             <select id="selected-icon-template" class="selected-icon-template" style="outline: none">
-                                <option value="template_one" <?php selected($varimoSelectedIconTemplate, 'template_one'); ?>><?php echo wp_kses('Check Mark Show in Center','variation-monster-pro');?></option>
-                                <option value="template_two" <?php selected($varimoSelectedIconTemplate, 'template_two'); ?>><?php echo wp_kses('Check Mark Show in Top Right Side','variation-monster-pro');?></option>
+                                <option value="template_one" <?php selected($varimoSelectedIconTemplate, 'template_one'); ?>><?php echo wp_kses('Check Mark Show in Center','variation-monster');?></option>
+                                <option value="template_two" <?php selected($varimoSelectedIconTemplate, 'template_two'); ?>><?php echo wp_kses('Check Mark Show in Top Right Side','variation-monster');?></option>
                             </select>
                         </div>
                     </div>
@@ -1719,27 +1719,27 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
                 <div class="quick-selections">
                     <div class="quick-selectors-wrapper">
-                        <label for="selected-icon-color"><strong> <?php echo wp_kses('Selected Icon Color: ','variation-monster-pro');?></strong></label>
+                        <label for="selected-icon-color"><strong> <?php echo wp_kses('Selected Icon Color: ','variation-monster');?></strong></label>
                         <input id="selected-icon-color" name="selected-icon-color" value="<?php echo esc_attr( $varimoSelectedIconColor ); ?>"  data-jscolor="{}">
                     </div>
                 </div>
 
                 <div class="quick-selections">
                     <div class="quick-selectors-wrapper">
-                        <label for="disabled-icon-color"><strong> <?php echo wp_kses('Disabled Icon Color: ','variation-monster-pro');?></strong></label>
+                        <label for="disabled-icon-color"><strong> <?php echo wp_kses('Disabled Icon Color: ','variation-monster');?></strong></label>
                         <input id="disabled-icon-color" name="disabled-icon-color" value="<?php echo esc_attr( $varimoDisabledIconColor ); ?>"  data-jscolor="{}">
                     </div>
                 </div>
 
                 <div class="quick-selections">
                     <div class="quick-selectors-wrapper m-top">
-                        <label for="selected-disabled-icon-width"><strong> <?php echo wp_kses('Selected Disabled Icon Width (px): ','variation-monster-pro');?></strong></label>
+                        <label for="selected-disabled-icon-width"><strong> <?php echo wp_kses('Selected Disabled Icon Width (px): ','variation-monster');?></strong></label>
                         <input id="selected-disabled-icon-width" class="selected-disabled-icon-width" type="number" name="selected-disabled-icon-width" value="<?php echo esc_attr( $varimoSelectedDisabledIconWidth ); ?>"  >
                     </div>
                 </div>
 
                 <div class="quick-selections" style="display: flex; align-items: center;">
-                    <h4><?php echo wp_kses('Overwrite default woocommerce selection to select2:', 'variation-monster-pro'); ?></h4>
+                    <h4><?php echo wp_kses('Overwrite default woocommerce selection to select2:', 'variation-monster'); ?></h4>
                     <div class="quick-selectors-wrapper">
                         <div class="default-selection-to-select2">
                             <label class="switch">
@@ -1751,7 +1751,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                 </div>
 
                 <div class="quick-selections" style="display: flex; align-items: center">
-                    <h4><?php echo wp_kses('Tooltip On: ','variation-monster-pro');?></h4>
+                    <h4><?php echo wp_kses('Tooltip On: ','variation-monster');?></h4>
                     <div class="quick-selectors-wrapper">
                         <div class="globally-tooltip-on-off">
                             <label class="switch">
@@ -1764,20 +1764,20 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
                 <div class="quick-selections quick-selections-style" style="display: flex; gap: 50%">
                     <div>
-                        <h4><?php echo wp_kses('Tooltip Position: ','variation-monster-pro');?></h4>
+                        <h4><?php echo wp_kses('Tooltip Position: ','variation-monster');?></h4>
                         <div>
                             <select id="varimo-tooltip-position-swatches" class="varimo-tooltip-position-swatches" style="outline: none">
-                                <option value="top" <?php selected($varimoTooltipPositionSwatches, 'top'); ?>><?php echo wp_kses('Top','variation-monster-pro');?></option>
-                                <option value="bottom" <?php selected($varimoTooltipPositionSwatches, 'bottom'); ?>><?php echo wp_kses('Bottom','variation-monster-pro');?></option>
-                                <option value="left" <?php selected($varimoTooltipPositionSwatches, 'left'); ?>><?php echo wp_kses('left','variation-monster-pro');?></option>
-                                <option value="right" <?php selected($varimoTooltipPositionSwatches, 'right'); ?>><?php echo wp_kses('Right','variation-monster-pro');?></option>
+                                <option value="top" <?php selected($varimoTooltipPositionSwatches, 'top'); ?>><?php echo wp_kses('Top','variation-monster');?></option>
+                                <option value="bottom" <?php selected($varimoTooltipPositionSwatches, 'bottom'); ?>><?php echo wp_kses('Bottom','variation-monster');?></option>
+                                <option value="left" <?php selected($varimoTooltipPositionSwatches, 'left'); ?>><?php echo wp_kses('left','variation-monster');?></option>
+                                <option value="right" <?php selected($varimoTooltipPositionSwatches, 'right'); ?>><?php echo wp_kses('Right','variation-monster');?></option>
                             </select>
                         </div>
                     </div>
                 </div>
 
                 <div class="quick-selections" style="display: flex; align-items: center">
-                    <h4><?php echo wp_kses('Image show into Tooltip: ','variation-monster-pro');?></h4>
+                    <h4><?php echo wp_kses('Image show into Tooltip: ','variation-monster');?></h4>
                     <div class="quick-selectors-wrapper">
                         <div class="image-show-into-tooltip">
                             <label class="switch">
@@ -1790,91 +1790,91 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
                 <div class="quick-selections">
                     <div class="quick-selectors-wrapper">
-                        <label for="select-variation-tooltip-bg-color"><strong> <?php echo wp_kses('Tooltip Background Color: ','variation-monster-pro');?></strong></label>
+                        <label for="select-variation-tooltip-bg-color"><strong> <?php echo wp_kses('Tooltip Background Color: ','variation-monster');?></strong></label>
                         <input id="select-variation-tooltip-bg-color" name="select-variation-tooltip-bg-color" value="<?php echo esc_attr( $varimoSelectVariationTooltipBgColor ); ?>"  data-jscolor="{}">
                     </div>
                 </div>
 
                 <div class="quick-selections">
                     <div class="quick-selectors-wrapper">
-                        <label for="select-variation-tooltip-text-color"><strong> <?php echo wp_kses('Tooltip Text Color: ','variation-monster-pro');?></strong></label>
+                        <label for="select-variation-tooltip-text-color"><strong> <?php echo wp_kses('Tooltip Text Color: ','variation-monster');?></strong></label>
                         <input id="select-variation-tooltip-text-color" name="select-variation-tooltip-text-color" value="<?php echo esc_attr( $varimoSelectVariationTooltipTextColor ); ?>"  data-jscolor="{}">
                     </div>
                 </div>
 
                 <div class="quick-selections">
                     <div class="quick-selectors-wrapper">
-                        <label for="select-variation-button-bg-color"><strong> <?php echo wp_kses('Button Background Color: ','variation-monster-pro');?></strong></label>
+                        <label for="select-variation-button-bg-color"><strong> <?php echo wp_kses('Button Background Color: ','variation-monster');?></strong></label>
                         <input id="select-variation-button-bg-color" name="select-variation-button-bg-color" value="<?php echo esc_attr( $varimoSelectVariationButtonBgColor ); ?>"  data-jscolor="{}">
                     </div>
                 </div>
 
                 <div class="quick-selections">
                     <div class="quick-selectors-wrapper">
-                        <label for="select-variation-button-text-color"><strong> <?php echo wp_kses('Button Text Color: ','variation-monster-pro');?></strong></label>
+                        <label for="select-variation-button-text-color"><strong> <?php echo wp_kses('Button Text Color: ','variation-monster');?></strong></label>
                         <input id="select-variation-button-text-color" name="select-variation-button-text-color" value="<?php echo esc_attr( $varimoSelectVariationButtonTextColor ); ?>"  data-jscolor="{}">
                     </div>
                 </div>
 
                 <div class="quick-selections">
                     <div class="quick-selectors-wrapper m-top">
-                        <label for="font-size-varimo-swatches"><strong> <?php echo wp_kses('Font Size (px): ','variation-monster-pro');?></strong></label>
+                        <label for="font-size-varimo-swatches"><strong> <?php echo wp_kses('Font Size (px): ','variation-monster');?></strong></label>
                         <input id="font-size-varimo-swatches" class="font-size-varimo-swatches" type="number" name="font-size-varimo-swatches" value="<?php echo esc_attr( $varimoFontSizeVarimoSwatches ); ?>"  >
                     </div>
                 </div>
 
                 <div class="quick-selections">
                     <div class="quick-selectors-wrapper m-top">
-                        <label for="image-color-height"><strong> <?php echo wp_kses('Image & Color Height (px): ','variation-monster-pro');?></strong></label>
+                        <label for="image-color-height"><strong> <?php echo wp_kses('Image & Color Height (px): ','variation-monster');?></strong></label>
                         <input id="image-color-height" class="image-color-height" type="number" name="image-color-height" value="<?php echo esc_attr( $varimoImageColorHeight ); ?>"  >
                     </div>
                 </div>
 
                 <div class="quick-selections">
                     <div class="quick-selectors-wrapper m-top">
-                        <label for="image-color-width"><strong> <?php echo wp_kses('Image & Color Width (px): ','variation-monster-pro');?></strong></label>
+                        <label for="image-color-width"><strong> <?php echo wp_kses('Image & Color Width (px): ','variation-monster');?></strong></label>
                         <input id="image-color-width" class="image-color-width" type="number" name="image-color-width" value="<?php echo esc_attr( $varimoImageColorWidth ); ?>"  >
                     </div>
                 </div>
 
                 <div class="quick-selections">
                     <div class="quick-selectors-wrapper m-top">
-                        <label for="image-color-border-radius"><strong> <?php echo wp_kses('Image & Color Border Radius (px): ','variation-monster-pro');?></strong></label>
+                        <label for="image-color-border-radius"><strong> <?php echo wp_kses('Image & Color Border Radius (px): ','variation-monster');?></strong></label>
                         <input id="image-color-border-radius" class="image-color-border-radius" type="number" name="image-color-border-radius" value="<?php echo esc_attr( $varimoImageColorBorderRadius ); ?>"  >
                     </div>
                 </div>
 
                 <div class="quick-selections">
                     <div class="quick-selectors-wrapper">
-                        <label for="swatches-button-border-color"><strong> <?php echo wp_kses('Button Border Color: ','variation-monster-pro');?></strong></label>
+                        <label for="swatches-button-border-color"><strong> <?php echo wp_kses('Button Border Color: ','variation-monster');?></strong></label>
                         <input id="swatches-button-border-color" name="swatches-button-border-color" value="<?php echo esc_attr( $varimoSwatchesButtonBorderColor ); ?>"  data-jscolor="{}">
                     </div>
                 </div>
 
                 <div class="quick-selections">
                     <div class="quick-selectors-wrapper">
-                        <label for="selected-variation-button-border-color"><strong> <?php echo wp_kses(' Selected Button Border Color: ','variation-monster-pro');?></strong></label>
+                        <label for="selected-variation-button-border-color"><strong> <?php echo wp_kses(' Selected Button Border Color: ','variation-monster');?></strong></label>
                         <input id="selected-variation-button-border-color" name="selected-variation-button-border-color" value="<?php echo esc_attr( $varimoSelectedVariationButtonBorderColor ); ?>"  data-jscolor="{}">
                     </div>
                 </div>
 
                 <div class="quick-selections">
                     <div class="quick-selectors-wrapper m-top">
-                        <label for="button-height"><strong> <?php echo wp_kses('Button Height (px): ','variation-monster-pro');?></strong></label>
+                        <label for="button-height"><strong> <?php echo wp_kses('Button Height (px): ','variation-monster');?></strong></label>
                         <input id="button-height" class="button-height" type="number" name="button-height" value="<?php echo esc_attr( $varimoButtonHeight ); ?>"  >
                     </div>
                 </div>
 
                 <div class="quick-selections">
                     <div class="quick-selectors-wrapper m-top">
-                        <label for="button-width"><strong> <?php echo wp_kses('Button Width (px): ','variation-monster-pro');?></strong></label>
+                        <label for="button-width"><strong> <?php echo wp_kses('Button Width (px): ','variation-monster');?></strong></label>
                         <input id="button-width" class="button-width" type="number" name="button-width" value="<?php echo esc_attr( $varimoButtonWidth ); ?>"  >
                     </div>
                 </div>
 
                 <div class="quick-selections">
                     <div class="quick-selectors-wrapper m-top">
-                        <label for="button-border-radius"><strong> <?php echo wp_kses('Button Border Radius (px): ','variation-monster-pro');?></strong></label>
+                        <label for="button-border-radius"><strong> <?php echo wp_kses('Button Border Radius (px): ','variation-monster');?></strong></label>
                         <input id="button-border-radius" class="button-border-radius" type="number" name="button-border-radius" value="<?php echo esc_attr( $varimoButtonBorderRadius ); ?>"  >
                     </div>
                 </div>
@@ -1883,13 +1883,13 @@ $varimoLicense_active                     = get_option('quick_license_key');
     </div>
 
     <div id="select-variation-ul-li" class="tabcontent">
-        <h2><?php echo esc_html('Select Variation List','variation-monster-pro'); ?></h2>
+        <h2><?php echo esc_html('Select Variation List','variation-monster'); ?></h2>
         <div style="display: flex; gap: 30%">
             <div>
                 <div id="quickSwitchesWrapper">
                     <div>
                         <div class="quick-selections" style="display: flex; align-items: center">
-                            <h4><?php echo wp_kses('Variation List Enable: ','variation-monster-pro');?></h4>
+                            <h4><?php echo wp_kses('Variation List Enable: ','variation-monster');?></h4>
                             <div class="quick-selectors-wrapper">
                                 <div class="select-variation-template-on-off">
                                     <label class="switch">
@@ -1902,7 +1902,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
                         <!-- List Image Size -->
                         <div class="quick-selections quick-selections-style">
-                            <h4><?php echo wp_kses('List Image Size: ','variation-monster-pro');?></h4>
+                            <h4><?php echo wp_kses('List Image Size: ','variation-monster');?></h4>
 
                             <div style="display: flex; gap: 80px;">
                                 <select id="list-image-show" class="list-image-show">
@@ -1939,17 +1939,17 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
 
 
-                        <h3 style="color: red; margin-top: 20px;"><?php echo wp_kses('Variation list is enable, variation swatches ','variation-monster-pro'); ?>
-                        <br><?php echo wp_kses('will not work in single product page ','variation-monster-pro'); ?></br>
+                        <h3 style="color: red; margin-top: 20px;"><?php echo wp_kses('Variation list is enable, variation swatches ','variation-monster'); ?>
+                        <br><?php echo wp_kses('will not work in single product page ','variation-monster'); ?></br>
                         </h3>
 
                         <div class="quick-selections quick-selections-style" style="display: flex; gap: 50%">
                             <div>
-                                <h4><?php echo wp_kses('Variation List Template: ','variation-monster-pro');?></h4>
+                                <h4><?php echo wp_kses('Variation List Template: ','variation-monster');?></h4>
                                 <div >
                                     <select id="variation-list-template" class="variation-list-template" style="outline: none">
-                                        <option value="template_1" <?php selected($varimoVariationListTemplate, 'template_1'); ?>><?php echo wp_kses('Template 1','variation-monster-pro');?></option>
-                                        <option value="template_2" <?php selected($varimoVariationListTemplate, 'template_2'); ?>><?php echo wp_kses('Template 2','variation-monster-pro');?></option>
+                                        <option value="template_1" <?php selected($varimoVariationListTemplate, 'template_1'); ?>><?php echo wp_kses('Template 1','variation-monster');?></option>
+                                        <option value="template_2" <?php selected($varimoVariationListTemplate, 'template_2'); ?>><?php echo wp_kses('Template 2','variation-monster');?></option>
                                     </select>
                                 </div>
                             </div>
@@ -1957,14 +1957,14 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
                         <div class="quick-selections">
                             <div class="quick-selectors-wrapper m-top">
-                                <label for="list-pagination"><strong> <?php echo wp_kses('Items Per Pages: ','variation-monster-pro');?></strong></label>
+                                <label for="list-pagination"><strong> <?php echo wp_kses('Items Per Pages: ','variation-monster');?></strong></label>
                                 <input id="list-pagination" class="list-pagination" type="number" min="1" name="list-pagination" value="<?php echo esc_attr( $varimoListPagination ); ?>"  >
                             </div>
                         </div>
 
                         <div class="quick-selections">
                             <div class="quick-selectors-wrapper m-top">
-                                <label for="list-pagination-per-line-mobile"><strong> <?php echo wp_kses('Items Per Line for Mobile Version: ','variation-monster-pro');?></strong></label>
+                                <label for="list-pagination-per-line-mobile"><strong> <?php echo wp_kses('Items Per Line for Mobile Version: ','variation-monster');?></strong></label>
                                 <input id="list-pagination-per-line-mobile" class="list-pagination-per-line-mobile" type="number" min="1" name="list-pagination" value="<?php echo esc_attr( $varimoListPaginationPerLineMobile ); ?>"  >
                             </div>
                         </div>
@@ -2026,7 +2026,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                         </div>
 
                         <div class="quick-selections" style="display: flex; align-items: center">
-                            <h4><?php echo wp_kses('Show Label: ','variation-monster-pro');?></h4>
+                            <h4><?php echo wp_kses('Show Label: ','variation-monster');?></h4>
                             <div class="quick-selectors-wrapper">
                                 <div class="list-label-show-on-off">
                                     <label class="switch">
@@ -2038,7 +2038,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                         </div>
 
                         <div class="quick-selections" style="display: flex; align-items: center">
-                            <h4><?php echo wp_kses('Show SKU: ','variation-monster-pro');?></h4>
+                            <h4><?php echo wp_kses('Show SKU: ','variation-monster');?></h4>
                             <div class="quick-selectors-wrapper">
                                 <div class="list-sku-show-on-off">
                                     <label class="switch">
@@ -2050,7 +2050,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                         </div>
 
                         <div class="quick-selections" style="display: flex; align-items: center">
-                            <h4><?php echo wp_kses('Show Price: ','variation-monster-pro');?></h4>
+                            <h4><?php echo wp_kses('Show Price: ','variation-monster');?></h4>
                             <div class="quick-selectors-wrapper">
                                 <div class="list-price-show-on-off">
                                     <label class="switch">
@@ -2062,7 +2062,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                         </div>
 
                         <div class="quick-selections" style="display: flex; align-items: center">
-                            <h4><?php echo wp_kses('Show Quantity: ','variation-monster-pro');?></h4>
+                            <h4><?php echo wp_kses('Show Quantity: ','variation-monster');?></h4>
                             <div class="quick-selectors-wrapper">
                                 <div class="list-quantity-show-on-off">
                                     <label class="switch">
@@ -2074,7 +2074,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                         </div>
 
                         <div class="quick-selections" style="display: flex; align-items: center">
-                            <h4><?php echo wp_kses('Show Attribute: ','variation-monster-pro');?></h4>
+                            <h4><?php echo wp_kses('Show Attribute: ','variation-monster');?></h4>
                             <div class="quick-selectors-wrapper">
                                 <div class="list-attribute-show">
                                     <label class="switch">
@@ -2086,7 +2086,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                         </div>
 
                         <div class="quick-selections" style="display: flex; align-items: center">
-                            <h4><?php echo wp_kses('Show Title: ','variation-monster-pro');?></h4>
+                            <h4><?php echo wp_kses('Show Title: ','variation-monster');?></h4>
                             <div class="quick-selectors-wrapper">
                                 <div class="list-title-show">
                                     <label class="switch">
@@ -2098,7 +2098,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                         </div>
 
                         <div class="quick-selections" style="display: flex; align-items: center">
-                            <h4><?php echo wp_kses('Show Discount Badge: ','variation-monster-pro');?>
+                            <h4><?php echo wp_kses('Show Discount Badge: ','variation-monster');?>
                                 <span class="discount-badge" data-tooltip="If discount available">?</span>
                             </h4>
 
@@ -2114,7 +2114,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
                         <div id="badge-all-settings" style="">
                             <div class="quick-selections" style="display: flex; align-items: center">
-                                <h4><?php echo wp_kses('Show Badge at Right Side: ','variation-monster-pro');?></h4>
+                                <h4><?php echo wp_kses('Show Badge at Right Side: ','variation-monster');?></h4>
                                 <div class="quick-selectors-wrapper">
                                     <div class="list-badge-show-right">
                                         <label class="switch">
@@ -2127,7 +2127,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
 
                             <div class="quick-selections" style="display: flex; align-items: center">
-                                <h4><?php echo wp_kses('Show Discount Price as Flat: ','variation-monster-pro');?></h4>
+                                <h4><?php echo wp_kses('Show Discount Price as Flat: ','variation-monster');?></h4>
                                 <div class="quick-selectors-wrapper">
                                     <div class="list-badge-discount-flat-price">
                                         <label class="switch">
@@ -2140,28 +2140,28 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
                             <div class="quick-selections">
                                 <div class="quick-selectors-wrapper m-top">
-                                    <label for="list-for-percent"><strong> <?php echo wp_kses('For Percent Label: ','variation-monster-pro');?></strong></label>
+                                    <label for="list-for-percent"><strong> <?php echo wp_kses('For Percent Label: ','variation-monster');?></strong></label>
                                     <input id="list-for-percent" class="list-for-percent" type="text" name="list-for-percent" value="<?php echo esc_attr( $varimoListForPercent ); ?>"  >
                                 </div>
                             </div>
 
                             <div class="quick-selections">
                                 <div class="quick-selectors-wrapper m-top">
-                                    <label for="list-for-flat"><strong> <?php echo wp_kses('For Flat Label: ','variation-monster-pro');?></strong></label>
+                                    <label for="list-for-flat"><strong> <?php echo wp_kses('For Flat Label: ','variation-monster');?></strong></label>
                                     <input id="list-for-flat" class="list-for-flat" type="text" name="list-for-flat" value="<?php echo esc_attr( $varimoListForFlat ); ?>"  >
                                 </div>
                             </div>
 
                             <div class="quick-selections">
                                 <div class="quick-selectors-wrapper">
-                                    <label for="list-badge-bg-color"><strong> <?php echo wp_kses('Badge Background Color: ','variation-monster-pro');?></strong></label>
+                                    <label for="list-badge-bg-color"><strong> <?php echo wp_kses('Badge Background Color: ','variation-monster');?></strong></label>
                                     <input id="list-badge-bg-color" name="list-badge-bg-color" value="<?php echo esc_attr( $varimoListBadgeBgColor ); ?>"  data-jscolor="{}">
                                 </div>
                             </div>
 
                             <div class="quick-selections">
                                 <div class="quick-selectors-wrapper">
-                                    <label for="list-badge-text-color"><strong> <?php echo wp_kses('Badge Text Color: ','variation-monster-pro');?></strong></label>
+                                    <label for="list-badge-text-color"><strong> <?php echo wp_kses('Badge Text Color: ','variation-monster');?></strong></label>
                                     <input id="list-badge-text-color" name="list-badge-text-color" value="<?php echo esc_attr( $varimoListBadgeTextColor ); ?>"  data-jscolor="{}">
                                 </div>
                             </div>
@@ -2177,13 +2177,13 @@ $varimoLicense_active                     = get_option('quick_license_key');
     </div>
 
     <div id="variation-gallery" class="tabcontent" style="">
-        <h2><?php echo esc_html('Variation Gallery Setting','variation-monster-pro'); ?></h2>
+        <h2><?php echo esc_html('Variation Gallery Setting','variation-monster'); ?></h2>
 
         <div style="display: flex; gap: 30%">
             <div id="quickSwitchesWrapper">
                 <div>
                     <div class="quick-selections" style="display: flex; align-items: center">
-                        <h4><?php echo wp_kses('Variation Gallery On: ','variation-monster-pro');?></h4>
+                        <h4><?php echo wp_kses('Variation Gallery On: ','variation-monster');?></h4>
                         <div class="quick-selectors-wrapper">
                             <div class="variation-gallery-on-off">
                                 <label class="switch">
@@ -2197,15 +2197,15 @@ $varimoLicense_active                     = get_option('quick_license_key');
                     <div class="quick-selections quick-selections-style" style="display: flex; gap: 50%">
 
                         <div>
-                            <h4><?php echo wp_kses('Gallery Style Template: ','variation-monster-pro');?></h4>
+                            <h4><?php echo wp_kses('Gallery Style Template: ','variation-monster');?></h4>
 
                             <div >
                                 <select id="gallery-style-template" class="gallery-style-template" style="outline: none">
-                                    <option value="template_1" <?php selected($varimoGalleryStyleTemplate, 'template_1'); ?>><?php echo wp_kses('Template 1','variation-monster-pro');?></option>
-                                    <option value="template_2" <?php selected($varimoGalleryStyleTemplate, 'template_2'); ?>><?php echo wp_kses('Template 2','variation-monster-pro');?></option>
-                                    <option value="template_3" <?php selected($varimoGalleryStyleTemplate, 'template_3'); ?>><?php echo wp_kses('Template 3','variation-monster-pro');?></option>
-                                    <option value="template_4" <?php selected($varimoGalleryStyleTemplate, 'template_4'); ?>><?php echo wp_kses('Template 4','variation-monster-pro');?></option>
-                                    <option value="template_5" <?php selected($varimoGalleryStyleTemplate, 'template_5'); ?>><?php echo wp_kses('Template 5','variation-monster-pro');?></option>
+                                    <option value="template_1" <?php selected($varimoGalleryStyleTemplate, 'template_1'); ?>><?php echo wp_kses('Template 1','variation-monster');?></option>
+                                    <option value="template_2" <?php selected($varimoGalleryStyleTemplate, 'template_2'); ?>><?php echo wp_kses('Template 2','variation-monster');?></option>
+                                    <option value="template_3" <?php selected($varimoGalleryStyleTemplate, 'template_3'); ?>><?php echo wp_kses('Template 3','variation-monster');?></option>
+                                    <option value="template_4" <?php selected($varimoGalleryStyleTemplate, 'template_4'); ?>><?php echo wp_kses('Template 4','variation-monster');?></option>
+                                    <option value="template_5" <?php selected($varimoGalleryStyleTemplate, 'template_5'); ?>><?php echo wp_kses('Template 5','variation-monster');?></option>
                                 </select>
                             </div>
                         </div>
@@ -2214,7 +2214,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
                     <!-- Gallery Image Size -->
                     <div class="quick-selections quick-selections-style">
-                        <h4><?php echo wp_kses('Gallery Image Size: ','variation-monster-pro');?></h4>
+                        <h4><?php echo wp_kses('Gallery Image Size: ','variation-monster');?></h4>
 
                         <div style="display: flex; gap: 80px;">
                             <select id="gallery-image-show" class="gallery-image-show">
@@ -2251,28 +2251,28 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
                     <div class="quick-selections">
                         <div class="quick-selectors-wrapper m-top">
-                            <label for="gallery-navigation-button-icon-color"><strong> <?php echo wp_kses('Gallery Navigation Button Icon Color: ','variation-monster-pro');?></strong></label>
+                            <label for="gallery-navigation-button-icon-color"><strong> <?php echo wp_kses('Gallery Navigation Button Icon Color: ','variation-monster');?></strong></label>
                             <input id="gallery-navigation-button-icon-color" name="gallery-navigation-button-icon-color" value="<?php echo esc_attr( $varimoGalleryNavigationButtonIconColor ); ?>"  data-jscolor="{}">
                         </div>
                     </div>
 
                     <div class="quick-selections">
                         <div class="quick-selectors-wrapper m-top">
-                            <label for="gallery-navigation-button-icon-hover-color"><strong> <?php echo wp_kses('Gallery Navigation Button Icon Hover Color: ','variation-monster-pro');?></strong></label>
+                            <label for="gallery-navigation-button-icon-hover-color"><strong> <?php echo wp_kses('Gallery Navigation Button Icon Hover Color: ','variation-monster');?></strong></label>
                             <input id="gallery-navigation-button-icon-hover-color" name="gallery-navigation-button-icon-hover-color" value="<?php echo esc_attr( $varimoGalleryNavigationButtonIconHoverColor ); ?>"  data-jscolor="{}">
                         </div>
                     </div>
 
                     <div class="quick-selections">
                         <div class="quick-selectors-wrapper m-top">
-                            <label for="gallery-navigation-button-background-color"><strong> <?php echo wp_kses('Gallery Navigation Button Background Color: ','variation-monster-pro');?></strong></label>
+                            <label for="gallery-navigation-button-background-color"><strong> <?php echo wp_kses('Gallery Navigation Button Background Color: ','variation-monster');?></strong></label>
                             <input id="gallery-navigation-button-background-color" name="gallery-navigation-button-background-color" value="<?php echo esc_attr( $varimoGalleryNavigationButtonBgColor ); ?>"  data-jscolor="{}">
                         </div>
                     </div>
 
                     <div class="quick-selections">
                         <div class="quick-selectors-wrapper m-top">
-                            <label for="gallery-navigation-button-background-hover-color"><strong> <?php echo wp_kses('Gallery Navigation Button Background Hover Color: ','variation-monster-pro');?></strong></label>
+                            <label for="gallery-navigation-button-background-hover-color"><strong> <?php echo wp_kses('Gallery Navigation Button Background Hover Color: ','variation-monster');?></strong></label>
                             <input id="gallery-navigation-button-background-hover-color" name="gallery-navigation-button-background-hover-color" value="<?php echo esc_attr( $varimoGalleryNavigationButtonBgHoverColor ); ?>"  data-jscolor="{}">
                         </div>
                     </div>
@@ -2289,10 +2289,10 @@ $varimoLicense_active                     = get_option('quick_license_key');
     <div id="attribute-gallery" class="tabcontent" style="">
 
         <div id="quickSwitchesWrapper">
-            <h2><?php echo esc_html('Attribute Gallery Setting','variation-monster-pro'); ?></h2>
+            <h2><?php echo esc_html('Attribute Gallery Setting','variation-monster'); ?></h2>
             <div>
                 <div class="quick-selections" style="display: flex; align-items: center">
-                    <h4><?php echo wp_kses('Attribute Gallery On: ','variation-monster-pro');?></h4>
+                    <h4><?php echo wp_kses('Attribute Gallery On: ','variation-monster');?></h4>
                     <div class="quick-selectors-wrapper">
                         <div class="attribute-gallery-on-off">
                             <label class="switch">
@@ -2305,7 +2305,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
                 <!-- Gallery Image Size -->
                 <div class="quick-selections quick-selections-style">
-                    <h4><?php echo wp_kses('Attribute Gallery Image Size: ','variation-monster-pro');?></h4>
+                    <h4><?php echo wp_kses('Attribute Gallery Image Size: ','variation-monster');?></h4>
 
                     <div style="display: flex; gap: 80px;">
                         <select id="attribute-gallery-image-show" class="attribute-gallery-image-show">
@@ -2349,7 +2349,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
 <?php wp_nonce_field( 'quick_admin_nonce_action', 'quick_admin_nonce' ); ?>
   <!-- save Button -->
     <button type="button" style="z-index:9999; position: fixed; bottom: 20px; right: 20px; display: flex; justify-content: center; align-items: center; padding: 10px 20px; background-color: #6033E7; color: white; border: none; border-radius: 5px; cursor: pointer; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);" class="buttonload">
-        <?php echo esc_html('Save', 'variation-monster-pro'); ?>
+        <?php echo esc_html('Save', 'variation-monster'); ?>
     </button>
 
 </div>

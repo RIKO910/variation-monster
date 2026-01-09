@@ -154,7 +154,7 @@ class VARIMO_Variables
                     'name'             => '',
                     'id'               => '',
                     'class'            => '',
-                    'show_option_none' => __('Choose an option', 'variation-monster-pro'),
+                    'show_option_none' => __('Choose an option', 'variation-monster'),
                 ]);
 
                 /** @var WC_Product_Variable $product */
@@ -196,7 +196,7 @@ class VARIMO_Variables
                         }else{
                             $display_type = $meta_display_type;
                         }
-                        $show_option_none_text = $args['show_option_none'] ?: __('Choose an option', 'variation-monster-pro');
+                        $show_option_none_text = $args['show_option_none'] ?: __('Choose an option', 'variation-monster');
 
                         // Get selected value.
 //                        if ($attribute && $product instanceof WC_Product && $args['selected'] === false) {
@@ -912,7 +912,7 @@ class VARIMO_Variables
                             'name'             => 'attribute_' . sanitize_title($attribute_key),
                             'id'               => sanitize_title($attribute_key),
                             'class'            => '',
-                            'show_option_none' => __('Choose an option', 'variation-monster-pro'),
+                            'show_option_none' => __('Choose an option', 'variation-monster'),
                         ];
 
                         // Call custom function to render the color, image, or button options.
@@ -987,7 +987,7 @@ class VARIMO_Variables
                     'name'             => '',
                     'id'               => '',
                     'class'            => '',
-                    'show_option_none' => __('Choose an option', 'variation-monster-pro'),
+                    'show_option_none' => __('Choose an option', 'variation-monster'),
                 ]);
 
                 /** @var WC_Product_Variable $product */
@@ -1028,7 +1028,7 @@ class VARIMO_Variables
                         }else{
                             $display_type = $meta_display_type;
                         }
-                        $show_option_none_text = $args['show_option_none'] ?: __('Choose an option', 'variation-monster-pro');
+                        $show_option_none_text = $args['show_option_none'] ?: __('Choose an option', 'variation-monster');
 
                         // Get selected value.
 //                        if ($attribute && $product instanceof WC_Product && $args['selected'] === false) {
@@ -1752,7 +1752,7 @@ class VARIMO_Variables
                             'name'             => 'attribute_' . sanitize_title($attribute_key),
                             'id'               => sanitize_title($attribute_key),
                             'class'            => '',
-                            'show_option_none' => __('Choose an option', 'variation-monster-pro'),
+                            'show_option_none' => __('Choose an option', 'variation-monster'),
                         ];
 
                         // Call custom function to render the color, image, or button options.
@@ -1881,7 +1881,7 @@ class VARIMO_Variables
             'name'             => '',
             'id'               => '',
             'class'            => '',
-            'show_option_none' => __('Choose an option', 'variation-monster-pro'),
+            'show_option_none' => __('Choose an option', 'variation-monster'),
         ]);
 
         /** @var WC_Product_Variable $product */
@@ -1923,7 +1923,7 @@ class VARIMO_Variables
                     $display_type = $meta_display_type;
                 }
 
-                $show_option_none_text = $args['show_option_none'] ?: __('Choose an option', 'variation-monster-pro');
+                $show_option_none_text = $args['show_option_none'] ?: __('Choose an option', 'variation-monster');
 
                 // Get selected value.
 
@@ -2616,7 +2616,7 @@ class VARIMO_Variables
                             <!-- SKU Label -->
                             <span class="variation-price" style="display: flex; flex-direction: column">
                                 <strong><?php if ($listLabelOnOff === "true" && $listSkuOnOff === "true"){
-                                        esc_html_e('SKU', 'variation-monster-pro');
+                                        esc_html_e('SKU', 'variation-monster');
                                     } ?></strong>
                                 <span><?php if ($listSkuOnOff === "true"){
                                     echo wp_kses_post($variation_obj->get_sku()); // nosemgrep
@@ -2663,7 +2663,7 @@ class VARIMO_Variables
                                         <span class="attribute-select-wrapper-custom" style="display: contents">
                                             <select name="attribute_<?php echo esc_attr($attribute_name); ?>" class="attribute-select">
                                                 <option value="">
-                                                    <?php esc_html_e('Choose', 'variation-monster-pro'); ?> <?php echo wp_kses_post(wc_attribute_label($attribute_name)); ?>
+                                                    <?php esc_html_e('Choose', 'variation-monster'); ?> <?php echo wp_kses_post(wc_attribute_label($attribute_name)); ?>
                                                 </option>
                                                 <?php foreach ($options as $option) :
                                                     ?>
@@ -2680,7 +2680,7 @@ class VARIMO_Variables
                             <!-- Title Label -->
                             <span class="variation-price" style="display: flex; flex-direction: column">
                                 <strong><?php if ($listLabelOnOff === "true" && $listTitleShow === "true"){
-                                        esc_html_e('Title', 'variation-monster-pro');
+                                        esc_html_e('Title', 'variation-monster');
                                     } ?></strong>
                                 <span><?php if ($listTitleShow === "true"){
                                     echo wp_kses_post($variation_obj->get_name()); // nosemgrep
@@ -2691,7 +2691,7 @@ class VARIMO_Variables
                             <!-- Price Label -->
                             <span class="variation-price" style="display: flex; flex-direction: column">
                                 <strong><?php if ($listLabelOnOff === "true" && $listPriceOnOff === "true"){
-                                        esc_html_e('Price', 'variation-monster-pro');
+                                        esc_html_e('Price', 'variation-monster');
                                     } ?></strong>
                                 <span><?php if ($listPriceOnOff === "true"){
                                     echo wp_kses_post($variation_obj->get_price_html()); // nosemgrep
@@ -2723,7 +2723,7 @@ class VARIMO_Variables
                                 ?>
                                 <span class="variation-price" style="display: flex; flex-direction: column">
                                     <strong><?php if ($listLabelOnOff === "true" && $listQuantityOnOff === "true"){
-                                            esc_html_e('Quantity', 'variation-monster-pro');
+                                            esc_html_e('Quantity', 'variation-monster');
                                         } ?></strong>
                                     <span><?php if ($listQuantityOnOff === "true"){
                                         echo wp_kses_post($variation_obj->get_stock_quantity()); // nosemgrep
@@ -3172,7 +3172,7 @@ class VARIMO_Variables
                             <!-- SKU Label -->
                             <span class="variation-price" >
                                 <strong><?php if ($listLabelOnOff === "true" && $listSkuOnOff === "true"){
-                                        esc_html_e('SKU: ', 'variation-monster-pro');
+                                        esc_html_e('SKU: ', 'variation-monster');
                                     } ?></strong>
                                 <span><?php if ($listSkuOnOff === "true"){
                                     echo wp_kses_post($variation_obj->get_sku()); // nosemgrep
@@ -3232,7 +3232,7 @@ class VARIMO_Variables
                             <!-- Price Label -->
                             <span class="variation-price" >
                                 <strong><?php if ($listLabelOnOff === "true" && $listPriceOnOff === "true"){
-                                        esc_html_e('Price: ', 'variation-monster-pro');
+                                        esc_html_e('Price: ', 'variation-monster');
                                     } ?></strong>
                                 <span><?php if ($listPriceOnOff === "true"){
                                     echo wp_kses_post($variation_obj->get_price_html()); // nosemgrep
@@ -3263,7 +3263,7 @@ class VARIMO_Variables
                                 ?>
                                 <span class="variation-price" >
                                     <strong><?php if ($listLabelOnOff === "true" && $listQuantityOnOff === "true"){
-                                            esc_html_e('Quantity: ', 'variation-monster-pro');
+                                            esc_html_e('Quantity: ', 'variation-monster');
                                         } ?></strong>
                                     <span><?php if ($listQuantityOnOff === "true"){
                                         echo wp_kses_post($variation_obj->get_stock_quantity()); // nosemgrep

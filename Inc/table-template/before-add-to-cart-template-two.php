@@ -184,7 +184,7 @@ class VARIMO_Table_Before_AddTo_Cart_Template_Two{
                             ?>
                             <th >
                                 <span style="display: inline-block; margin-top: 9px">
-                                <?php esc_html_e('Price', 'variation-monster-pro'); ?>
+                                <?php esc_html_e('Price', 'variation-monster'); ?>
                                 </span>
                                 <span style="float: right; display: grid" id="price-sort-arrows">
                                     <span style="height: 10px" class="dashicons dashicons-arrow-up" id="price-sort-arrow-up"></span>
@@ -201,7 +201,7 @@ class VARIMO_Table_Before_AddTo_Cart_Template_Two{
 
                         if ($quantityHideShow === "true"){
                             ?>
-                            <th><?php esc_html_e('Quantity', 'variation-monster-pro'); ?></th>
+                            <th><?php esc_html_e('Quantity', 'variation-monster'); ?></th>
                             <?php
                         }?>
                     </tr>
@@ -257,7 +257,7 @@ class VARIMO_Table_Before_AddTo_Cart_Template_Two{
                                 }else{
                                     ?>
                                     <td>
-                                        <span style="font-size: 11px; color: red; margin: 0; padding: 0"> <?php esc_html_e('Out of Stock', 'variation-monster-pro'); ?> </span>
+                                        <span style="font-size: 11px; color: red; margin: 0; padding: 0"> <?php esc_html_e('Out of Stock', 'variation-monster'); ?> </span>
                                     </td>
                                     <?php
                                 }
@@ -502,15 +502,15 @@ class VARIMO_Table_Before_AddTo_Cart_Template_Two{
                         <i class="<?php echo esc_attr($quickCartIcon); ?> cart-icon-remove" aria-hidden="true"></i>
                     <?php endif; ?>
                     <span><?php echo esc_html($cartButtonText); ?></span>
-                    <span class="total-and-currency-sign"><?php esc_html_e('Total: ','variation-monster-pro' ); ?></span>
+                    <span class="total-and-currency-sign"><?php esc_html_e('Total: ','variation-monster' ); ?></span>
                     <span class="total-price-count"></span>
                     <span class="bulk-add-to-cart-before-cart-success-icon"> </span>
                 </button>
 
                 <!-- Pagination Controls -->
                 <div id="pagination">
-                    <button disabled style="margin-right: 5px; padding: 5px; border-radius: 5px; font-weight: 500; <?php echo ($tableRowPagination >= $variation_count) ? ' display:none;' : ''; ?>" id="prevPage-before-cart" ><?php esc_html_e('Previous', 'variation-monster-pro'); ?></button>
-                    <button id="nextPage-before-cart" style="padding: 5px; border-radius: 5px; font-weight: 500; <?php echo ($tableRowPagination >= $variation_count) ? ' display:none;' : ''; ?> " ><?php esc_html_e('Next', 'variation-monster-pro'); ?></button>
+                    <button disabled style="margin-right: 5px; padding: 5px; border-radius: 5px; font-weight: 500; <?php echo ($tableRowPagination >= $variation_count) ? ' display:none;' : ''; ?>" id="prevPage-before-cart" ><?php esc_html_e('Previous', 'variation-monster'); ?></button>
+                    <button id="nextPage-before-cart" style="padding: 5px; border-radius: 5px; font-weight: 500; <?php echo ($tableRowPagination >= $variation_count) ? ' display:none;' : ''; ?> " ><?php esc_html_e('Next', 'variation-monster'); ?></button>
                 </div>
             </div>
             <?php

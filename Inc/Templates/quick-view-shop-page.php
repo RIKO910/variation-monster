@@ -200,7 +200,7 @@ if ($product->is_type('variable')) {
     ?>
     <div <?php echo esc_attr($varimo_ignore_attr); ?> class="variation-monster-quick-view-wrapper">
         <!-- Button to open modal -->
-        <button class="variation-monster-quick-view" onclick="variationMonsterQuickViewButton(this)" data-modal="modal-<?php echo esc_attr($product_id); ?>"><?php echo esc_html($varimoQuickViewTextChange, 'variation-monster-pro')?></button>
+        <button class="variation-monster-quick-view" onclick="variationMonsterQuickViewButton(this)" data-modal="modal-<?php echo esc_attr($product_id); ?>"><?php echo esc_html($varimoQuickViewTextChange, 'variation-monster')?></button>
 
         <!-- Modal structure -->
         <div id="modal-<?php echo esc_attr($product_id); ?>" class="vmonster-quick-view-modal"
@@ -321,7 +321,7 @@ if ($product->is_type('variable')) {
                                         'name'             => '',
                                         'id'               => '',
                                         'class'            => '',
-                                        'show_option_none' => __('Choose an option', 'variation-monster-pro'),
+                                        'show_option_none' => __('Choose an option', 'variation-monster'),
                                 ]);
 
                                 /** @var WC_Product_Variable $product */
@@ -361,7 +361,7 @@ if ($product->is_type('variable')) {
                                         }else{
                                             $display_type = $meta_display_type;
                                         }
-                                        $show_option_none_text = $args['show_option_none'] ?: __('Choose an option', 'variation-monster-pro');
+                                        $show_option_none_text = $args['show_option_none'] ?: __('Choose an option', 'variation-monster');
 
                                         // Get selected value.
                                         //                        if ($attribute && $product instanceof WC_Product && $args['selected'] === false) {
@@ -1058,7 +1058,7 @@ if ($product->is_type('variable')) {
                                         'name'             => 'attribute_' . sanitize_title($varimo_attribute_key),
                                         'id'               => sanitize_title($varimo_attribute_key),
                                         'class'            => '',
-                                        'show_option_none' => __('Choose an option', 'variation-monster-pro'),
+                                        'show_option_none' => __('Choose an option', 'variation-monster'),
                                 ];
 
                                 // Call custom function to render the color, image, or button options.
@@ -1071,9 +1071,9 @@ if ($product->is_type('variable')) {
 
                         <div class="quick-quantity-container quick-view-quantity-container" style="display: block;">
                             <div class="variation-monster-quick-view-in-de">
-                                <button onclick="varimoShopPageQuantityDecrease(this)" class="quick-quantity-decrease" id="decrease"><?php echo esc_html("-", 'variation-monster-pro'); ?></button>
+                                <button onclick="varimoShopPageQuantityDecrease(this)" class="quick-quantity-decrease" id="decrease"><?php echo esc_html("-", 'variation-monster'); ?></button>
                                 <input type="text" autocomplete="off" id="quantity" class="quick-quantity-input" value="1" data-max="">
-                                <button onclick="varimoShopPageQuantityIncrese(this)" class="quick-quantity-increase" id="increase"><?php echo esc_html("+", 'variation-monster-pro'); ?></button>
+                                <button onclick="varimoShopPageQuantityIncrese(this)" class="quick-quantity-increase" id="increase"><?php echo esc_html("+", 'variation-monster'); ?></button>
                             </div>
 
                             <div style="margin-top: 10px" class="notice-container-template-four">

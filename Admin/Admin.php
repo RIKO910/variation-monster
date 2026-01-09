@@ -107,28 +107,28 @@ class VARIMO_Admin{
         ?>
         <tr class="form-field">
             <th scope="row" valign="top">
-                <label for="attribute_display_type"><?php esc_html_e( 'Display Type', 'variation-monster-pro' ); ?></label>
+                <label for="attribute_display_type"><?php esc_html_e( 'Display Type', 'variation-monster' ); ?></label>
             </th>
             <td>
                 <select name="attribute_display_type" id="attribute_display_type">
-                    <option value="select" <?php selected( $display_type, 'select' ); ?>><?php esc_html_e( 'Select', 'variation-monster-pro' ); ?></option>
-                    <option value="color" <?php selected( $display_type, 'color' ); ?>><?php esc_html_e( 'Color', 'variation-monster-pro' ); ?></option>
-                    <option value="image" <?php selected( $display_type, 'image' ); ?>><?php esc_html_e( 'Image', 'variation-monster-pro' ); ?></option>
-                    <option value="button" <?php selected( $display_type, 'button' ); ?>><?php esc_html_e( 'Button', 'variation-monster-pro' ); ?></option>
-                    <option value="radio" <?php selected( $display_type, 'radio' ); ?>><?php esc_html_e( 'Radio', 'variation-monster-pro' ); ?></option>
+                    <option value="select" <?php selected( $display_type, 'select' ); ?>><?php esc_html_e( 'Select', 'variation-monster' ); ?></option>
+                    <option value="color" <?php selected( $display_type, 'color' ); ?>><?php esc_html_e( 'Color', 'variation-monster' ); ?></option>
+                    <option value="image" <?php selected( $display_type, 'image' ); ?>><?php esc_html_e( 'Image', 'variation-monster' ); ?></option>
+                    <option value="button" <?php selected( $display_type, 'button' ); ?>><?php esc_html_e( 'Button', 'variation-monster' ); ?></option>
+                    <option value="radio" <?php selected( $display_type, 'radio' ); ?>><?php esc_html_e( 'Radio', 'variation-monster' ); ?></option>
                 </select>
-                <p class="description"><?php esc_html_e( 'Select how this attribute should be displayed on the product page.', 'variation-monster-pro' ); ?></p>
+                <p class="description"><?php esc_html_e( 'Select how this attribute should be displayed on the product page.', 'variation-monster' ); ?></p>
             </td>
         </tr>
 
         <tr class="form-field">
             <th scope="row" valign="top">
-                <label for="attribute_tooltip_permission"><?php esc_html_e( 'Tooltip Show', 'variation-monster-pro' ); ?></label>
+                <label for="attribute_tooltip_permission"><?php esc_html_e( 'Tooltip Show', 'variation-monster' ); ?></label>
             </th>
             <td>
                 <input type="checkbox" id="attribute_tooltip_permission" name="attribute_tooltip_permission" value="yes"
                     <?php checked($tooltip_permission, 'yes'); ?>>
-                <p class="description"><?php esc_html_e( 'If you want to show tooltip on above attribute then check it.', 'variation-monster-pro' ); ?></p>
+                <p class="description"><?php esc_html_e( 'If you want to show tooltip on above attribute then check it.', 'variation-monster' ); ?></p>
             </td>
         </tr>
         <?php
@@ -184,24 +184,24 @@ class VARIMO_Admin{
         if ($display_type === 'color') {
             ?>
             <div class="form-field product_attribute_color">
-                <label for="term_color"><?php esc_html_e('Color', 'variation-monster-pro'); ?></label>
+                <label for="term_color"><?php esc_html_e('Color', 'variation-monster'); ?></label>
                 <input name="term_color" id="term_color" type="text" value="" class="wvs-color-picker" data-default-color="#ffffff">
-                <p class="description"><?php esc_html_e('Select a color for this term.', 'variation-monster-pro'); ?></p>
+                <p class="description"><?php esc_html_e('Select a color for this term.', 'variation-monster'); ?></p>
             </div>
 
             <div class="form-field product_attribute_color">
-                <label for="term_secondary_color"><?php esc_html_e('Secondary Color', 'variation-monster-pro'); ?></label>
+                <label for="term_secondary_color"><?php esc_html_e('Secondary Color', 'variation-monster'); ?></label>
                 <input name="term_secondary_color" id="term_secondary_color" type="text" value="" class="wvs-color-picker" data-default-color="#ffffff">
-                <p class="description"><?php esc_html_e('Select a secondary color for this term.', 'variation-monster-pro'); ?></p>
+                <p class="description"><?php esc_html_e('Select a secondary color for this term.', 'variation-monster'); ?></p>
             </div>
             <?php
         }elseif ($display_type === 'image') {
             ?>
             <div class="form-field">
-                <label for="term_image_add_new"><?php esc_html_e('Image', 'variation-monster-pro'); ?></label>
+                <label for="term_image_add_new"><?php esc_html_e('Image', 'variation-monster'); ?></label>
                 <input type="hidden" name="term_image_add_new" id="term_image_add_new" value="">
                 <div style="display: flex; gap: 20px; align-items: center" >
-                    <button type="button" class="button" id="upload_image_button_add_new"><?php esc_html_e('Upload Image', 'variation-monster-pro'); ?></button>
+                    <button type="button" class="button" id="upload_image_button_add_new"><?php esc_html_e('Upload Image', 'variation-monster'); ?></button>
                     <div id="term_image_preview_add_new_render_from_js"></div>
                 </div>
                 <p class="description">Upload an image for this term.</p>
@@ -304,7 +304,7 @@ class VARIMO_Admin{
         // Only check nonce if it exists (meaning our form was submitted)
         if (isset($_POST['save_term_meta_nonce_wpnonce'])) {
             if (!wp_verify_nonce(sanitize_key($_POST['save_term_meta_nonce_wpnonce']), 'save_term_meta_nonce')) {
-                wp_die(esc_html__('Security check failed', 'variation-monster-pro'));
+                wp_die(esc_html__('Security check failed', 'variation-monster'));
             }
         } else {
             // If nonce doesn't exist, this isn't from our form - exit gracefully
@@ -342,7 +342,7 @@ class VARIMO_Admin{
         // Only check nonce if it exists (meaning our form was submitted)
         if (isset($_POST['varimo_wpnonce'])) {
             if (!wp_verify_nonce(sanitize_key($_POST['varimo_wpnonce']), 'edit_term_meta_nonce')) {
-                wp_die(esc_html__('Security check failed', 'variation-monster-pro'));
+                wp_die(esc_html__('Security check failed', 'variation-monster'));
             }
         } else {
             // If nonce doesn't exist, this isn't from our form - exit gracefully
@@ -394,9 +394,9 @@ class VARIMO_Admin{
             $new_columns[$key] = $value;
             if ($key === 'slug') {
                 if ($display_type === 'color') {
-                    $new_columns['color'] = __('Color', 'variation-monster-pro');
+                    $new_columns['color'] = __('Color', 'variation-monster');
                 }elseif ($display_type === 'image') {
-                    $new_columns['image'] = __('Image', 'variation-monster-pro');
+                    $new_columns['image'] = __('Image', 'variation-monster');
                 }
             }
         }
@@ -447,7 +447,7 @@ class VARIMO_Admin{
                 "></span>';
                 }
             } else {
-                $content = __('—', 'variation-monster-pro');
+                $content = __('—', 'variation-monster');
             }
         }
         if ($column_name === 'image' && $display_type === 'image') {
@@ -456,10 +456,10 @@ class VARIMO_Admin{
 
             if ($image) {
                 $content = wp_get_attachment_image($image_id, 'thumbnail', false, [
-                    'alt'   => esc_attr__('Term Image', 'variation-monster-pro'),
+                    'alt'   => esc_attr__('Term Image', 'variation-monster'),
                     'style' => 'max-width: 50px; height: auto;',
                 ]);            } else {
-                $content = __('—', 'variation-monster-pro');
+                $content = __('—', 'variation-monster');
             }
         }
         return $content;
@@ -476,7 +476,7 @@ class VARIMO_Admin{
         $image_ids      = $gallery_images ? explode(',', $gallery_images) : [];
         ?>
         <div class="form-row form-row-full" style="margin-top: 10px; margin-bottom: 10px; border: 1px solid lightgrey; padding: 5px; border-radius: 5px;">
-            <label><?php esc_html_e('Gallery Images', 'variation-monster-pro'); ?></label>
+            <label><?php esc_html_e('Gallery Images', 'variation-monster'); ?></label>
             <ul id="gallery-container-<?php echo esc_attr($variation->ID); ?>" class="variation-gallery-container" style="margin-top: 5px;">
                 <?php foreach ($image_ids as $image_id): ?>
                     <li class="variation-gallery-item" data-image-id="<?php echo esc_attr($image_id); ?>">
@@ -499,7 +499,7 @@ class VARIMO_Admin{
             </ul>
             <input type="hidden" name="variation_gallery_nonce[<?php echo esc_attr($variation->ID); ?>]" value="<?php echo esc_attr(wp_create_nonce('save_variation_gallery_' . $variation->ID)); ?>" />
             <input type="hidden" name="variation_gallery_image[<?php echo esc_attr($variation->ID); ?>]" id="variation-gallery-input-<?php echo esc_attr($variation->ID); ?>" value="<?php echo esc_attr($gallery_images); ?>" />
-            <button type="button" class="button upload-variation-gallery-image" data-variation-id="<?php echo esc_attr($variation->ID); ?>"><?php esc_html_e('Upload Images', 'variation-monster-pro'); ?></button>
+            <button type="button" class="button upload-variation-gallery-image" data-variation-id="<?php echo esc_attr($variation->ID); ?>"><?php esc_html_e('Upload Images', 'variation-monster'); ?></button>
         </div>
         <?php
     }
@@ -546,7 +546,7 @@ class VARIMO_Admin{
     public function add_data_tab( $tabs ) {
 
         $tabs['product_preorder_woocommerce'] = array(
-            'label'    => esc_html__( 'Variation Monster', 'variation-monster-pro' ),
+            'label'    => esc_html__( 'Variation Monster', 'variation-monster' ),
             'target'   => 'product_variation_product_data',
             'class'    => array( 'show_if_simple', 'show_if_variable' ),
             'priority' => 21,
@@ -622,12 +622,12 @@ class VARIMO_Admin{
                         woocommerce_wp_select(
                             array(
                                 'id'          => '_quick_cart_carousel_meta',
-                                'label'       => __( 'Quick Cart Carousel', 'variation-monster-pro' ),
-                                'description' => __( 'Variation quick cart carousel enable disable for this product', 'variation-monster-pro' ),
+                                'label'       => __( 'Quick Cart Carousel', 'variation-monster' ),
+                                'description' => __( 'Variation quick cart carousel enable disable for this product', 'variation-monster' ),
                                 'desc_tip'    => 'true',
                                 'options'     => array(
-                                    'true'  => __( 'On', 'variation-monster-pro' ),
-                                    'false' => __( 'Off', 'variation-monster-pro' ),
+                                    'true'  => __( 'On', 'variation-monster' ),
+                                    'false' => __( 'Off', 'variation-monster' ),
                                 ),
                                 'value'       => $defaultValueQuickCarouselMeta,  // Set the default value
                             )
@@ -636,15 +636,15 @@ class VARIMO_Admin{
                         woocommerce_wp_select(
                             array(
                                 'id'          => '_quick_cart_carousel_template_meta',
-                                'label'       => __( 'Carousel Template', 'variation-monster-pro' ),
-                                'description' => __( 'Carousel template for this product. Also you can show this template from our global settings', 'variation-monster-pro' ),
+                                'label'       => __( 'Carousel Template', 'variation-monster' ),
+                                'description' => __( 'Carousel template for this product. Also you can show this template from our global settings', 'variation-monster' ),
                                 'desc_tip'    => 'true',
                                 'options'     => array(
-                                    'none'       => __( 'Select', 'variation-monster-pro' ),
-                                    'template_1' => __( 'Template 1', 'variation-monster-pro' ),
-                                    'template_2' => __( 'Template 2', 'variation-monster-pro' ),
-                                    'template_3' => __( 'Template 3', 'variation-monster-pro' ),
-                                    'template_4' => __( 'Template 4', 'variation-monster-pro' ),
+                                    'none'       => __( 'Select', 'variation-monster' ),
+                                    'template_1' => __( 'Template 1', 'variation-monster' ),
+                                    'template_2' => __( 'Template 2', 'variation-monster' ),
+                                    'template_3' => __( 'Template 3', 'variation-monster' ),
+                                    'template_4' => __( 'Template 4', 'variation-monster' ),
                                 ),
                                 'value'        => $defaultValueQuickCartCarouselTemplateMeta,
                             )
@@ -655,12 +655,12 @@ class VARIMO_Admin{
                         woocommerce_wp_select(
                             array(
                                 'id'          => '_variation_list_meta',
-                                'label'       => __( 'Variation List', 'variation-monster-pro' ),
-                                'description' => __( 'Variation List enable disable for this product', 'variation-monster-pro' ),
+                                'label'       => __( 'Variation List', 'variation-monster' ),
+                                'description' => __( 'Variation List enable disable for this product', 'variation-monster' ),
                                 'desc_tip'    => 'true',
                                 'options'     => array(
-                                    'true'  => __( 'On', 'variation-monster-pro' ),
-                                    'false' => __( 'Off', 'variation-monster-pro' ),
+                                    'true'  => __( 'On', 'variation-monster' ),
+                                    'false' => __( 'Off', 'variation-monster' ),
                                 ),
                                 'value'       => $defaultValueVariationListMeta,  // Set the default value
                             )
@@ -669,13 +669,13 @@ class VARIMO_Admin{
                         woocommerce_wp_select(
                             array(
                                 'id'          => '_variation_list_template_meta',
-                                'label'       => __( 'Variation List Template', 'variation-monster-pro' ),
-                                'description' => __( 'Variation list template for this product. Also you can show this template from our global settings', 'variation-monster-pro' ),
+                                'label'       => __( 'Variation List Template', 'variation-monster' ),
+                                'description' => __( 'Variation list template for this product. Also you can show this template from our global settings', 'variation-monster' ),
                                 'desc_tip'    => 'true',
                                 'options'     => array(
-                                    'none'       => __( 'Select', 'variation-monster-pro' ),
-                                    'template_1' => __( 'Template 1', 'variation-monster-pro' ),
-                                    'template_2' => __( 'Template 2', 'variation-monster-pro' ),
+                                    'none'       => __( 'Select', 'variation-monster' ),
+                                    'template_1' => __( 'Template 1', 'variation-monster' ),
+                                    'template_2' => __( 'Template 2', 'variation-monster' ),
                                 ),
                                 'value'        => $defaultValueVariationListTemplateMeta,
                             )
@@ -687,12 +687,12 @@ class VARIMO_Admin{
                         woocommerce_wp_select(
                             array(
                                 'id'          => '_variation_swatches_meta',
-                                'label'       => __( 'Variation Swatches', 'variation-monster-pro' ),
-                                'description' => __( 'Variation swatches enable disable for this product', 'variation-monster-pro' ),
+                                'label'       => __( 'Variation Swatches', 'variation-monster' ),
+                                'description' => __( 'Variation swatches enable disable for this product', 'variation-monster' ),
                                 'desc_tip'    => 'true',
                                 'options'     => array(
-                                    'true'  => __( 'On', 'variation-monster-pro' ),
-                                    'false' => __( 'Off', 'variation-monster-pro' ),
+                                    'true'  => __( 'On', 'variation-monster' ),
+                                    'false' => __( 'Off', 'variation-monster' ),
                                 ),
                                 'value'       => $defaultValueVariationSwatchesMeta,  // Set the default value
                             )
@@ -704,12 +704,12 @@ class VARIMO_Admin{
                         woocommerce_wp_select(
                             array(
                                 'id'          => '_variation_table_meta',
-                                'label'       => __( 'Variation Table', 'variation-monster-pro' ),
-                                'description' => __( 'Variation table enable disable for this product', 'variation-monster-pro' ),
+                                'label'       => __( 'Variation Table', 'variation-monster' ),
+                                'description' => __( 'Variation table enable disable for this product', 'variation-monster' ),
                                 'desc_tip'    => 'true',
                                 'options'     => array(
-                                    'true'  => __( 'On', 'variation-monster-pro' ),
-                                    'false' => __( 'Off', 'variation-monster-pro' ),
+                                    'true'  => __( 'On', 'variation-monster' ),
+                                    'false' => __( 'Off', 'variation-monster' ),
                                 ),
                                 'value'       => $defaultValueVariationTableMeta,  // Set the default value
                             )
@@ -718,13 +718,13 @@ class VARIMO_Admin{
                         woocommerce_wp_select(
                             array(
                                 'id'          => '_variation_table_template',
-                                'label'       => __( 'Variation Table Template', 'variation-monster-pro' ),
-                                'description' => __( 'Variation table template for this product. Also you can show this template from our global settings', 'variation-monster-pro' ),
+                                'label'       => __( 'Variation Table Template', 'variation-monster' ),
+                                'description' => __( 'Variation table template for this product. Also you can show this template from our global settings', 'variation-monster' ),
                                 'desc_tip'    => 'true',
                                 'options'     => array(
-                                    'none'    => __( 'select', 'variation-monster-pro' ),
-                                    'template_1' => __( 'Template 1', 'variation-monster-pro' ),
-                                    'template_2' => __( 'Template 2', 'variation-monster-pro' ),
+                                    'none'    => __( 'select', 'variation-monster' ),
+                                    'template_1' => __( 'Template 1', 'variation-monster' ),
+                                    'template_2' => __( 'Template 2', 'variation-monster' ),
                                 ),
                                 'value'       => $defaultValueVariationTableTemplateMeta,
                             )
@@ -734,13 +734,13 @@ class VARIMO_Admin{
                         woocommerce_wp_select(
                             array(
                                 'id'          => '_table_template2_cart_section_style_template',
-                                'label'       => __( 'Cart Section Style Template', 'variation-monster-pro' ),
-                                'description' => __( 'Cart section style template in table template 2 for this product. Also you can show this template from our global settings', 'variation-monster-pro' ),
+                                'label'       => __( 'Cart Section Style Template', 'variation-monster' ),
+                                'description' => __( 'Cart section style template in table template 2 for this product. Also you can show this template from our global settings', 'variation-monster' ),
                                 'desc_tip'    => 'true',
                                 'options'     => array(
-                                    'none'    => __( 'Select', 'variation-monster-pro' ),
-                                    'template_1' => __( 'Template 1', 'variation-monster-pro' ),
-                                    'template_2' => __( 'Template 2', 'variation-monster-pro' ),
+                                    'none'    => __( 'Select', 'variation-monster' ),
+                                    'template_1' => __( 'Template 1', 'variation-monster' ),
+                                    'template_2' => __( 'Template 2', 'variation-monster' ),
                                 ),
                                 'value'      => $defaultValueVariationTable2CartTemplateMeta,
                             )
@@ -751,12 +751,12 @@ class VARIMO_Admin{
                         woocommerce_wp_select(
                             array(
                                 'id'          => '_before_cart_variation_table_meta',
-                                'label'       => __( 'Before Cart Variation Table', 'variation-monster-pro' ),
-                                'description' => __( 'Before Cart variation table enable disable for this product', 'variation-monster-pro' ),
+                                'label'       => __( 'Before Cart Variation Table', 'variation-monster' ),
+                                'description' => __( 'Before Cart variation table enable disable for this product', 'variation-monster' ),
                                 'desc_tip'    => 'true',
                                 'options'     => array(
-                                    'false' => __( 'Off', 'variation-monster-pro' ),
-                                    'true'  => __( 'On', 'variation-monster-pro' ),
+                                    'false' => __( 'Off', 'variation-monster' ),
+                                    'true'  => __( 'On', 'variation-monster' ),
                                 ),
                                 'value'       => $defaultBeforeCartValueVariationTableMeta,  // Set the default value
                             )
@@ -767,14 +767,14 @@ class VARIMO_Admin{
                         woocommerce_wp_select(
                             array(
                                 'id'          => '_variation_swatches_archive_page_meta',
-                                'label'       => __( 'Variation Swatches on Archive Page', 'variation-monster-pro' ),
-                                'description' => __( 'Enable single product variation swatches archive page settings', 'variation-monster-pro' ),
+                                'label'       => __( 'Variation Swatches on Archive Page', 'variation-monster' ),
+                                'description' => __( 'Enable single product variation swatches archive page settings', 'variation-monster' ),
                                 'desc_tip'    => 'true',
                                 'options'     => array(
-                                    'not-select'         => __( 'Select', 'variation-monster-pro' ),
-                                    'attribute-archive'  => __( 'Redirect Single Product Page', 'variation-monster-pro' ),
-                                    'attribute-swatches' => __( 'Quick Cart', 'variation-monster-pro' ),
-                                    'none'               => __( 'None', 'variation-monster-pro' ),
+                                    'not-select'         => __( 'Select', 'variation-monster' ),
+                                    'attribute-archive'  => __( 'Redirect Single Product Page', 'variation-monster' ),
+                                    'attribute-swatches' => __( 'Quick Cart', 'variation-monster' ),
+                                    'none'               => __( 'None', 'variation-monster' ),
                                 ),
                                 'value'      => $defaultValueShowAttributeSwatchesArchiveMeta,
                             )
@@ -785,7 +785,7 @@ class VARIMO_Admin{
                 </div>
             </div>
 
-            <h2 style="font-weight: bold"><?php esc_html_e('Extend Attribute Settings', 'variation-monster-pro'); ?></h2>
+            <h2 style="font-weight: bold"><?php esc_html_e('Extend Attribute Settings', 'variation-monster'); ?></h2>
             <table class="wp-list-table widefat fixed striped" id="attribute-table" style="cursor: pointer">
                 <tbody>
                 <?php
@@ -811,19 +811,19 @@ class VARIMO_Admin{
                                 <h4 style="font-weight: bold;"><?php echo esc_html($attribute_name); ?></h4>
                             </td>
                             <td class="show-in-archive-page-attribute-select-option">
-                                <label><?php esc_html_e('Show in Archive Page:', 'variation-monster-pro'); ?></label>
+                                <label><?php esc_html_e('Show in Archive Page:', 'variation-monster'); ?></label>
                                 <select name="show_attribute_archive_page[<?php echo esc_attr($attribute_slug); ?>]" id="show_attribute_archive_page_[<?php echo esc_attr($attribute_slug); ?>]">
-                                    <option value="yes" <?php selected($show_archive, 'yes'); ?>><?php esc_html_e('Yes', 'variation-monster-pro'); ?></option>
-                                    <option value="" <?php selected($show_archive, ''); ?>><?php esc_html_e('No', 'variation-monster-pro'); ?></option>
+                                    <option value="yes" <?php selected($show_archive, 'yes'); ?>><?php esc_html_e('Yes', 'variation-monster'); ?></option>
+                                    <option value="" <?php selected($show_archive, ''); ?>><?php esc_html_e('No', 'variation-monster'); ?></option>
                                 </select>
                             </td>
                             <td>
-                                <label><?php esc_html_e('Display Type:', 'variation-monster-pro'); ?></label>
+                                <label><?php esc_html_e('Display Type:', 'variation-monster'); ?></label>
                                 <select data-rowSlug-displayType="<?php echo esc_attr($attribute_slug); ?>" name="attribute_display_type[<?php echo esc_attr($attribute_slug); ?>]" id="attribute_display_type_<?php echo esc_attr($attribute_slug); ?>">
-                                    <option value="button" <?php selected($display_type, 'button'); ?>><?php esc_html_e('Button', 'variation-monster-pro'); ?></option>
-                                    <option value="color" <?php selected($display_type, 'color'); ?>><?php esc_html_e('Color', 'variation-monster-pro'); ?></option>
-                                    <option value="image" <?php selected($display_type, 'image'); ?>><?php esc_html_e('Image', 'variation-monster-pro'); ?></option>
-                                    <option value="radio" <?php selected($display_type, 'radio'); ?>><?php esc_html_e('Radio', 'variation-monster-pro'); ?></option>
+                                    <option value="button" <?php selected($display_type, 'button'); ?>><?php esc_html_e('Button', 'variation-monster'); ?></option>
+                                    <option value="color" <?php selected($display_type, 'color'); ?>><?php esc_html_e('Color', 'variation-monster'); ?></option>
+                                    <option value="image" <?php selected($display_type, 'image'); ?>><?php esc_html_e('Image', 'variation-monster'); ?></option>
+                                    <option value="radio" <?php selected($display_type, 'radio'); ?>><?php esc_html_e('Radio', 'variation-monster'); ?></option>
                                 </select>
                                 <p class="attribute-toggle-btn" data-row-id="<?php echo esc_attr($attribute_slug); ?>" style="cursor: pointer; display: inline-flex; align-items: center; margin-left: 80px">
                                     <span class="dashicons dashicons-arrow-down toggle-icon"></span>
@@ -871,7 +871,7 @@ class VARIMO_Admin{
                                                 <td style="min-width: 100px"><?php echo esc_html(get_term($term_id)->name); ?></td>
                                                 <td>
                                                     <div class="color-meta display-typeShow-color-<?php echo esc_attr($attribute_slug); ?>" id="display-select-option-color-<?php echo esc_attr($term_id); ?>-<?php echo esc_attr($attribute_id); ?>" style="display: none;">
-                                                        <label><?php esc_html_e('Color:', 'variation-monster-pro'); ?></label>
+                                                        <label><?php esc_html_e('Color:', 'variation-monster'); ?></label>
                                                         <input type="text"
                                                                name="variation_meta_color[<?php echo esc_attr($term_id); ?>][<?php echo esc_attr($attribute_id); ?>]"
                                                                id="variation_meta_color_<?php echo esc_attr($term_id); ?>_<?php echo esc_attr($attribute_id); ?>"
@@ -880,7 +880,7 @@ class VARIMO_Admin{
                                                     </div>
 
                                                     <div class="color-meta display-typeShow-color-<?php echo esc_attr($attribute_slug); ?>" id="display-select-option-secondary-color-<?php echo esc_attr($term_id); ?>-<?php echo esc_attr($attribute_id); ?>" style="display: none;">
-                                                        <label><?php esc_html_e('Secondary Color:', 'variation-monster-pro'); ?></label>
+                                                        <label><?php esc_html_e('Secondary Color:', 'variation-monster'); ?></label>
                                                         <input type="text"
                                                                name="variation_meta_secondary_color[<?php echo esc_attr($term_id); ?>][<?php echo esc_attr($attribute_id); ?>]"
                                                                id="variation_meta_secondary_color_<?php echo esc_attr($term_id); ?>_<?php echo esc_attr($attribute_id); ?>"
@@ -889,7 +889,7 @@ class VARIMO_Admin{
                                                     </div>
 
                                                     <div class="image-meta display-typeShow-image-<?php echo esc_attr($attribute_slug); ?>" id="display-select-option-image-<?php echo esc_attr($term_id); ?>-<?php echo esc_attr($attribute_id); ?>" style="display: none;">
-                                                        <label><?php esc_html_e('Image:', 'variation-monster-pro'); ?></label>
+                                                        <label><?php esc_html_e('Image:', 'variation-monster'); ?></label>
                                                         <img id="meta_term_image_preview_<?php echo esc_attr($term_id); ?>"
                                                              class="meta_term_image_preview"
                                                              src="<?php echo esc_url($image_url); ?>"
@@ -901,12 +901,12 @@ class VARIMO_Admin{
                                                                class="meta_term_image"
                                                                value="<?php echo esc_attr($image_url); ?>">
                                                         <div style="display: flex; gap: 10px;">
-                                                            <button type="button" class="button meta_upload_image_button"><?php esc_html_e('Upload Image', 'variation-monster-pro'); ?></button>
-                                                            <button type="button" class="button meta_image_button_remove" style="background-color: firebrick; color: white;"><?php esc_html_e('Remove Image', 'variation-monster-pro'); ?></button>
+                                                            <button type="button" class="button meta_upload_image_button"><?php esc_html_e('Upload Image', 'variation-monster'); ?></button>
+                                                            <button type="button" class="button meta_image_button_remove" style="background-color: firebrick; color: white;"><?php esc_html_e('Remove Image', 'variation-monster'); ?></button>
                                                         </div>
                                                     </div>
                                                     <div class="tooltip-meta" style="margin-top: 10px">
-                                                        <label><?php esc_html_e('Tooltip:', 'variation-monster-pro'); ?></label>
+                                                        <label><?php esc_html_e('Tooltip:', 'variation-monster'); ?></label>
                                                         <input type="text" placeholder="
 "
                                                                name="variation_meta_tooltip[<?php echo esc_attr($term_id); ?>][<?php echo esc_attr($attribute_id); ?>]"
@@ -915,7 +915,7 @@ class VARIMO_Admin{
                                                     </div>
 
                                                     <div class="tooltip-image-meta " id="" style="margin-top: 44px">
-                                                        <label><?php esc_html_e('Tooltip Image:', 'variation-monster-pro'); ?></label>
+                                                        <label><?php esc_html_e('Tooltip Image:', 'variation-monster'); ?></label>
                                                         <img id="tooltip_meta_term_image_preview_<?php echo esc_attr($term_id); ?>"
                                                              class="tooltip_meta_term_image_preview"
                                                              src="<?php echo esc_url($tooltip_meta_image_url); ?>"
@@ -927,8 +927,8 @@ class VARIMO_Admin{
                                                                class="tooltip_meta_term_image"
                                                                value="<?php echo esc_attr($tooltip_meta_image_url); ?>">
                                                         <div style="display: flex; gap: 10px;">
-                                                            <button type="button" class="button tooltip_meta_upload_image_button"><?php esc_html_e('Upload Image', 'variation-monster-pro'); ?></button>
-                                                            <button type="button" class="button tooltip_meta_image_button_remove" style="background-color: firebrick; color: white;"><?php esc_html_e('Remove Image', 'variation-monster-pro'); ?></button>
+                                                            <button type="button" class="button tooltip_meta_upload_image_button"><?php esc_html_e('Upload Image', 'variation-monster'); ?></button>
+                                                            <button type="button" class="button tooltip_meta_image_button_remove" style="background-color: firebrick; color: white;"><?php esc_html_e('Remove Image', 'variation-monster'); ?></button>
                                                         </div>
                                                     </div>
 
@@ -944,7 +944,7 @@ class VARIMO_Admin{
 
                                                             ?>
                                                             <div class="form-row form-row-full" >
-                                                                <label><?php esc_html_e('Gallery Image:', 'variation-monster-pro'); ?></label>
+                                                                <label><?php esc_html_e('Gallery Image:', 'variation-monster'); ?></label>
                                                                 <ul id="gallery-container-<?php echo esc_attr($term_id); ?>" class="variation-gallery-container" style="margin-top: 5px;">
                                                                     <?php foreach ($term_image_ids as $image_id): ?>
                                                                         <li class="variation-gallery-item" data-image-id="<?php echo esc_attr($image_id); ?>">
@@ -966,7 +966,7 @@ class VARIMO_Admin{
                                                                     <?php endforeach; ?>
                                                                 </ul>
                                                                 <input type="hidden" name="term_gallery_image[<?php echo esc_attr($term_id); ?>][<?php echo esc_attr($attribute_id); ?>]" id="variation-gallery-input-<?php echo esc_attr($term_id); ?>" value="<?php echo esc_attr($term_gallery_images); ?>" />
-                                                                <button type="button" class="button upload-variation-gallery-image" data-variation-id="<?php echo esc_attr($term_id); ?>"><?php esc_html_e('Upload Images', 'variation-monster-pro'); ?></button>
+                                                                <button type="button" class="button upload-variation-gallery-image" data-variation-id="<?php echo esc_attr($term_id); ?>"><?php esc_html_e('Upload Images', 'variation-monster'); ?></button>
                                                             </div>
 
                                                         </div>
@@ -996,7 +996,7 @@ class VARIMO_Admin{
                                                 <td style="min-width: 100px"><?php echo esc_html($custom_value); ?></td>
                                                 <td>
                                                     <div class="color-meta display-typeShow-color-<?php echo esc_attr($attribute_slug); ?>" id="display-select-option-custom-color-<?php echo esc_attr($custom_value_id); ?>-<?php echo esc_attr($attribute_id); ?>" style="display: none;">
-                                                        <label><?php esc_html_e('Color:', 'variation-monster-pro'); ?></label>
+                                                        <label><?php esc_html_e('Color:', 'variation-monster'); ?></label>
                                                         <input type="text"
                                                                name="variation_meta_color[<?php echo esc_attr($custom_value_slug); ?>][<?php echo esc_attr($attribute_id); ?>]"
                                                                id="variation_meta_color_<?php echo esc_attr($custom_value_slug); ?>_<?php echo esc_attr($attribute_id); ?>"
@@ -1005,7 +1005,7 @@ class VARIMO_Admin{
                                                     </div>
 
                                                     <div class="color-meta display-typeShow-color-<?php echo esc_attr($attribute_slug); ?>" id="display-select-option-custom-secondary-color-<?php echo esc_attr($custom_value_id); ?>-<?php echo esc_attr($attribute_id); ?>" style="display: none;">
-                                                        <label><?php esc_html_e('Secondary Color:', 'variation-monster-pro'); ?></label>
+                                                        <label><?php esc_html_e('Secondary Color:', 'variation-monster'); ?></label>
                                                         <input type="text"
                                                                name="variation_meta_secondary_color[<?php echo esc_attr($custom_value_slug); ?>][<?php echo esc_attr($attribute_id); ?>]"
                                                                id="variation_meta_secondary_color_<?php echo esc_attr($custom_value_slug); ?>_<?php echo esc_attr($attribute_id); ?>"
@@ -1014,7 +1014,7 @@ class VARIMO_Admin{
                                                     </div>
 
                                                     <div class="image-meta display-typeShow-image-<?php echo esc_attr($attribute_slug); ?>" id="display-select-option-custom-image-<?php echo esc_attr($custom_value_id); ?>-<?php echo esc_attr($attribute_id); ?>" style="display: none;">
-                                                        <label><?php esc_html_e('Image:', 'variation-monster-pro'); ?></label>
+                                                        <label><?php esc_html_e('Image:', 'variation-monster'); ?></label>
                                                         <img id="meta_term_image_preview_<?php echo esc_attr($custom_value_slug); ?>"
                                                              class="meta_term_image_preview"
                                                              src="<?php echo esc_url(get_post_meta($post->ID, 'variation_meta_attribute_image_' . $custom_value_slug . '_' . $attribute_id, true)); ?>"
@@ -1031,7 +1031,7 @@ class VARIMO_Admin{
                                                         </div>
                                                     </div>
                                                     <div class="tooltip-meta" style="margin-top: 10px">
-                                                        <label><?php esc_html_e('Tooltip:', 'variation-monster-pro'); ?></label>
+                                                        <label><?php esc_html_e('Tooltip:', 'variation-monster'); ?></label>
                                                         <input type="text" placeholder="Tooltip"
                                                                name="variation_meta_tooltip[<?php echo esc_attr($custom_value_slug); ?>][<?php echo esc_attr($attribute_id); ?>]"
                                                                id="variation_meta_tooltip_<?php echo esc_attr($custom_value_slug); ?>"
@@ -1039,7 +1039,7 @@ class VARIMO_Admin{
                                                     </div>
 
                                                     <div class="tooltip-image-meta " id="" style="margin-top: 44px">
-                                                        <label><?php esc_html_e('Tooltip Image:', 'variation-monster-pro'); ?></label>
+                                                        <label><?php esc_html_e('Tooltip Image:', 'variation-monster'); ?></label>
                                                         <img id="tooltip_meta_term_image_preview_<?php echo esc_attr($custom_value_slug); ?>"
                                                              class="tooltip_meta_term_image_preview"
                                                              src="<?php echo esc_url(get_post_meta($post->ID, 'tooltip_meta_term_image_' . $custom_value_slug . '_' . $attribute_id, true)); ?>"
@@ -1067,7 +1067,7 @@ class VARIMO_Admin{
 
                                                             ?>
                                                             <div class="form-row form-row-full" >
-                                                                <label><?php esc_html_e('Gallery Image:', 'variation-monster-pro'); ?></label>
+                                                                <label><?php esc_html_e('Gallery Image:', 'variation-monster'); ?></label>
                                                                 <ul id="gallery-container-<?php echo esc_attr($custom_value_slug); ?>" class="variation-gallery-container" style="margin-top: 5px;">
                                                                     <?php foreach ($term_image_ids as $image_id): ?>
                                                                         <li class="variation-gallery-item" data-image-id="<?php echo esc_attr($image_id); ?>">
@@ -1089,7 +1089,7 @@ class VARIMO_Admin{
                                                                     <?php endforeach; ?>
                                                                 </ul>
                                                                 <input type="hidden" name="term_gallery_image[<?php echo esc_attr($custom_value_slug); ?>][<?php echo esc_attr($attribute_id); ?>]" id="variation-gallery-input-<?php echo esc_attr($custom_value_slug); ?>" value="<?php echo esc_attr($term_gallery_images); ?>" />
-                                                                <button type="button" class="button upload-variation-gallery-image" data-variation-id="<?php echo esc_attr($custom_value_slug); ?>"><?php esc_html_e('Upload Images', 'variation-monster-pro'); ?></button>
+                                                                <button type="button" class="button upload-variation-gallery-image" data-variation-id="<?php echo esc_attr($custom_value_slug); ?>"><?php esc_html_e('Upload Images', 'variation-monster'); ?></button>
                                                             </div>
 
                                                         </div>
@@ -1106,7 +1106,7 @@ class VARIMO_Admin{
                                     }
 
                                     if (empty($term_ids) && empty($custom_attribute_values)) {
-                                        echo '<tr><td colspan="2">' . esc_html__('No attributes found for this product.', 'variation-monster-pro') . '</td></tr>';
+                                        echo '<tr><td colspan="2">' . esc_html__('No attributes found for this product.', 'variation-monster') . '</td></tr>';
                                     }
                                     ?>
 
@@ -1118,7 +1118,7 @@ class VARIMO_Admin{
                         <?php
                     }
                 } else {
-                    echo '<tr><td colspan="2">' . esc_html__('No attributes found.', 'variation-monster-pro') . '</td></tr>';
+                    echo '<tr><td colspan="2">' . esc_html__('No attributes found.', 'variation-monster') . '</td></tr>';
                 }
                 ?>
                 </tbody>
