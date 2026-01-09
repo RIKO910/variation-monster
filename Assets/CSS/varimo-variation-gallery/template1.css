@@ -1,0 +1,96 @@
+/* Slider Container */
+.variation-gallery-slider {
+    position: relative;
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto;
+}
+.gallery-slide-single-product-page img{
+    cursor: zoom-in;
+}
+
+/* Individual Slides */
+.gallery-slide {
+    text-align: center;
+}
+
+/* Navigation Buttons */
+.slick-prev,
+.slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.slick-prev {
+    left: 10px;
+}
+
+.slick-next {
+    right: 10px;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.woocommerce-product-gallery .flex-viewport {
+    overflow: hidden !important;
+    position: relative !important;
+    height: auto !important;
+}
+
+.woocommerce-product-gallery .woocommerce-product-gallery__wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.woocommerce-product-gallery .flex-viewport .slides img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+.lightbox-button {
+    position: absolute;
+    top: 17px;
+    right: 17px;
+    height: 2em;
+    width: 2em;
+    border-radius: 3px;
+    z-index: 99;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.lightbox-button:hover {
+    background-color: #D5D5D5;
+    color: #333;
+}
+
+.spinner-container {
+    display: block !important; /* Force display for debugging */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.spinner-container i {
+    font-size: 18px;
+    color: #333; /* Spinner color */
+}

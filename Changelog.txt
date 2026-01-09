@@ -1,0 +1,12 @@
+*** Variation Monster Pro Changelog ***
+
+2025-05-22 - version 1.0.0
+* Initial release
+* Variation swatches integration.
+* Archive page variation swatches integration.
+* Quick view integration.
+* Variation table integration.
+* Variation list integration.
+* Variation quick cart integration in archive page.
+* Variation gallery integration.
+* Attribute gallery integration.

@@ -1,0 +1,139 @@
+.tooltip_meta_upload_image_button, .meta_upload_image_button{
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.tooltip_meta_image_button_remove, .meta_image_button_remove{
+    background: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.upload-variation-gallery-image{
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sp-colorize-container {
+    width:40px !important;
+    border: none !important;
+}
+
+/*Help tip by variation monster in dokan plugin*/
+
+.varimo-help-tip {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    background-color: #e5e5e5;
+    color: #555;
+    border-radius: 50%;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: help;
+    position: relative;
+    margin-left: 5px;
+    font-family: Arial, sans-serif;
+}
+
+.varimo-help-tip::after {
+    content: attr(data-tip);
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.varimo-help-tip::before {
+    content: '';
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: #333;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 998;
+}
+
+.varimo-help-tip:hover::after,
+.varimo-help-tip:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.dokan-varimo-form-field, .show-in-archive-page-attribute-select-option, .varimo-dokan-display-type-attribute{
+    display: flex;
+    align-items: center;
+}
+
+.dokan-varimo-form-field label, .show-in-archive-page-attribute-select-option label, .varimo-dokan-display-type-attribute label{
+    font-weight: bold !important;
+    width:100%;
+    max-width: 250px;
+}
+
+.dokan-varimo-form-field select{
+    width: 30%;
+    margin-left: 20px;
+}
+
+.dokan-varimo-form-field select, .show-in-archive-page-attribute-select-option select, .varimo-dokan-display-type-attribute select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    padding: 10px 40px 10px 15px;
+    font-size: 14px;
+    border-radius: 8px;
+    color: #333;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px 16px;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dokan-varimo-form-field select:focus , .show-in-archive-page-attribute-select-option select:focus, .varimo-dokan-display-type-attribute select:focus{
+    border-color: #66afe9;
+    outline: none;
+    box-shadow: 0 0 5px rgba(102, 175, 233, 0.6);
+}
+
+.dokan-varimo-form-field select:hover , .show-in-archive-page-attribute-select-option select:hover, .varimo-dokan-display-type-attribute select:hover{
+    border-color: #999;
+}

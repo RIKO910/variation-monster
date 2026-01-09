@@ -1,0 +1,93 @@
+/* Flex container for the sliders */
+.gallery-flex-container {
+    display: flex;
+    flex-direction: column; /* Stack thumbnails and main slider vertically */
+    align-items: flex-start; /* Align items to the left */
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto; /* Center the container */
+    gap: 10px; /* Space between thumbnails and main slider */
+}
+
+/* Thumbnail Slider */
+.variation-gallery-slider-thumbnails {
+    width: 100%; /* Full width for the thumbnail slider */
+    flex-shrink: 0; /* Prevent the thumbnail slider from shrinking */
+    order: 1; /* Ensure the thumbnail slider is on top */
+}
+
+.variation-gallery-slider-thumbnails .gallery-thumbnail {
+    cursor: pointer;
+    margin: 5px; /* Space between thumbnails */
+    opacity: 0.6; /* Make thumbnails slightly transparent */
+    transition: opacity 0.3s ease;
+}
+
+.variation-gallery-slider-thumbnails .gallery-thumbnail img {
+    width: 46px;
+    height: 46px;
+    display: block;
+}
+
+.variation-gallery-slider-thumbnails .gallery-thumbnail.slick-current {
+    opacity: 1; /* Highlight the active thumbnail */
+}
+
+/* Main Slider */
+.variation-gallery-slider-main {
+    flex-grow: 1; /* Allow the main slider to take up remaining space */
+    width: 100%; /* Full width for the main slider */
+    order: 2; /* Ensure the main slider is below the thumbnails */
+}
+
+.variation-gallery-slider-main .gallery-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: zoom-in;
+}
+
+
+.variation-gallery-slider-thumbnails .gallery-thumbnail img {
+    width: 46px; /* Adjust as needed */
+    height: 46px; /* Adjust as needed */
+    display: block;
+    margin: 0 5px; /* Add horizontal spacing between thumbnails */
+}
+
+
+.lightbox-button {
+    position: absolute;
+    top: 87px;
+    right: 10px;
+    height: 2em;
+    width: 2em;
+    border-radius: 3px;
+    z-index: 99;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.lightbox-button:hover {
+    background-color: #D5D5D5;
+    color: #333;
+}
+
+.spinner-container {
+    display: block !important; /* Force display for debugging */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.spinner-container i {
+    font-size: 18px;
+    color: #333; /* Spinner color */
+}

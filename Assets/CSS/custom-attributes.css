@@ -1,0 +1,18 @@
+.vb-variation-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.vb-variation-buttons .vb-button {
+    padding: 10px 20px;
+    background-color: #0071a1;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.vb-variation-buttons .vb-button.selected {
+    background-color: #005377;
+}

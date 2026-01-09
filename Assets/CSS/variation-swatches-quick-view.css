@@ -1,0 +1,293 @@
+/* Modal styles */
+.vmonster-quick-view-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    overflow: auto;
+    padding: 20px;
+}
+
+.variation-monster-quick-view {
+    background: transparent;
+    color: #333;
+    padding: 8px 18px;
+    border-radius: 6px;
+    border: 2px solid #333;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.25s ease;
+}
+
+.variation-monster-quick-view:hover {
+    background: #333;
+    color: #fff;
+}
+
+
+
+.vmonster-quick-view-modal-content {
+    background: #fff;
+    margin: 5% auto; /* Center vertically */
+    border-radius: 8px;
+    max-width: 900px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+
+.variation-display-quick-view{
+    margin-left: 38px;
+}
+.variation-monster-quick-view-content{
+    margin-left: 38px;
+    margin-top: 38px;
+}
+.variation-monster-quick-view-in-de{
+    display: flex !important;
+    gap: 5px;
+    margin-left: 38px;
+    margin-bottom: 10px;
+
+}
+
+/* Gallery styles */
+.vm-quick-variable-gallery-quick-view {
+    position: relative;
+    /*width: 100%;*/
+    /*height: 100%;*/
+    margin: 0 auto;
+}
+
+.quick-variable-active-image-quick-view {
+    /*max-width: 100%;*/
+    /*height: 100%;*/
+    text-align: center;
+    margin: 0;
+}
+
+.quick-variable-active-image-quick-view img {
+    /*max-width: 100%;*/
+    /*height: 100%;*/
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: block;
+    margin: 0 !important;
+}
+
+.quick-gallery-prev-quick-view,
+.quick-gallery-next-quick-view {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 5px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.quick-gallery-prev-quick-view:hover,
+.quick-gallery-next-quick-view:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+.quick-gallery-prev-quick-view {
+    left: 15px;
+}
+
+.quick-gallery-next-quick-view {
+    right: 15px;
+}
+
+.quick-gallery-prev-quick-view:disabled,
+.quick-gallery-next-quick-view:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.quick-variable-thumbnail-quick-view {
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+    flex: 0 0 auto;
+}
+
+.quick-variable-thumbnail-quick-view:hover,
+.quick-variable-thumbnail-quick-view.active {
+    border-color: #0073aa;
+}
+
+.quick-variable-thumbnail-quick-view img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.variation-monster-content-wrap-quick-view{
+    /*width: 100%;*/
+    display: flex;
+}
+.vm-gallery-image-show-into-popup-quick-view{
+    height: 100%;
+    width: -webkit-fill-available;
+}
+
+.vm-content-show-into-popup-quick-view{
+    width: 100%;
+    /*align-items: stretch;*/
+    /*padding: 0;*/
+    /*justify-content: end;*/
+    display: flex;
+    flex-direction: column;
+}
+
+.quick-quantity-container.quick-view-quantity-container{
+    margin-top: auto;
+}
+
+.varimo-quick-view-product-name h4{
+    text-align: left;
+}
+
+.varimo-quick-view-product-name h4{
+    font-weight: 400;
+    font-size: xx-large;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+}
+
+.varimo-quick-view-product-sDescription{
+    font-size: x-large;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    line-height: 25px;
+}
+
+.varimo-quick-view-product-sku-section{
+    display: flex;
+    gap: 4px;
+    font-size: large;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    line-height: 25px;
+}
+
+.varimo-quick-view-product-sku-section p{
+    margin: 0;
+    padding: 0;
+    line-height: 25px;
+}
+
+.varimo-quick-view-product-price{
+    font-size:large;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    line-height: 25px;
+    display: flex;
+    gap: 5px;
+}
+
+.varimo-quick-view-product-meta-data{
+    font-size:large;
+    text-align: left;
+    display: flex;
+    flex-direction: column
+}
+
+@media only screen and (max-width: 600px) {
+
+    .quick-variable-gallery{
+        padding: 5px;
+    }
+
+    .quick-variable-active-image-quick-view img{
+        border-radius: 5px;
+    }
+
+    .variation-monster-content-wrap-quick-view{
+        display: flex;
+        flex-direction: column;
+        /*max-width: 280px;*/
+    }
+    .variation-monster-quick-view-content{
+        padding-left: 5px !important;
+        margin-top: 5px !important;
+    }
+    .variation-display-quick-view{
+        padding-left: 5px !important;
+    }
+    .vm-quick-variable-gallery-quick-view{
+        padding: 5px;
+    }
+
+    .quick-view-quantity-container{
+        gap: 43px;
+    }
+
+    .variation-display-quick-view, .variation-monster-quick-view-content{
+        margin: 0;
+    }
+
+    .add-to-cart-more-info-button{
+        width: 50% !important;
+    }
+
+    .close {
+        position: absolute !important;
+        top: 10px !important;
+        right: 10px !important;
+        font-size: 24px !important;
+        z-index: 1001; /* Above the modal */
+        color: #000 !important;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .vmonster-quick-view-modal {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        z-index: 1000;
+        margin: 0 !important;
+        padding: 0;
+    }
+
+    .vmonster-quick-view-modal-content {
+        margin: 10% auto;
+        width: 95%;
+        max-height: 95vh;
+    }
+
+
+    .notice-container-template-four{
+        margin-top: 0 !important;
+    }
+}
