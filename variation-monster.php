@@ -293,3 +293,25 @@ add_action('dokan_product_after_variation_pricing', function ($loop, $variation_
     </div>
     <?php
 }, 10, 3);
+
+require __DIR__ . '/vendor/autoload.php';
+
+/**
+ * Initialize the plugin tracker
+ *
+ * @return void
+ */
+function varimo_appsero_init_tracker_variation_monster() {
+
+    if ( ! class_exists( 'Appsero\Client' ) ) {
+        require_once __DIR__ . '/appsero/src/Client.php';
+    }
+
+    $client = new Appsero\Client( 'c2c98c0a-83a6-4e5d-8bb8-6008cb8b04e7', 'Variation Monster — Variation Tables, Swatches &amp; Quick View for WooCommerce', __FILE__ );
+
+    // Active insights
+    $client->insights()->init();
+
+}
+
+varimo_appsero_init_tracker_variation_monster();
