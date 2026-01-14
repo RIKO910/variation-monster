@@ -1216,7 +1216,7 @@ class VARIMO_Admin{
      * @since 1.0.2
      */
     public function enqueueAssets() {
-        $version = VMONSTER_VERION;
+        $version = VMONSTER_VERSION;
         wp_enqueue_style('wp-color-picker');
         wp_enqueue_media();
         wp_enqueue_script('jquery-ui-sortable');

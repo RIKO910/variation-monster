@@ -85,7 +85,7 @@ if (varimo_variation_monster_check_conflicts() === true){
     return;
 }else{
 
-    define("VMONSTER_VERION", '1.0.0');
+    define("VMONSTER_VERSION", '1.0.1');
     define("VMONSTER_DIR_URL", plugin_dir_url(__FILE__) );
     define("VMONSTER_DIR_PATH", plugin_dir_path(__FILE__) );
 

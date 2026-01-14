@@ -73,17 +73,17 @@ class VARIMO_Assets{
 
         wp_enqueue_script('jquery');
 
-        wp_enqueue_style('varimo-variation-swatches-quick-view-css', plugin_dir_url(dirname(__FILE__)) . 'Assets/CSS/variation-swatches-quick-view.css', array(), VMONSTER_VERION);
-        wp_enqueue_style('varimo-main-css', plugin_dir_url(dirname(__FILE__)) . 'Assets/CSS/style.css', array(), VMONSTER_VERION);
-        wp_enqueue_script('varimo-custom-slick-js', plugin_dir_url(dirname(__FILE__)) . 'Assets/JS/custom-slick.min.js',array(), VMONSTER_VERION, true );
-        wp_enqueue_script('varimo-custom-elevatezoom-js', plugin_dir_url(dirname(__FILE__)) . 'Assets/JS/custom-elevatezoom.min.js',array(), VMONSTER_VERION, true );
+        wp_enqueue_style('varimo-variation-swatches-quick-view-css', plugin_dir_url(dirname(__FILE__)) . 'Assets/CSS/variation-swatches-quick-view.css', array(), VMONSTER_VERSION);
+        wp_enqueue_style('varimo-main-css', plugin_dir_url(dirname(__FILE__)) . 'Assets/CSS/style.css', array(), VMONSTER_VERSION);
+        wp_enqueue_script('varimo-custom-slick-js', plugin_dir_url(dirname(__FILE__)) . 'Assets/JS/custom-slick.min.js',array(), VMONSTER_VERSION, true );
+        wp_enqueue_script('varimo-custom-elevatezoom-js', plugin_dir_url(dirname(__FILE__)) . 'Assets/JS/custom-elevatezoom.min.js',array(), VMONSTER_VERSION, true );
         wp_enqueue_style('varimo-all-min-font-awesome', plugin_dir_url(dirname(__FILE__)) . 'Assets/CSS/all.min.css', array(), '5.15.4');
         wp_enqueue_style('varimo-main-font-awesome-css', plugin_dir_url(dirname(__FILE__)) . 'Assets/CSS/fontawesome.min.css', array(), '5.15.4');
-        wp_enqueue_script('varimo-accounting-js', plugin_dir_url(dirname(__FILE__)) . 'Assets/JS/accounting.js',array(), VMONSTER_VERION, true );
-        wp_enqueue_script('varimo-frontend-js', plugin_dir_url(dirname(__FILE__)) . 'Assets/JS/frontend-script.js',array(), VMONSTER_VERION, true );
-        wp_enqueue_script('varimo-variation-swatches-for-archive-page', plugin_dir_url(dirname(__FILE__)) . 'Assets/JS/variation-swatches-for-archive-page.js',array(), VMONSTER_VERION, true );
-        wp_enqueue_script('varimo-variation-swatches-quick-view', plugin_dir_url(dirname(__FILE__)) . 'Assets/JS/variation-swatches-quick-view.js',array(), VMONSTER_VERION, true );
-        wp_enqueue_script('varimo-variation-swatches-popup-template-four', plugin_dir_url(dirname(__FILE__)) . 'Assets/JS/variation-swatches-popup-template-four.js',array(), VMONSTER_VERION, true );
+        wp_enqueue_script('varimo-accounting-js', plugin_dir_url(dirname(__FILE__)) . 'Assets/JS/accounting.js',array(), VMONSTER_VERSION, true );
+        wp_enqueue_script('varimo-frontend-js', plugin_dir_url(dirname(__FILE__)) . 'Assets/JS/frontend-script.js',array(), VMONSTER_VERSION, true );
+        wp_enqueue_script('varimo-variation-swatches-for-archive-page', plugin_dir_url(dirname(__FILE__)) . 'Assets/JS/variation-swatches-for-archive-page.js',array(), VMONSTER_VERSION, true );
+        wp_enqueue_script('varimo-variation-swatches-quick-view', plugin_dir_url(dirname(__FILE__)) . 'Assets/JS/variation-swatches-quick-view.js',array(), VMONSTER_VERSION, true );
+        wp_enqueue_script('varimo-variation-swatches-popup-template-four', plugin_dir_url(dirname(__FILE__)) . 'Assets/JS/variation-swatches-popup-template-four.js',array(), VMONSTER_VERSION, true );
 
         $varimoVariableSetting                  = get_option('variable_all_checked', array());
         $varimoVariationSwatchesDisableSettings = isset($varimoVariableSetting['variationSwatchesDisableSettings'][0]) ? $varimoVariableSetting['variationSwatchesDisableSettings'][0] : 'not-disable';
@@ -104,13 +104,13 @@ class VARIMO_Assets{
             wp_enqueue_style('varimo-select2-frontend',
                 plugin_dir_url(dirname(__FILE__)) . 'Assets/CSS/varimo-select2-frontend.min.css',
                 array(),
-                VMONSTER_VERION,
+                VMONSTER_VERSION,
             );
 
             wp_enqueue_script('varimo-select2-frontend',
                 plugin_dir_url(dirname(__FILE__)) . 'Assets/JS/varimo-select2-frontend.min.js',
                 array('jquery'),
-                VMONSTER_VERION,
+                VMONSTER_VERSION,
                 true
             );
 
@@ -209,14 +209,14 @@ class VARIMO_Assets{
             'varimo-filter-frontend',
             plugin_dir_url(dirname(__FILE__)) . 'Inc/filter-widget/assets/css/filter-frontend.css',
             array(),
-            VMONSTER_VERION
+            VMONSTER_VERSION
         );
 
         wp_enqueue_script(
             'varimo-filter-frontend',
             plugin_dir_url(dirname(__FILE__)) . 'Inc/filter-widget/assets/js/filter-frontend.js',
             array('jquery', 'wp-util'),
-            VMONSTER_VERION,
+            VMONSTER_VERSION,
             true
         );
 

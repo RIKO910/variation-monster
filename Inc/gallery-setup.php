@@ -30,7 +30,7 @@ class VARIMO_Gallery_Setup {
         if ($variationSwatchesMeta !== 'false'){
             wp_dequeue_script('wc-add-to-cart-variation');
             wp_deregister_script('wc-add-to-cart-variation');
-            wp_register_script('wc-add-to-cart-variation', plugin_dir_url(dirname(__FILE__)) . 'Assets/JS/variation-swatches.js',array(), VMONSTER_VERION, true );
+            wp_register_script('wc-add-to-cart-variation', plugin_dir_url(dirname(__FILE__)) . 'Assets/JS/variation-swatches.js',array(), VMONSTER_VERSION, true );
             wp_enqueue_script('wc-add-to-cart-variation');
             wc_get_template( 'single-product/add-to-cart/variation.php', array(), '', WC()->plugin_path() . '/templates/' );
         }
@@ -54,14 +54,14 @@ class VARIMO_Gallery_Setup {
             // phpcs:ignore
 //            wp_enqueue_script('slick-slider-js','https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js',['jquery'],'1.8.1',true);
 
-            wp_enqueue_script('varimo-custom-slick-slider-js', plugin_dir_url(dirname(__FILE__)) . 'Assets/JS/custom-slick-slider.min.js',array(), VMONSTER_VERION, true );
+            wp_enqueue_script('varimo-custom-slick-slider-js', plugin_dir_url(dirname(__FILE__)) . 'Assets/JS/custom-slick-slider.min.js',array(), VMONSTER_VERSION, true );
 
 
             wp_enqueue_script(
                 'varimo-variation-gallery',
                 plugin_dir_url(dirname(__FILE__)) . 'Assets/JS/varimo-variation-gallery/template3.js',
                 ['jquery', 'varimo-custom-slick-slider-js'],
-                VMONSTER_VERION,
+                VMONSTER_VERSION,
                 true
             );
 
@@ -69,7 +69,7 @@ class VARIMO_Gallery_Setup {
                 'varimo-variation-gallery',
                 plugin_dir_url(dirname(__FILE__)) . 'Assets/CSS/varimo-variation-gallery/template3.css',
                 [],
-                VMONSTER_VERION
+                VMONSTER_VERSION
             );
 
             global $product;

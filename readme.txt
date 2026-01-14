@@ -1,6 +1,6 @@
 === Variation Monster — Variation Tables, Swatches & Quick View for WooCommerce ===
 Contributors: wooxperto
-Tags: WooCommerce Swatches, Variation Carousel for WooCommerce, Variation Gallery for WooCommerce, Quick View for WooCommerce, Variation Table for WooCommerce
+Tags: variation table, variation swatches, variation gallery, quick view, quick cart
 Requires at least: 5.2
 Tested up to: 6.9
 Requires PHP: 7.2
@@ -194,13 +194,21 @@ Learn more about how [Appsero collects and uses this data](https://appsero.com/p
 
 == Changelog ==
 
-= 1.0.0 =
-* Variation swatches integration.
-* Archive page variation swatches integration.
-* Quick view integration.
-* Variation table integration.
-* Variation list integration.
-* Variation quick cart integration in archive page.
-* Variation gallery integration.
-* Attribute gallery integration.
+### 1.0.1 (January 12, 2026 )
+- **Fix:** Block theme compatibility.
+- **Fix:** Ajax load shop page compatibility.
+- **Update:** Security updated.
+- **Update:** Dashboard change from woocommerce product menu to woocommerce settings.
+- **Update:** UX change from dashboard.
+- **Update:** UX change from quick view modal.
 
+### 1.0.0 (March 09, 2025 )
+- Initial release with core features:
+  - **New:** Attribute gallery integration.
+  - **New:** Variation gallery integration.
+  - **New:** Variation quick cart integration in archive page.
+  - **New:** Variation list integration.
+  - **New:** Variation table integration.
+  - **New:** Quick view integration.
+  - **New:** Archive page variation swatches integration.
+  - **New:** Variation swatches integration.
