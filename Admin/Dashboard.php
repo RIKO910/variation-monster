@@ -198,12 +198,12 @@ $varimoLicense_active                     = get_option('quick_license_key');
             <i class="fas fa-shapes"></i> <?php echo wp_kses(' Attribute Gallery','variation-monster'); ?>
         </a>
         <div class="vertical-divider"></div>
-        <a style="padding:8px" class="tablinks" onclick="varimoDashboardClick(event, 'support')">
+        <a style="padding:8px" class="tablinks" onclick="event.preventDefault(); varimoDashboardClick(event, 'support')">
             <i class="fas fa-life-ring"></i> <?php echo wp_kses(' Support','variation-monster'); ?>
         </a>
         <div class="vertical-divider"></div>
-        <a style="padding:8px" class="our-products" onclick="varimoDashboardClick(event, 'our-products')">
-            <i class="fas fa-life-ring"></i> <?php echo wp_kses(' Our Products','variation-monster'); ?>
+        <a style="padding:8px" class="tablinks" onclick="event.preventDefault(); varimoDashboardClick(event, 'our-products')">
+            <i class="fas fa-store"></i> <?php echo wp_kses(' Our Products','variation-monster-pro'); ?>
         </a>
     </div>
 
