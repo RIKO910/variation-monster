@@ -2354,8 +2354,6 @@ $varimoLicense_active                     = get_option('quick_license_key');
         var helpButton                       = document.querySelector('.help-button');
         var helpImageContainer               = document.querySelector('.help-image');
         var popup                            = document.getElementById('popup-container');
-        var helpButtonOverwriteTable         = document.querySelector('.help-button-overwrite-default-cart-table');
-        var helpImageContainerOverwriteTable = document.querySelector('.help-image-overwrite-default-cart-table');
         var popupOverwriteTable              = document.getElementById('popup-container-overwrite-default-cart-table');
 
         var buffer = 6;
@@ -2389,34 +2387,6 @@ $varimoLicense_active                     = get_option('quick_license_key');
             }
         }
 
-        helpButtonOverwriteTable.addEventListener('mouseenter', function(e) {
-            e.preventDefault();
-            helpImageContainerOverwriteTable.innerHTML = '';
-
-            var img = document.createElement('img');
-            img.src = "<?php echo esc_url(plugin_dir_url(__DIR__) . 'Assets/images/overwrite-cart-to-table.png'); ?>";
-            img.alt = "Quick Cart Help Image";
-
-            helpImageContainerOverwriteTable.appendChild(img);
-            popupOverwriteTable.style.display = 'flex';
-
-            document.addEventListener('mousemove', trackMouseOutsideOverwriteTable);
-        });
-
-        function trackMouseOutsideOverwriteTable(e) {
-            var rect = helpButtonOverwriteTable.getBoundingClientRect();
-
-            var outside =
-                e.clientX < rect.left - buffer ||
-                e.clientX > rect.right + buffer ||
-                e.clientY < rect.top - buffer ||
-                e.clientY > rect.bottom + buffer;
-
-            if (outside) {
-                popupOverwriteTable.style.display = 'none';
-                document.removeEventListener('mousemove', trackMouseOutsideOverwriteTable);
-            }
-        }
 
         window.addEventListener('click', function(event) {
             if (event.target === popup) {
@@ -2632,8 +2602,6 @@ $varimoLicense_active                     = get_option('quick_license_key');
         const template2Options = document.getElementById('variation-table-template2-options');
         const template1Options = document.getElementById('variation-table-template1-options');
         const tableTemplate2CartDesign = document.getElementById('variation-table-template2-cart-design');
-        const variationGalleryCheckbox = document.getElementById('variation-gallery-on-off');
-        const showGalleryImageIntoPopup = document.getElementById('show-gallery-image-into-popup');
         const badgeAllSettings = document.getElementById('badge-all-settings');
         const discountBadge = document.getElementById('discount-badge');
 
@@ -2652,22 +2620,6 @@ $varimoLicense_active                     = get_option('quick_license_key');
 
         // Event listener for changes
         discountBadge.addEventListener('change', toggleDiscountBadge);
-
-
-        // Function to toggle the display
-        function toggleShowGalleryWrapper() {
-            if (variationGalleryCheckbox.checked) {
-                showGalleryImageIntoPopup.style.display = 'flex';
-            } else {
-                showGalleryImageIntoPopup.style.display = 'none';
-            }
-        }
-
-        // Initial state check
-        toggleShowGalleryWrapper();
-
-        // Event listener for changes
-        variationGalleryCheckbox.addEventListener('change', toggleShowGalleryWrapper);
 
 
         // Function to toggle display of Template 2 options
