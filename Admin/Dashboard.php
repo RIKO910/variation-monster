@@ -394,7 +394,7 @@ $varimoLicense_active                     = get_option('quick_license_key');
                 <h4 ><?php echo wp_kses('Variation Quick Cart Carousel Position: ','variation-monster');
 
                     ?></h4>
-                <div style="display: flex; gap: 10%;">
+                <div style="display: flex; gap: 1%;">
                     <select class="quick-carousel-position">
 
                         <?php
@@ -425,11 +425,8 @@ $varimoLicense_active                     = get_option('quick_license_key');
                     <button class="help-button variation-cart-carousel-setting-help">?</button>
 
                     <!-- Popup Structure -->
-                    <div id="varimo-quick-cart-admin-popup-container" style="display: none;">
-
-
-                        <div class="varimo-quick-cart-admin-popup-content">
-                            <span class="close">&times;</span>
+                    <div id="popup-container" style="display: none;">
+                        <div class="popup-content">
                             <div class="help-image"></div>
                         </div>
                     </div>
